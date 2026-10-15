@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak Kami & Permintaan Informasi | Ryco Spices Indonesia</title>
+  <meta name="description" content="Hubungi kantor pusat dan fasilitas gudang ekspor Ryco Spices di Jakarta dan Banda Maluku. Dapatkan penawaran harga resmi dan konsultasi gratis.">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="bg-forest py-2 small border-bottom border-success border-opacity-25">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div>
+        <i class="bi bi-geo-alt-fill text-warning me-1"></i> Maluku & Jakarta, Indonesia
+        <span class="mx-2 text-white-50">|</span>
+        <i class="bi bi-envelope-fill text-warning me-1"></i> info@rycospices.com
+      </div>
+      <div>
+        <span class="badge bg-warning text-dark"><i class="bi bi-chat-heart-fill me-1"></i> Layanan Konsultasi Ramah & Responsif</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-glass sticky-top shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="../images/logo.webp" alt="Ryco Spices Logo" class="me-2">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="dokter.html">Dokter Tanaman</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="member.html">Member</a></li>
+          <li class="nav-item"><a class="nav-link active" href="kontak.html">Kontak</a></li>
+          <li class="nav-item ms-lg-2">
+            <a href="pendaftaran.html" class="btn btn-primary px-3 py-2 rounded-pill shadow-sm">
+              <i class="bi bi-person-plus-fill me-1"></i> Pendaftaran
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header text-center">
+    <div class="container">
+      <span class="eyebrow-badge eyebrow-badge-light mb-3">Saluran Komunikasi</span>
+      <h1 class="display-5 fw-bold mb-3">Hubungi Tim Ryco Spices</h1>
+      <p class="lead max-w-text mx-auto mb-0">
+        Kami siap melayani kebutuhan informasi komoditas, penawaran harga ekspor, serta jadwal kunjungan fasilitas pengolahan rempah.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kontak Form & Info -->
+  <section class="py-5 bg-cream">
+    <div class="container py-4">
+      <div class="row g-5">
+        <!-- Formulir Pesan -->
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 bg-white">
+            <h3 class="fw-bold mb-4 text-forest border-bottom pb-3">Kirim Pesan Langsung</h3>
+
+            <div id="contactSuccess" class="alert alert-success d-none mb-4 rounded-3 d-flex align-items-center" role="alert">
+              <i class="bi bi-check-circle-fill fs-3 me-3"></i>
+              <div>
+                <strong>Pesan Terkirim!</strong><br>
+                Terima kasih telah menghubungi Ryco Spices. Tim representatif kami akan membalas pesan Anda secepatnya.
+              </div>
+            </div>
+
+            <form onsubmit="event.preventDefault(); document.getElementById('contactSuccess').classList.remove('d-none'); this.reset();">
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="contactName" class="form-label small fw-semibold">Nama Lengkap <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="contactName" placeholder="Nama Anda" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="contactEmail" class="form-label small fw-semibold">Email Perusahaan / Pribadi <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="contactEmail" placeholder="nama@email.com" required>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="contactPhone" class="form-label small fw-semibold">Nomor WhatsApp / Telepon</label>
+                  <input type="tel" class="form-control" id="contactPhone" placeholder="+62 8xx-xxxx-xxxx">
+                </div>
+                <div class="col-md-6">
+                  <label for="contactSubject" class="form-label small fw-semibold">Subjek Pertanyaan <span class="text-danger">*</span></label>
+                  <select class="form-select" id="contactSubject" required>
+                    <option value="" disabled selected>Pilih Topik...</option>
+                    <option value="inquiry">Permintaan Penawaran Harga Ekspor (Inquiry)</option>
+                    <option value="sample">Permintaan Sampel Biji Pala / Rempah</option>
+                    <option value="partnership">Kerjasama Mitra Petani Binaan</option>
+                    <option value="doctor">Konsultasi dengan Dokter Tanaman</option>
+                    <option value="other">Pertanyaan Lainnya</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="contactMessage" class="form-label small fw-semibold">Isi Pesan / Pertanyaan <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="contactMessage" rows="5" placeholder="Tuliskan secara ringkas kebutuhan Anda, jenis komoditas, atau estimasi tonase yang dibutuhkan..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill fw-semibold shadow-sm w-100">
+                <i class="bi bi-send-fill me-2"></i>Kirimkan Pesan Sekarang
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Kartu Detail Kontak -->
+        <div class="col-lg-5">
+          <div class="d-flex flex-column gap-4">
+            <!-- Kantor Jakarta -->
+            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white card-hover">
+              <div class="d-flex align-items-start">
+                <div class="icon-box-emerald me-3 flex-shrink-0">
+                  <i class="bi bi-building"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1">Kantor Representatif Ekspor</h5>
+                  <p class="text-muted small mb-2">Pusat korespondensi kontrak dagang dan dokumen internasional.</p>
+                  <p class="small text-forest mb-0">
+                    <i class="bi bi-geo-alt-fill me-1"></i> Gedung Agro Niaga Lt. 8, Jl. Rasuna Said, Jakarta Selatan, Indonesia
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gudang Banda Maluku -->
+            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white card-hover">
+              <div class="d-flex align-items-start">
+                <div class="icon-box-emerald me-3 flex-shrink-0">
+                  <i class="bi bi-houses"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1">Pusat Sortasi & Pengeringan</h5>
+                  <p class="text-muted small mb-2">Fasilitas solar dryer dome dan laboratorium mutu pascapanen.</p>
+                  <p class="small text-forest mb-0">
+                    <i class="bi bi-geo-alt-fill me-1"></i> Kawasan Perkebunan Pala Nusantara, Banda Neira, Maluku Tengah, Indonesia
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Saluran Telepon & Email -->
+            <div class="card border-0 shadow-sm rounded-4 p-4 bg-forest text-white">
+              <h5 class="fw-bold text-warning mb-3"><i class="bi bi-headset me-2"></i>Hubungi Cepat</h5>
+              <div class="d-flex flex-column gap-3 small">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-telephone-fill text-warning fs-5 me-3"></i>
+                  <div>
+                    <span class="d-block text-white-50">Telepon Kantor</span>
+                    <strong>+62 (21) 5678-9012</strong>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-whatsapp text-warning fs-5 me-3"></i>
+                  <div>
+                    <span class="d-block text-white-50">Customer Support WhatsApp</span>
+                    <strong>+62 821-2345-6789</strong>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-envelope-fill text-warning fs-5 me-3"></i>
+                  <div>
+                    <span class="d-block text-white-50">Email Korespondensi</span>
+                    <strong>inquiry@rycospices.com</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Singkat -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="eyebrow-badge">Tanya Jawab</span>
+        <h2 class="display-6 fw-bold">Pertanyaan yang Sering Diajukan</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
+            <div class="accordion-item border-0 border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button fw-bold text-forest" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Berapa minimum pemesanan (MOQ) untuk ekspor?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted small">
+                  Untuk pengiriman ekspor laut reguler, MOQ adalah 1 ton (LCL) atau 1 kontainer 20ft (FCL, sekitar 10-12 ton). Namun, kami dapat menyediakan paket sampel uji coba 10-50 kg melalui kargo udara.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border-0 border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold text-forest" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Apakah tersedia sampel fisik sebelum menandatangani kontrak?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted small">
+                  Ya, kami secara rutin mengirimkan sampel fisik biji pala, fuli, cengkeh, atau kayu manis seberat 200–500 gram lengkap dengan fotokopi Certificate of Analysis (COA) untuk diuji di laboratorium buyer.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold text-forest" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Bagaimana jaminan keamanan dari jamur aflatoksin?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted small">
+                  Seluruh komoditas kami dikeringkan di dalam solar dome higienis (bukan di atas aspal jalanan), diawasi oleh dokter tanaman, dan diuji di laboratorium independen berstandar internasional sehingga bebas dari racun aflatoksin.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4">
+          <img src="../images/logo.webp" alt="Ryco Spices" class="mb-3" style="max-height: 44px; filter: brightness(0) invert(1);">
+          <p class="text-white-50 small mb-3">
+            Ryco Spices adalah produsen dan eksportir rempah Indonesia yang mengedepankan kualitas organik, sertifikasi laboratorium, dan pemberdayaan petani lokal di Kepulauan Rempah.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-warning fw-bold mb-3">Menu Utama</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 text-white-50">
+            <li><a href="index.html" class="text-decoration-none text-white-50">Beranda</a></li>
+            <li><a href="tentang-kami.html" class="text-decoration-none text-white-50">Tentang Kami</a></li>
+            <li><a href="layanan.html" class="text-decoration-none text-white-50">Layanan Ekspor</a></li>
+            <li><a href="dokter.html" class="text-decoration-none text-white-50">Dokter Tanaman</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-warning fw-bold mb-3">Akses Khusus</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 text-white-50">
+            <li><a href="galeri.html" class="text-decoration-none text-white-50">Galeri Panen</a></li>
+            <li><a href="member.html" class="text-decoration-none text-white-50">Portal Member</a></li>
+            <li><a href="pendaftaran.html" class="text-decoration-none text-white-50">Form Pendaftaran</a></li>
+            <li><a href="kontak.html" class="text-decoration-none text-white-50">Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6 class="text-warning fw-bold mb-3">Kontak Perusahaan</h6>
+          <ul class="list-unstyled small text-white-50 d-flex flex-column gap-2">
+            <li><i class="bi bi-geo-alt-fill text-warning me-2"></i>Banda & Jakarta, Indonesia</li>
+            <li><i class="bi bi-telephone-fill text-warning me-2"></i>+62 821-2345-6789</li>
+            <li><i class="bi bi-envelope-fill text-warning me-2"></i>info@rycospices.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top border-secondary pt-3 text-center text-white-50 small">
+        <p class="mb-0">&copy; 2026 Ryco Spices Indonesia. Hak Cipta Dilindungi Undang-Undang. Dibuat dengan Bootstrap 5.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6282123456789?text=Halo%20Ryco%20Spices%2C%20saya%20ingin%20bertanya" class="floating-whatsapp" target="_blank" title="Chat WhatsApp Kami">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

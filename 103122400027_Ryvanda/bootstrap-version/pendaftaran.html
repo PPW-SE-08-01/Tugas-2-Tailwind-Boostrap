@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Kemitraan & Buyer | Ryco Spices Indonesia</title>
+  <meta name="description" content="Formulir resmi pendaftaran kemitraan petani rempah dan permohonan kuota ekspor bagi buyer internasional.">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="bg-forest py-2 small border-bottom border-success border-opacity-25">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div>
+        <i class="bi bi-geo-alt-fill text-warning me-1"></i> Maluku & Jakarta, Indonesia
+        <span class="mx-2 text-white-50">|</span>
+        <i class="bi bi-envelope-fill text-warning me-1"></i> partnership@rycospices.com
+      </div>
+      <div>
+        <span class="badge bg-warning text-dark"><i class="bi bi-check-circle-fill me-1"></i> Formulir Resmi Terverifikasi</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-glass sticky-top shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="../images/logo.webp" alt="Ryco Spices Logo" class="me-2">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="dokter.html">Dokter Tanaman</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="member.html">Member</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+          <li class="nav-item ms-lg-2">
+            <a href="pendaftaran.html" class="btn btn-primary px-3 py-2 rounded-pill shadow-sm active">
+              <i class="bi bi-person-plus-fill me-1"></i> Pendaftaran
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header text-center">
+    <div class="container">
+      <span class="eyebrow-badge eyebrow-badge-light mb-3">Formulir Pendaftaran</span>
+      <h1 class="display-5 fw-bold mb-3">Registrasi Kemitraan & Permintaan Kuota Ekspor</h1>
+      <p class="lead max-w-text mx-auto mb-0">
+        Silakan isi data lengkap di bawah ini. Tim kami akan meninjau dan menghubungi Anda dalam waktu 1x24 jam kerja.
+      </p>
+    </div>
+  </section>
+
+  <!-- Form Area -->
+  <section class="py-5 bg-cream">
+    <div class="container py-4">
+      <div class="row g-5">
+        <!-- Form Kolom Kiri -->
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 bg-white">
+            <h3 class="fw-bold mb-4 text-forest border-bottom pb-3">Formulir Data Calon Mitra</h3>
+
+            <form id="regForm" onsubmit="event.preventDefault(); document.getElementById('successMsg').classList.remove('d-none'); this.reset(); window.scrollTo({top: 300, behavior: 'smooth'});">
+              
+              <!-- Pesan Sukses -->
+              <div id="successMsg" class="alert alert-success d-none mb-4 rounded-3 d-flex align-items-center" role="alert">
+                <i class="bi bi-check-circle-fill fs-3 me-3"></i>
+                <div>
+                  <strong>Pendaftaran Berhasil Dikirim!</strong><br>
+                  Terima kasih telah mendaftar. Tim representatif Ryco Spices akan segera menghubungi kontak WhatsApp dan Email Anda.
+                </div>
+              </div>
+
+              <!-- Pilihan Kategori -->
+              <div class="mb-4">
+                <label class="form-label fw-bold">Saya Ingin Mendaftar Sebagai: <span class="text-danger">*</span></label>
+                <div class="d-flex flex-wrap gap-3">
+                  <div class="form-check p-3 rounded-3 flex-fill role-card">
+                    <input class="form-check-input" type="radio" name="mitraType" id="typeBuyer" value="buyer" checked>
+                    <label class="form-check-label fw-semibold" for="typeBuyer">
+                      <i class="bi bi-briefcase-fill text-forest me-1"></i> Buyer Internasional / Industri
+                    </label>
+                  </div>
+                  <div class="form-check p-3 rounded-3 flex-fill role-card">
+                    <input class="form-check-input" type="radio" name="mitraType" id="typePetani" value="petani">
+                    <label class="form-check-label fw-semibold" for="typePetani">
+                      <i class="bi bi-tree-fill text-forest me-1"></i> Kelompok Tani / Petani Mitra
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bagian 1: Biodata -->
+              <h5 class="fw-bold text-earth mb-3"><i class="bi bi-1-circle me-2"></i>Informasi Pemohon & Lembaga</h5>
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="fullName" class="form-label small fw-semibold">Nama Lengkap <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="fullName" placeholder="Contoh: Hendra Pratama" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="companyName" class="form-label small fw-semibold">Nama Perusahaan / Kelompok Tani <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="companyName" placeholder="PT Rempah Global / Poktan Harapan Banda" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label small fw-semibold">Alamat Email Aktif <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="email" placeholder="nama@domain.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label small fw-semibold">Nomor WhatsApp / Telepon <span class="text-danger">*</span></label>
+                  <input type="tel" class="form-control" id="phone" placeholder="+62 812-xxxx-xxxx" required>
+                </div>
+              </div>
+
+              <!-- Bagian 2: Alamat -->
+              <h5 class="fw-bold text-earth mb-3"><i class="bi bi-2-circle me-2"></i>Alamat & Lokasi Operasional</h5>
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="countryCity" class="form-label small fw-semibold">Negara / Kota Domisili <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="countryCity" placeholder="Contoh: Jakarta / Rotterdam / Dubai" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="address" class="form-label small fw-semibold">Alamat Lengkap Kantor / Kebun</label>
+                  <input type="text" class="form-control" id="address" placeholder="Jl. Raya / Desa / Kecamatan">
+                </div>
+              </div>
+
+              <!-- Bagian 3: Komoditas -->
+              <h5 class="fw-bold text-earth mb-3"><i class="bi bi-3-circle me-2"></i>Komoditas & Minat Kerjasama</h5>
+              <div class="mb-3">
+                <label class="form-label small fw-semibold d-block">Komoditas yang Diminati (Bisa pilih lebih dari satu):</label>
+                <div class="row g-2">
+                  <div class="col-6 col-md-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="commNutmeg" checked>
+                      <label class="form-check-label" for="commNutmeg">Biji Pala (Nutmeg)</label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="commMace">
+                      <label class="form-check-label" for="commMace">Fuli (Mace)</label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="commCloves">
+                      <label class="form-check-label" for="commCloves">Cengkeh (Cloves)</label>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="commCinnamon">
+                      <label class="form-check-label" for="commCinnamon">Kayu Manis</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="volumeTarget" class="form-label small fw-semibold">Estimasi Kebutuhan / Kapasitas Panen</label>
+                  <select class="form-select" id="volumeTarget">
+                    <option value="1">Uji Coba Sampel (&lt; 50 kg)</option>
+                    <option value="2">1 - 5 Ton (LCL)</option>
+                    <option value="3">1 Kontainer 20ft (FCL ~10-12 Ton)</option>
+                    <option value="4">Multi-Kontainer Kontrak Rutin</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="sampleReq" class="form-label small fw-semibold">Permintaan Sampel Fisik Laboratorium</label>
+                  <select class="form-select" id="sampleReq">
+                    <option value="yes">Ya, kirimkan sampel ke alamat kami</option>
+                    <option value="no">Tidak, cukup penawaran harga & COA</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="notes" class="form-label small fw-semibold">Catatan Khusus / Spesifikasi Tambahan</label>
+                <textarea class="form-control" id="notes" rows="3" placeholder="Tuliskan jika Anda membutuhkan parameter kadar air khusus, sertifikasi tertentu, atau permintaan jadwal inspeksi kebun..."></textarea>
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                <label class="form-check-label small text-muted" for="termsCheck">
+                  Saya menyatakan bahwa data yang diisikan adalah benar dan bersedia dihubungi oleh perwakilan Ryco Spices.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill fw-semibold shadow-sm w-100">
+                <i class="bi bi-send-fill me-2"></i>Kirim Formulir Pendaftaran
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Panduan & Keuntungan -->
+        <div class="col-lg-4">
+          <div class="card border-0 shadow-sm rounded-4 p-4 bg-white mb-4">
+            <h5 class="fw-bold mb-3 text-forest"><i class="bi bi-star-fill text-warning me-2"></i>Keuntungan Mitra Terdaftar</h5>
+            <ul class="list-unstyled text-muted small d-flex flex-column gap-3 mb-0">
+              <li class="d-flex">
+                <i class="bi bi-check2-circle text-forest fs-5 me-2 mt-n1"></i>
+                <span><strong>Bagi Buyer B2B:</strong> Prioritas alokasi panen baru, sampel fisik gratis untuk uji laboratorium, dan fleksibilitas termin pembayaran kontrak dagang.</span>
+              </li>
+              <li class="d-flex">
+                <i class="bi bi-check2-circle text-forest fs-5 me-2 mt-n1"></i>
+                <span><strong>Bagi Petani Binaan:</strong> Pendampingan langsung dokter tanaman, jaminan pembelian harga wajar tanpa perantara, dan edukasi pascapanen solar dome.</span>
+              </li>
+              <li class="d-flex">
+                <i class="bi bi-check2-circle text-forest fs-5 me-2 mt-n1"></i>
+                <span><strong>Dokumen Lengkap:</strong> Akses instan ke sertifikat fitosanitari, sertifikat asal (COO), dan COA bebas aflatoksin.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card border-0 shadow-sm rounded-4 p-4 bg-forest text-white">
+            <h5 class="fw-bold mb-2"><i class="bi bi-headset me-2 text-warning"></i>Butuh Bantuan Pendaftaran?</h5>
+            <p class="text-white-50 small mb-3">
+              Tim sekretariat kemitraan kami siap membantu pengisian data atau menjawab pertanyaan teknis Anda melalui saluran pesan instan.
+            </p>
+            <a href="https://wa.me/6282123456789?text=Halo%20Admin%2C%20saya%20butuh%20bantuan%20pendaftaran%20kemitraan" class="btn btn-warning w-100 rounded-pill fw-bold text-dark" target="_blank">
+              <i class="bi bi-whatsapp me-2"></i>Chat WhatsApp Customer Service
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4">
+          <img src="../images/logo.webp" alt="Ryco Spices" class="mb-3" style="max-height: 44px; filter: brightness(0) invert(1);">
+          <p class="text-white-50 small mb-3">
+            Ryco Spices adalah produsen dan eksportir rempah Indonesia yang mengedepankan kualitas organik, sertifikasi laboratorium, dan pemberdayaan petani lokal di Kepulauan Rempah.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-warning fw-bold mb-3">Menu Utama</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 text-white-50">
+            <li><a href="index.html" class="text-decoration-none text-white-50">Beranda</a></li>
+            <li><a href="tentang-kami.html" class="text-decoration-none text-white-50">Tentang Kami</a></li>
+            <li><a href="layanan.html" class="text-decoration-none text-white-50">Layanan Ekspor</a></li>
+            <li><a href="dokter.html" class="text-decoration-none text-white-50">Dokter Tanaman</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-warning fw-bold mb-3">Akses Khusus</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2 text-white-50">
+            <li><a href="galeri.html" class="text-decoration-none text-white-50">Galeri Panen</a></li>
+            <li><a href="member.html" class="text-decoration-none text-white-50">Portal Member</a></li>
+            <li><a href="pendaftaran.html" class="text-decoration-none text-white-50">Form Pendaftaran</a></li>
+            <li><a href="kontak.html" class="text-decoration-none text-white-50">Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6 class="text-warning fw-bold mb-3">Sekretariat Kemitraan</h6>
+          <ul class="list-unstyled small text-white-50 d-flex flex-column gap-2">
+            <li><i class="bi bi-geo-alt-fill text-warning me-2"></i>Banda & Jakarta, Indonesia</li>
+            <li><i class="bi bi-telephone-fill text-warning me-2"></i>+62 821-2345-6789</li>
+            <li><i class="bi bi-envelope-fill text-warning me-2"></i>partnership@rycospices.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top border-secondary pt-3 text-center text-white-50 small">
+        <p class="mb-0">&copy; 2026 Ryco Spices Indonesia. Hak Cipta Dilindungi Undang-Undang. Dibuat dengan Bootstrap 5.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6282123456789?text=Halo%20Admin%2C%20saya%20ingin%20tanya%20tentang%20pendaftaran" class="floating-whatsapp" target="_blank" title="Chat WhatsApp Kami">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
