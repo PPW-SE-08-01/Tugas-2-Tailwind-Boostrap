@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kumpulan resep masakan Indonesia dari RecipeMate." />
+    <meta name="author" content="RecipeMate Team" />
+    <title>Resep Indonesia | RecipeMate</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-bg-body: #fdfbf7;
+            --color-primary: #d97706;
+            --color-primary-hover: #b45309;
+            --color-text-main: #1f2937;
+            --color-border: #e5e7eb;
+        }
+
+        @layer base {
+            a {
+                transition: color 0.2s ease-in-out;
+            }
+
+            a:hover {
+                color: var(--color-primary);
+            }
+
+            ul,
+            ol {
+                list-style: none;
+            }
+
+            img {
+                display: block;
+            }
+
+            button,
+            input,
+            select,
+            textarea {
+                font-family: inherit;
+                font-size: 1rem;
+                border: 1px solid var(--color-border);
+                border-radius: 0.5rem;
+                padding: 0.75rem 1.25rem;
+                background-color: #fff;
+                color: var(--color-text-main);
+                transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            input:focus,
+            select:focus,
+            textarea:focus {
+                outline: none;
+                border-color: var(--color-primary);
+                box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+            }
+
+            button {
+                background-color: var(--color-primary);
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                font-weight: 600;
+                transition: background-color 0.2s ease-in-out;
+            }
+
+            button:hover {
+                background-color: var(--color-primary-hover);
+            }
+        }
+    </style>
+</head>
+
+<body class="flex min-h-screen flex-col bg-bg-body font-sans text-gray-800 leading-[1.6]">
+
+    <header id="header" class="sticky top-0 z-[100] border-b border-gray-200 bg-white">
+        <nav id="nav" class="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-6 p-4">
+
+            <div id="logo">
+                <a href="../index.html" class="text-2xl font-extrabold tracking-tight text-amber-600">
+                    <span>RecipeMate</span>
+                </a>
+            </div>
+
+            <ul id="menu" class="flex flex-wrap items-center gap-6">
+                <li><a href="../index.html" class="font-medium">Home</a></li>
+                <li><a href="../resep.html" class="font-medium">Resep</a></li>
+                <li><a href="../kategori.html" class="font-medium">Kategori</a></li>
+                <li><a href="../masak-dengan-bahan.html" class="font-medium">Masak Dengan Bahan</a></li>
+                <li><a href="../perencana-makan.html" class="font-medium">Perencana Makan</a></li>
+                <li><a href="../favorit.html" class="font-medium">Favorit</a></li>
+            </ul>
+
+            <div id="auth" class="flex gap-4">
+                <a href="../login.html" id="login" class="rounded border border-gray-200 px-5 py-2 font-semibold hover:border-amber-600">Login</a>
+                <a href="../register.html" id="register" class="rounded bg-amber-600 px-5 py-2 font-semibold text-white hover:bg-amber-700">Register</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main id="content" class="mx-auto w-full max-w-[1200px] flex-1 px-4 py-10">
+
+        <section id="page-header" class="mb-16">
+            <div id="page-header-content">
+                <h1 class="mb-3 text-4xl font-extrabold leading-[1.2] text-gray-800">Resep Indonesia</h1>
+                <p class="max-w-[700px] text-lg text-gray-600">Kaya cita rasa rempah Nusantara. Dari nasi goreng hingga rendang, temukan kelezatan masakan Indonesia di sini.</p>
+                <div class="mt-6">
+                    <a href="../kategori.html" class="underline">&larr; Kembali ke Daftar Kategori</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="semua-resep" class="mb-16">
+
+            <div id="grid-semua-resep" class="mt-8 grid gap-8 [grid-template-columns:repeat(auto-fill,minmax(280px,1fr))]">
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="../resep/nasi-goreng-spesial.html">
+                        <img src="https://placehold.co/400x260?text=Nasi+Goreng+Spesial" alt="Nasi Goreng Spesial disajikan dengan telur ceplok dan kerupuk" width="400" height="260" loading="lazy"  class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="mb-4 inline-block self-start rounded bg-amber-100 px-2 py-1 text-xs font-bold uppercase tracking-[0.05em] text-amber-700">Indonesia</span>
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="../resep/nasi-goreng-spesial.html">Nasi Goreng Spesial</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Nasi goreng dengan bumbu rempah khas Indonesia, dilengkapi telur ceplok,
+                            ayam suwir, dan kerupuk renyah.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT20M">20 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="../resep/nasi-goreng-spesial.html" class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="../resep/rendang-daging-sapi.html">
+                        <img src="https://placehold.co/400x260?text=Rendang+Daging+Sapi" alt="Rendang daging sapi Padang dengan bumbu cokelat pekat dan santan kental" width="400" height="260" loading="lazy"  class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="mb-4 inline-block self-start rounded bg-amber-100 px-2 py-1 text-xs font-bold uppercase tracking-[0.05em] text-amber-700">Indonesia</span>
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="../resep/rendang-daging-sapi.html">Rendang Daging Sapi</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Rendang otentik Padang dengan daging sapi empuk dan bumbu rempah
+                            yang meresap sempurna — hidangan kebanggaan Indonesia.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT180M">3 jam</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Sedang</dd>
+                            </div>
+                        </dl>
+                        <a href="../resep/rendang-daging-sapi.html" class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="../resep/soto-ayam-lamongan.html">
+                        <img src="https://placehold.co/400x260?text=Soto+Ayam+Lamongan" alt="Soto Ayam Lamongan dengan kuah kuning bening dan koya gurih" width="400" height="260" loading="lazy"  class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="mb-4 inline-block self-start rounded bg-amber-100 px-2 py-1 text-xs font-bold uppercase tracking-[0.05em] text-amber-700">Indonesia</span>
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="../resep/soto-ayam-lamongan.html">Soto Ayam Lamongan</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Soto ayam khas Lamongan dengan kuah kuning segar, suwiran ayam,
+                            telur rebus, dan taburan koya yang gurih.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT60M">1 jam</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Sedang</dd>
+                            </div>
+                        </dl>
+                        <a href="../resep/soto-ayam-lamongan.html" class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="../resep/gado-gado-jakarta.html">
+                        <img src="https://placehold.co/400x260?text=Gado-Gado+Jakarta" alt="Gado-Gado Jakarta dengan berbagai sayuran segar dan saus kacang kental" width="400" height="260" loading="lazy"  class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="mb-4 inline-block self-start rounded bg-amber-100 px-2 py-1 text-xs font-bold uppercase tracking-[0.05em] text-amber-700">Indonesia</span>
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="../resep/gado-gado-jakarta.html">Gado-Gado Jakarta</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Salad sayuran khas Indonesia dengan saus kacang yang gurih dan manis,
+                            dilengkapi tempe goreng dan lontong.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT30M">30 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="../resep/gado-gado-jakarta.html" class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="../resep/mie-goreng-jawa.html">
+                        <img src="https://placehold.co/400x260?text=Mie+Goreng+Jawa" alt="Mie Goreng Jawa dengan bumbu kecap dan taburan bawang goreng" width="400" height="260" loading="lazy"  class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="mb-4 inline-block self-start rounded bg-amber-100 px-2 py-1 text-xs font-bold uppercase tracking-[0.05em] text-amber-700">Indonesia</span>
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="../resep/mie-goreng-jawa.html">Mie Goreng Jawa</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Mie goreng khas Jawa dengan bumbu kecap, cabai, dan sayuran segar.
+                            Pilihan favorit saat ingin masak cepat dan lezat.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT15M">15 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="../resep/mie-goreng-jawa.html" class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="../resep/telur-balado.html">
+                        <img src="https://placehold.co/400x260?text=Telur+Balado" alt="Telur Balado dengan saus cabai merah yang pekat dan menggugah selera" width="400" height="260" loading="lazy"  class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="mb-4 inline-block self-start rounded bg-amber-100 px-2 py-1 text-xs font-bold uppercase tracking-[0.05em] text-amber-700">Indonesia</span>
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="../resep/telur-balado.html">Telur Balado</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Telur rebus goreng dengan saus balado pedas khas Padang.
+                            Lauk sederhana yang selalu dirindukan.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT25M">25 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="../resep/telur-balado.html" class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="../resep/telur-dadar-bumbu.html">
+                        <img src="https://placehold.co/400x260?text=Telur+Dadar+Bumbu+Kuning" alt="Telur dadar bumbu kuning dengan irisan daun bawang" width="400" height="260" loading="lazy"  class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="mb-4 inline-block self-start rounded bg-amber-100 px-2 py-1 text-xs font-bold uppercase tracking-[0.05em] text-amber-700">Indonesia</span>
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="../resep/telur-dadar-bumbu.html">Telur Dadar Bumbu Kuning</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Telur dadar tipis dan gurih dengan bumbu kunyit, bawang merah, dan
+                            cabai. Lauk praktis favorit sehari-hari.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT10M">10 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="../resep/telur-dadar-bumbu.html" class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="../resep/tumis-kangkung-belacan.html">
+                        <img src="https://placehold.co/400x260?text=Tumis+Kangkung+Belacan" alt="Tumis kangkung belacan dengan tampilan hijau segar dan bumbu merah" width="400" height="260" loading="lazy"  class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="mb-4 inline-block self-start rounded bg-amber-100 px-2 py-1 text-xs font-bold uppercase tracking-[0.05em] text-amber-700">Indonesia</span>
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="../resep/tumis-kangkung-belacan.html">Tumis Kangkung Belacan</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Tumis kangkung dengan terasi dan cabai yang wangi dan gurih.
+                            Sayur pelengkap favorit yang selalu habis di meja makan.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT10M">10 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="../resep/tumis-kangkung-belacan.html" class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="../resep/ayam-bakar-madu.html">
+                        <img src="https://placehold.co/400x260?text=Ayam+Bakar+Madu" alt="Ayam Bakar Madu dengan warna cokelat keemasan dan saus madu mengkilap" width="400" height="260" loading="lazy"  class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <span class="mb-4 inline-block self-start rounded bg-amber-100 px-2 py-1 text-xs font-bold uppercase tracking-[0.05em] text-amber-700">Indonesia</span>
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="../resep/ayam-bakar-madu.html">Ayam Bakar Madu</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Ayam bakar dengan olesan madu, kecap, dan rempah pilihan.
+                            Aroma harumnya bikin selera makan meningkat!
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT50M">50 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="../resep/ayam-bakar-madu.html" class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer id="site-footer" class="mt-auto border-t border-gray-200 bg-white px-4 pb-6 pt-16">
+
+        <div id="footer-brand" class="mb-12 mx-auto max-w-[1200px] md:flex md:items-center md:justify-between md:text-left">
+            <p id="footer-logo" class="mb-3 text-2xl font-extrabold tracking-tight text-amber-600">
+                RecipeMate
+            </p>
+            <p id="footer-tagline" class="max-w-[350px] text-gray-600 md:text-right">
+                Temukan inspirasi masakan baru setiap hari. Dari dapur sederhana hingga sajian spesial — semua ada di RecipeMate.
+            </p>
+        </div>
+
+        <nav id="footer-nav" class="mx-auto mb-16 grid max-w-[1200px] gap-10 [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))]">
+
+            <section class="mb-16">
+                <h3 class="mb-5 text-lg font-bold text-gray-800">Explore</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="../resep.html" class="text-gray-600">Resep</a></li>
+                    <li><a href="../kategori.html" class="text-gray-600">Kategori</a></li>
+                    <li><a href="../masak-dengan-bahan.html" class="text-gray-600">Masak Dengan Bahan</a></li>
+                    <li><a href="../perencana-makan.html" class="text-gray-600">Perencana Makan</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="mb-5 text-lg font-bold text-gray-800">Company</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="../about.html" class="text-gray-600">About</a></li>
+                    <li><a href="../contact.html" class="text-gray-600">Contact</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="mb-5 text-lg font-bold text-gray-800">Legal</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="../privacy-policy.html" class="text-gray-600">Privacy Policy</a></li>
+                    <li><a href="../terms.html" class="text-gray-600">Terms</a></li>
+                </ul>
+            </section>
+
+        </nav>
+
+        <div id="footer-bottom" class="mx-auto max-w-[1200px] border-t border-gray-200 pt-6 text-center text-sm text-gray-600">
+            <p id="footer-copyright">
+                <small>
+                    &copy; <time datetime="2026">2026</time> RecipeMate. All rights reserved.
+                </small>
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

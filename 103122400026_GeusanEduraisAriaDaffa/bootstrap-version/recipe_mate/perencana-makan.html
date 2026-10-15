@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rencanakan menu masakan harian dan mingguan Anda dengan mudah menggunakan fitur Perencana Makan dari RecipeMate." />
+    <meta name="author" content="RecipeMate Team" />
+    <title>Perencana Makan | RecipeMate</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="d-flex min-vh-100 flex-column bg-body-custom text-dark">
+
+    <header id="header" class="sticky-top z-header border-bottom border bg-white">
+        <nav id="nav" class="mx-auto d-flex max-w-main flex-wrap align-items-center justify-content-between gap-4 p-3">
+
+            <div id="logo">
+                <a href="index.html" class="fs-3 fw-bolder text-primary-custom">
+                    <span>RecipeMate</span>
+                </a>
+            </div>
+
+            <ul id="menu" class="d-flex flex-wrap align-items-center gap-4">
+                <li><a href="index.html" class="fw-medium">Home</a></li>
+                <li><a href="resep.html" class="fw-medium">Resep</a></li>
+                <li><a href="kategori.html" class="fw-medium">Kategori</a></li>
+                <li><a href="masak-dengan-bahan.html" class="fw-medium">Masak Dengan Bahan</a></li>
+                <li><a href="perencana-makan.html" aria-current="page" class="fw-bold text-primary-custom">Perencana Makan</a></li>
+                <li><a href="favorit.html" class="fw-medium">Favorit</a></li>
+            </ul>
+
+            <div id="auth" class="d-flex gap-3">
+                <a href="login.html" id="login" class="btn-outline-custom rounded px-3 py-2 text-decoration-none">Login</a>
+                <a href="register.html" id="register" class="btn-primary-custom rounded px-3 py-2 text-decoration-none">Register</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main id="content" class="mx-auto w-100 max-w-main flex-grow-1 px-3 py-5">
+
+        <section id="page-header" class="mb-4 rounded-3 border bg-white px-3 py-5 text-center">
+            <div id="page-header-content">
+                <h1 class="mb-3 fs-1 fw-bolder text-dark">Perencana Makan</h1>
+                <p class="mx-auto mb-4 max-w-hero-p fs-5 text-muted">Atur jadwal menu masakan Anda selama seminggu penuh agar lebih hemat, sehat, dan terstruktur. Pilih resep favorit Anda untuk setiap waktu makan.</p>
+            </div>
+        </section>
+
+        <section id="jadwal-mingguan" class="gap-4 grid-cards-lg mb-5">
+
+            <article class="rounded-3 border bg-white p-4">
+                <h2 class="mb-3 border-bottom border-2 border-primary-custom pb-2 fs-4 fw-bold text-primary-custom">Senin</h2>
+                <ul class="d-flex flex-column gap-3">
+                    <li class="schedule-item">
+                        <strong class="text-muted">Sarapan:</strong>
+                        <a class="fw-semibold" href="resep/pancake-pisang.html">Pancake Pisang</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Siang:</strong>
+                        <a class="fw-semibold" href="resep/soto-ayam-lamongan.html">Soto Ayam Lamongan</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Malam:</strong>
+                        <a class="fw-semibold" href="resep/ayam-bakar-madu.html">Ayam Bakar Madu</a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="rounded-3 border bg-white p-4">
+                <h2 class="mb-3 border-bottom border-2 border-primary-custom pb-2 fs-4 fw-bold text-primary-custom">Selasa</h2>
+                <ul class="d-flex flex-column gap-3">
+                    <li class="schedule-item">
+                        <strong class="text-muted">Sarapan:</strong>
+                        <a class="fw-semibold" href="resep.html">Pilih Resep</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Siang:</strong>
+                        <a class="fw-semibold" href="resep/nasi-goreng-spesial.html">Nasi Goreng Spesial</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Malam:</strong>
+                        <a class="fw-semibold" href="resep.html">Pilih Resep</a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="rounded-3 border bg-white p-4">
+                <h2 class="mb-3 border-bottom border-2 border-primary-custom pb-2 fs-4 fw-bold text-primary-custom">Rabu</h2>
+                <ul class="d-flex flex-column gap-3">
+                    <li class="schedule-item">
+                        <strong class="text-muted">Sarapan:</strong>
+                        <a class="fw-semibold" href="resep.html">Pilih Resep</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Siang:</strong>
+                        <a class="fw-semibold" href="resep/mie-goreng-jawa.html">Mie Goreng Jawa</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Malam:</strong>
+                        <a class="fw-semibold" href="resep/chicken-teriyaki.html">Chicken Teriyaki</a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="rounded-3 border bg-white p-4">
+                <h2 class="mb-3 border-bottom border-2 border-primary-custom pb-2 fs-4 fw-bold text-primary-custom">Kamis</h2>
+                <ul class="d-flex flex-column gap-3">
+                    <li class="schedule-item">
+                        <strong class="text-muted">Sarapan:</strong>
+                        <a class="fw-semibold" href="resep.html">Pilih Resep</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Siang:</strong>
+                        <a class="fw-semibold" href="resep/telur-balado.html">Telur Balado</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Malam:</strong>
+                        <a class="fw-semibold" href="resep/pasta-carbonara.html">Pasta Carbonara</a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="rounded-3 border bg-white p-4">
+                <h2 class="mb-3 border-bottom border-2 border-primary-custom pb-2 fs-4 fw-bold text-primary-custom">Jumat</h2>
+                <ul class="d-flex flex-column gap-3">
+                    <li class="schedule-item">
+                        <strong class="text-muted">Sarapan:</strong>
+                        <a class="fw-semibold" href="resep.html">Pilih Resep</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Siang:</strong>
+                        <a class="fw-semibold" href="resep/gado-gado-jakarta.html">Gado-Gado Jakarta</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Malam:</strong>
+                        <a class="fw-semibold" href="resep.html">Pilih Resep</a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="rounded-3 border bg-white p-4">
+                <h2 class="mb-3 border-bottom border-2 border-primary-custom pb-2 fs-4 fw-bold text-primary-custom">Sabtu</h2>
+                <ul class="d-flex flex-column gap-3">
+                    <li class="schedule-item">
+                        <strong class="text-muted">Sarapan:</strong>
+                        <a class="fw-semibold" href="resep.html">Pilih Resep</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Siang:</strong>
+                        <a class="fw-semibold" href="resep.html">Pilih Resep</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Malam:</strong>
+                        <a class="fw-semibold" href="resep/rendang-daging-sapi.html">Rendang Daging Sapi</a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="rounded-3 border bg-white p-4">
+                <h2 class="mb-3 border-bottom border-2 border-primary-custom pb-2 fs-4 fw-bold text-primary-custom">Minggu</h2>
+                <ul class="d-flex flex-column gap-3">
+                    <li class="schedule-item">
+                        <strong class="text-muted">Sarapan:</strong>
+                        <a class="fw-semibold" href="resep.html">Pilih Resep</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Siang:</strong>
+                        <a class="fw-semibold" href="resep.html">Pilih Resep</a>
+                    </li>
+                    <li class="schedule-item">
+                        <strong class="text-muted">Makan Malam:</strong>
+                        <a class="fw-semibold" href="resep.html">Pilih Resep</a>
+                    </li>
+                </ul>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer id="site-footer" class="mt-auto border-top border bg-white px-3 pb-4 pt-5">
+
+        <div id="footer-brand" class="mb-4 mx-auto max-w-main d-md-flex align-items-md-center justify-content-md-between text-md-start">
+            <p id="footer-logo" class="mb-3 fs-3 fw-bolder text-primary-custom">
+                RecipeMate
+            </p>
+            <p id="footer-tagline" class="max-w-tagline text-muted text-md-end">
+                Temukan inspirasi masakan baru setiap hari. Dari dapur sederhana hingga sajian spesial — semua ada di RecipeMate.
+            </p>
+        </div>
+
+        <nav id="footer-nav" class="mx-auto mb-5 max-w-main gap-4 grid-cards-md">
+
+            <section class="mb-5">
+                <h3 class="mb-3 fs-5 fw-bold text-dark">Explore</h3>
+                <ul class="d-flex flex-column gap-3">
+                    <li><a href="resep.html" class="text-muted">Resep</a></li>
+                    <li><a href="kategori.html" class="text-muted">Kategori</a></li>
+                    <li><a href="masak-dengan-bahan.html" class="text-muted">Masak Dengan Bahan</a></li>
+                    <li><a href="perencana-makan.html" class="text-muted">Perencana Makan</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3 class="mb-3 fs-5 fw-bold text-dark">Company</h3>
+                <ul class="d-flex flex-column gap-3">
+                    <li><a href="about.html" class="text-muted">About</a></li>
+                    <li><a href="contact.html" class="text-muted">Contact</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3 class="mb-3 fs-5 fw-bold text-dark">Legal</h3>
+                <ul class="d-flex flex-column gap-3">
+                    <li><a href="privacy-policy.html" class="text-muted">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="text-muted">Terms</a></li>
+                </ul>
+            </section>
+
+        </nav>
+
+        <div id="footer-bottom" class="mx-auto max-w-main border-top border pt-4 text-center small text-muted">
+            <p id="footer-copyright">
+                <small>
+                    &copy; <time datetime="2026">2026</time> RecipeMate. All rights reserved.
+                </small>
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

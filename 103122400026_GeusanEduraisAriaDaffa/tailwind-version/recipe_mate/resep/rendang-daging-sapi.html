@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Resep Rendang Daging Sapi lengkap dengan bahan dan cara membuat. Rendang otentik Padang dengan daging sapi empuk dan bumbu rempah yang meresap sempurna." />
+    <meta name="author" content="RecipeMate Team" />
+    <title>Rendang Daging Sapi | RecipeMate</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-bg-body: #fdfbf7;
+            --color-primary: #d97706;
+            --color-primary-hover: #b45309;
+            --color-text-main: #1f2937;
+            --color-border: #e5e7eb;
+        }
+
+        @layer base {
+            a {
+                transition: color 0.2s ease-in-out;
+            }
+
+            a:hover {
+                color: var(--color-primary);
+            }
+
+            ul,
+            ol {
+                list-style: none;
+            }
+
+            img {
+                display: block;
+            }
+
+            button,
+            input,
+            select,
+            textarea {
+                font-family: inherit;
+                font-size: 1rem;
+                border: 1px solid var(--color-border);
+                border-radius: 0.5rem;
+                padding: 0.75rem 1.25rem;
+                background-color: #fff;
+                color: var(--color-text-main);
+                transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            input:focus,
+            select:focus,
+            textarea:focus {
+                outline: none;
+                border-color: var(--color-primary);
+                box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+            }
+
+            button {
+                background-color: var(--color-primary);
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                font-weight: 600;
+                transition: background-color 0.2s ease-in-out;
+            }
+
+            button:hover {
+                background-color: var(--color-primary-hover);
+            }
+        }
+    </style>
+</head>
+
+<body class="flex min-h-screen flex-col bg-bg-body font-sans text-gray-800 leading-[1.6]">
+
+    <header id="header" class="sticky top-0 z-[100] border-b border-gray-200 bg-white">
+        <nav id="nav" class="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-6 p-4">
+
+            <div id="logo">
+                <a href="../index.html" class="text-2xl font-extrabold tracking-tight text-amber-600">
+                    <span>RecipeMate</span>
+                </a>
+            </div>
+
+            <ul id="menu" role="list" class="flex flex-wrap items-center gap-6">
+                <li><a href="../index.html" class="font-medium">Home</a></li>
+                <li><a href="../resep.html" class="font-medium">Resep</a></li>
+                <li><a href="../kategori.html" class="font-medium">Kategori</a></li>
+                <li><a href="../masak-dengan-bahan.html" class="font-medium">Masak Dengan Bahan</a></li>
+                <li><a href="../perencana-makan.html" class="font-medium">Perencana Makan</a></li>
+                <li><a href="../favorit.html" class="font-medium">Favorit</a></li>
+            </ul>
+
+            <div id="auth" class="flex gap-4">
+                <a href="../login.html" id="login" class="rounded border border-gray-200 px-5 py-2 font-semibold hover:border-amber-600">Login</a>
+                <a href="../register.html" id="register" class="rounded bg-amber-600 px-5 py-2 font-semibold text-white hover:bg-amber-700">Register</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main id="content" class="mx-auto w-full max-w-[1200px] flex-1 px-4 py-10">
+
+        <article id="detail-resep">
+
+            <header id="header-resep" class="mb-12 flex flex-col gap-8 lg:flex-row lg:items-center">
+                <div class="flex flex-col lg:flex-1 lg:pr-8">
+                    <nav id="breadcrumb" class="mb-6 text-sm text-gray-600">
+                        <a class="text-amber-600" href="../index.html">Home</a> &rsaquo;
+                        <a class="text-amber-600" href="../resep.html">Resep</a> &rsaquo;
+                        <a class="text-amber-600" href="../kategori/makan-malam.html">Makan Malam</a> &rsaquo;
+                        <span>Rendang Daging Sapi</span>
+                    </nav>
+
+                    <h1 class="mb-3 text-4xl font-extrabold leading-[1.2] text-gray-800">Rendang Daging Sapi</h1>
+                    <p class="max-w-[700px] text-lg text-gray-600">Rendang otentik Padang dengan daging sapi empuk dan bumbu rempah yang meresap sempurna. Hidangan kebanggaan Indonesia.</p>
+
+                    <section id="info-resep" class="mb-10 mt-6 rounded-lg border border-gray-200 bg-white p-6">
+                        <dl class="grid grid-cols-1 gap-6 [grid-template-columns:repeat(auto-fit,minmax(150px,1fr))]">
+                            <div class="flex flex-col gap-1">
+                                <dt class="text-sm text-gray-600">Waktu Memasak</dt>
+                                <dd class="text-xl font-bold"><time datetime="PT180M">3 jam</time></dd>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <dt class="text-sm text-gray-600">Porsi</dt>
+                                <dd class="text-xl font-bold">6 Porsi</dd>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <dt class="text-sm text-gray-600">Tingkat Kesulitan</dt>
+                                <dd class="text-xl font-bold">Sedang</dd>
+                            </div>
+                        </dl>
+                    </section>
+                </div>
+
+                <div class="lg:flex-1">
+                    <img src="../assets/img/resep/rendang_daging.jpg" alt="Rendang daging sapi Padang dengan bumbu kuah kental berwarna cokelat gelap" width="800" height="400"  class="mt-8 h-full w-full max-h-[450px] rounded-lg object-cover" />
+                </div>
+            </header>
+
+            <section id="bahan-resep" class="mb-16">
+                <h2 class="mb-6 border-b-2 border-gray-200 pb-2 text-[1.75rem] font-bold">Bahan-bahan</h2>
+
+                <h3 class="mb-3 mt-6 text-lg font-bold text-amber-600">Bahan Utama</h3>
+                <ul class="list-inside list-disc mb-6">
+                    <li class="mb-2">1 kg daging sapi (sengkel atau paha), potong dadu besar</li>
+                    <li class="mb-2">1,5 liter santan kental dari 2 butir kelapa</li>
+                    <li class="mb-2">2 lembar daun jeruk purut</li>
+                    <li class="mb-2">2 lembar daun kunyit</li>
+                    <li class="mb-2">2 batang serai, memarkan</li>
+                    <li class="mb-2">3 cm lengkuas, memarkan</li>
+                    <li class="mb-2">2 sendok makan minyak goreng</li>
+                    <li class="mb-2">1 sendok teh garam, atau sesuai selera</li>
+                </ul>
+
+                <h3 class="mb-3 mt-6 text-lg font-bold text-amber-600">Bumbu Halus</h3>
+                <ul class="list-inside list-disc mb-6">
+                    <li class="mb-2">10 butir bawang merah</li>
+                    <li class="mb-2">6 siung bawang putih</li>
+                    <li class="mb-2">4 cm jahe</li>
+                    <li class="mb-2">3 cm kunyit, bakar</li>
+                    <li class="mb-2">3 buah cabai merah keriting</li>
+                    <li class="mb-2">2 buah cabai rawit (sesuai selera)</li>
+                    <li class="mb-2">1 sendok teh ketumbar bubuk</li>
+                    <li class="mb-2">1/2 sendok teh merica bubuk</li>
+                </ul>
+
+                <h3 class="mb-3 mt-6 text-lg font-bold text-amber-600">Pelengkap</h3>
+                <ul class="list-inside list-disc mb-6">
+                    <li class="mb-2">Nasi putih hangat</li>
+                    <li class="mb-2">Ketupat atau lontong (opsional)</li>
+                </ul>
+            </section>
+
+            <section id="cara-memasak" class="mb-16">
+                <h2 class="mb-6 border-b-2 border-gray-200 pb-2 text-[1.75rem] font-bold">Cara Memasak</h2>
+                <ol class="list-inside list-decimal mb-8">
+                    <li class="mb-4 pl-2">Panaskan minyak goreng dengan api sedang. Tumis bumbu halus hingga harum dan matang, sekitar 5 menit.</li>
+                    <li class="mb-4 pl-2">Masukkan serai, lengkuas, daun jeruk, dan daun kunyit. Aduk hingga wangi.</li>
+                    <li class="mb-4 pl-2">Masukkan potongan daging sapi, aduk rata hingga permukaan daging berubah warna.</li>
+                    <li class="mb-4 pl-2">Tuangkan santan encer (sisakan santan kental), didihkan sambil diaduk perlahan.</li>
+                    <li class="mb-4 pl-2">Kecilkan api dan masukkan santan kental. Masak sambil terus diaduk agar santan tidak pecah dan tidak gosong.</li>
+                    <li class="mb-4 pl-2">Lanjutkan memasak selama 2–3 jam hingga bumbu meresap sempurna, minyak kelapa terpisah, dan kuah mengental menjadi rendang kering.</li>
+                    <li class="mb-4 pl-2">Koreksi rasa dengan garam. Angkat dan sajikan bersama nasi hangat.</li>
+                </ol>
+            </section>
+
+            <section id="tips-memasak" class="mb-16">
+                <h2 class="mb-6 border-b-2 border-gray-200 pb-2 text-[1.75rem] font-bold">Tips</h2>
+                <p>Rendang akan lebih awet dan gurih jika dimasak dengan api kecil dan diaduk secara berkala hingga kuahnya kering. Sisa rendang justru makin lezat setelah disimpan semalam di kulkas.</p>
+            </section>
+
+            <div class="mt-6">
+                <a href="../resep.html" class="underline">&#8592; Kembali ke Semua Resep</a>
+            </div>
+
+        </article>
+
+    </main>
+
+    <footer id="site-footer" role="contentinfo" class="mt-auto border-t border-gray-200 bg-white px-4 pb-6 pt-16">
+
+        <div id="footer-brand" class="mb-12 mx-auto max-w-[1200px] md:flex md:items-center md:justify-between md:text-left">
+            <p id="footer-logo" class="mb-3 text-2xl font-extrabold tracking-tight text-amber-600">
+                RecipeMate
+            </p>
+            <p id="footer-tagline" class="max-w-[350px] text-gray-600 md:text-right">
+                Temukan inspirasi masakan baru setiap hari. Dari dapur sederhana hingga sajian spesial, semua ada di RecipeMate.
+            </p>
+        </div>
+
+        <footer id="footer" class="mx-auto mb-16 grid max-w-[1200px] gap-10 [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))]">
+
+            <section class="mb-16">
+                <h3 class="mb-5 text-lg font-bold text-gray-800">Explore</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="../index.html" class="text-gray-600">Home</a></li>
+                    <li><a href="../resep.html" class="text-gray-600">Recipes</a></li>
+                    <li><a href="../kategori.html" class="text-gray-600">Categories</a></li>
+                    <li><a href="../masak-dengan-bahan.html" class="text-gray-600">Cook With What You Have</a></li>
+                    <li><a href="../perencana-makan.html" class="text-gray-600">Meal Planner</a></li>
+                    <li><a href="../favorit.html" class="text-gray-600">Favorites</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="mb-5 text-lg font-bold text-gray-800">Company</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="../about.html" class="text-gray-600">About</a></li>
+                    <li><a href="../contact.html" class="text-gray-600">Contact</a></li>
+                    <li><a href="../blog.html" class="text-gray-600">Blog</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="mb-5 text-lg font-bold text-gray-800">Legal</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="../privacy-policy.html" class="text-gray-600">Privacy Policy</a></li>
+                    <li><a href="../terms.html" class="text-gray-600">Terms of Service</a></li>
+                </ul>
+            </section>
+
+        </footer>
+
+        <div id="footer-bottom" class="mx-auto max-w-[1200px] border-t border-gray-200 pt-6 text-center text-sm text-gray-600">
+            <p id="footer-copyright">
+                <small>
+                    &copy; <time datetime="2026">2026</time> RecipeMate. All rights reserved.
+                </small>
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
