@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamLinux Indonesia - Distro</title>
+    <link rel="stylesheet" href="distro.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <!-- Header -->
+    <header class="bg-dark text-white text-center py-4 shadow-sm mb-4">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Distro Linux</h1>
+            <p class="lead text-secondary mb-0">Eksplorasi ragam distribusi Linux terbaik sesuai kebutuhanmu</p>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <div class="container mb-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary rounded shadow-sm px-3">
+            <span class="navbar-brand mb-0 h1 d-lg-none">Menu</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100 justify-content-around">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" href="distro.html">Distro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="join.html">Join</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="member.html">Member</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <main class="container flex-grow-1 mb-5">
+        <h2 class="h3 mb-4 text-center fw-bold text-dark border-bottom pb-2">Berbagai Distro Linux Populer</h2>
+
+        <!-- Basis Debian -->
+        <section class="mb-5">
+            <div class="bg-white p-4 rounded shadow-sm">
+                <h3 class="h4 text-primary fw-bold">Basis Debian</h3>
+                <p class="text-muted">Distro yang diturunkan dari Debian, terkenal dengan stabilitas tinggi dan sistem
+                    manajemen paket APT yang matang.</p>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm text-center p-3">
+                            <div class="d-flex align-items-center justify-content-center my-3" style="height: 120px;">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Openlogo-debianV2.svg/1280px-Openlogo-debianV2.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20220905005628"
+                                    alt="Debian Logo" class="img-fluid mh-100">
+                            </div>
+                            <div class="card-body p-2">
+                                <h4 class="card-title h5 fw-bold">Debian</h4>
+                                <p class="card-text text-secondary">Cocok untuk dipakai di <strong>server</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm text-center p-3">
+                            <div class="d-flex align-items-center justify-content-center my-3" style="height: 120px;">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/1280px-UbuntuCoF.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20120210072525"
+                                    alt="Ubuntu Logo" class="img-fluid mh-100">
+                            </div>
+                            <div class="card-body p-2">
+                                <h4 class="card-title h5 fw-bold">Ubuntu</h4>
+                                <p class="card-text text-secondary">Cocok untuk user <strong>pemula dan pengguna
+                                        harian</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm text-center p-3">
+                            <div class="d-flex align-items-center justify-content-center my-3" style="height: 120px;">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Linux_Mint_logo_without_wordmark.svg/1280px-Linux_Mint_logo_without_wordmark.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20211107101027"
+                                    alt="Linux Mint Logo" class="img-fluid mh-100">
+                            </div>
+                            <div class="card-body p-2">
+                                <h4 class="card-title h5 fw-bold">Mint</h4>
+                                <p class="card-text text-secondary">Cocok untuk user yang baru <strong>migrasi dari
+                                        Windows</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Basis Arch -->
+        <section class="mb-5">
+            <div class="bg-white p-4 rounded shadow-sm">
+                <h3 class="h4 text-primary fw-bold">Basis Arch</h3>
+                <p class="text-muted">Distro dengan model rolling release yang berfokus pada kustomisasi tinggi,
+                    fleksibilitas, dan kesederhanaan sistem.</p>
+
+                <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm text-center p-3">
+                            <div class="d-flex align-items-center justify-content-center my-3" style="height: 120px;">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Arch_Linux_%22Crystal%22_icon.svg/960px-Arch_Linux_%22Crystal%22_icon.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20230812231250"
+                                    alt="Arch Linux Logo" class="img-fluid mh-100">
+                            </div>
+                            <div class="card-body p-2">
+                                <h4 class="card-title h5 fw-bold">Arch</h4>
+                                <p class="card-text text-secondary">Cocok untuk user yang suka <strong>kustomisasi dan
+                                        merakit sistem sendiri</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm text-center p-3">
+                            <div class="d-flex align-items-center justify-content-center my-3" style="height: 120px;">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/CachyOS_Logo.svg/250px-CachyOS_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20230130074653"
+                                    alt="CachyOS Logo" class="img-fluid mh-100">
+                            </div>
+                            <div class="card-body p-2">
+                                <h4 class="card-title h5 fw-bold">Cachy</h4>
+                                <p class="card-text text-secondary">Cocok untuk user yang suka <strong>mengejar performa
+                                        tinggi dan bermain game</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Basis Fedora -->
+        <section class="mb-5">
+            <div class="bg-white p-4 rounded shadow-sm">
+                <h3 class="h4 text-primary fw-bold">Basis Fedora</h3>
+                <p class="text-muted">Distro yang berfokus pada teknologi open-source mutakhir, inovasi perangkat lunak
+                    terbaru, dan standar enterprise.</p>
+
+                <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm text-center p-3">
+                            <div class="d-flex align-items-center justify-content-center my-3" style="height: 120px;">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Fedora-logo.svg/330px-Fedora-logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20150505191134"
+                                    alt="Fedora Logo" class="img-fluid mh-100">
+                            </div>
+                            <div class="card-body p-2">
+                                <h4 class="card-title h5 fw-bold">Fedora</h4>
+                                <p class="card-text text-secondary">Cocok untuk <strong>developer dan menjalankan fitur
+                                        terbaru</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm text-center p-3">
+                            <div class="d-flex align-items-center justify-content-center my-3" style="height: 120px;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Nobara_logotype.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+                                    alt="Nobara Logo" class="img-fluid mh-100">
+                            </div>
+                            <div class="card-body p-2">
+                                <h4 class="card-title h5 fw-bold">Nobara</h4>
+                                <p class="card-text text-secondary">Cocok untuk <strong>gamer dan Content
+                                        Creator</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-3 border-top mt-auto text-muted">
+        <div class="container">
+            <p class="mb-0 small">&copy; 2026 TeamLinux Indonesia. Dibuat oleh <strong>Rafael Putra Septava</strong>
+                pada <time>30 September 2026</time>.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
