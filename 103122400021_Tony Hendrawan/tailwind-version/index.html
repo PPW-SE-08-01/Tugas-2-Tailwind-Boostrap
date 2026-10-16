@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TurKita - Temukan Liburan Seru</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ["Outfit", "sans-serif"] }, colors: { navy: "#132238", blue: "#0d6efd", cream: "#f7f9fc" } } } };</script>
+</head>
+
+<body class="bg-cream font-sans text-black antialiased">
+    <nav class="sticky top-0 z-10 border-b border-slate-200/80 bg-cream/95 backdrop-blur">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+            <a href="#beranda" class="text-xl font-extrabold text-black">Tur<span class="text-black">Kita</span></a>
+            <div class="hidden items-center gap-7 text-sm font-medium text-black md:flex">
+                <a href="#beranda" class="hover:text-black">Beranda</a>
+                <a href="#kontak"
+                    class="rounded-full bg-blue px-5 py-2.5 font-semibold text-white hover:bg-blue-700">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header id="beranda" class="mx-auto max-w-6xl px-5 py-16 lg:py-24">
+            <div class="grid items-center gap-12 lg:grid-cols-2">
+                <div>
+                    <h1 class="text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">Yuk, cari <span
+                            class="text-black">tempat seru</span> bareng TurKita.</h1>
+                    <p class="mt-6 max-w-xl text-lg leading-8 text-black">Rencanakan perjalanan tanpa ribet. Pilih
+                        destinasi, ajak orang terdekat, lalu nikmati momen yang tidak terlupakan.</p>
+                    <a href="#layanan"
+                        class="mt-7 inline-block rounded-full bg-blue px-6 py-3.5 font-semibold text-white shadow-lg shadow-blue/20 hover:bg-blue-700">Lihat
+                        layanan</a>
+                    <div class="mt-12 grid max-w-md grid-cols-3 gap-4">
+                        <div><strong class="block text-2xl">50+</strong><small>Destinasi</small></div>
+                        <div><strong class="block text-2xl">1.200+</strong><small>Pelancong</small></div>
+                        <div><strong class="block text-2xl">4.9/5</strong><small>Ulasan</small></div>
+                    </div>
+                </div>
+                <img class="h-[300px] w-full rounded-3xl object-cover shadow-2xl shadow-navy/15 sm:h-[430px]"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj4MJBWdKxUEQf4uDbnAybSVd-P4Btnj9s7Cgr1fDWkQ&s=10" alt="Pemandangan tempat wisata">
+            </div>
+        </header>
+
+        <section id="layanan" class="bg-white py-20">
+            <div class="mx-auto max-w-6xl px-5">
+                <div class="mx-auto mb-12 max-w-2xl text-center">
+                    <h2 class="text-3xl font-bold sm:text-4xl">Semua yang kamu butuhkan untuk liburan</h2>
+                    <p class="mt-4 text-lg leading-7">TurKita membantu membuat rencana perjalanan terasa lebih mudah.</p>
+                </div>
+                <div class="grid gap-5 md:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-200 p-6">
+                        <h3 class="text-xl font-bold">Pilihan destinasi</h3>
+                        <p class="mt-3 leading-7">Temukan tempat menarik yang cocok untuk liburan bersama keluarga atau teman.</p>
+                    </article>
+                    <article class="rounded-2xl border border-slate-200 p-6">
+                        <h3 class="text-xl font-bold">Rencana yang praktis</h3>
+                        <p class="mt-3 leading-7">Susun perjalanan dengan informasi yang jelas dan mudah diikuti.</p>
+                    </article>
+                    <article class="rounded-2xl border border-slate-200 p-6">
+                        <h3 class="text-xl font-bold">Bantuan perjalanan</h3>
+                        <p class="mt-3 leading-7">Dapatkan bantuan saat memilih tujuan dan menyiapkan perjalananmu.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="bg-white py-20">
+            <div class="mx-auto max-w-6xl px-5">
+                <div class="rounded-3xl bg-blue p-8 text-white sm:p-12">
+                    <p class="text-xs font-bold uppercase tracking-[.16em] text-white">Siap berangkat?</p>
+                    <div class="mt-2 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+                        <div>
+                            <h2 class="text-3xl font-bold">Liburan berikutnya bisa dimulai hari ini.</h2>
+                            <p class="mt-2">Cerita rencana liburanmu, kami bantu carikan pilihan yang pas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <p><strong>Email:</strong> halo@turkita.id</p>
+                    <p class="mt-1"><strong>Telepon:</strong> +62 812-3456-7890</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-cream px-5 py-8 text-center">© 2026 TurKita. Semua hak dilindungi.</footer>
+
+</body>
+
+</html>
