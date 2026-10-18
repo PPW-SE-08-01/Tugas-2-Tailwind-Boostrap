@@ -1,0 +1,74 @@
+/* =====================================================
+   RG ECOPRINT - Tema untuk Bootstrap 5.3
+   Dimuat SETELAH bootstrap.min.css. Hanya berisi tema:
+   warna, font, dan beberapa helper kecil.
+   Layout & spacing memakai class Bootstrap langsung di HTML.
+   ===================================================== */
+
+:root {
+  --forest: #2c3b2e;
+  --forest-deep: #1e2a20;
+  --paper: #f1ead9;
+  --paper-warm: #eae1cb;
+  --rust: #b4522f;
+  --olive: #6b7a4f;
+  --ink: #2a2420;
+  --ink-soft: #5b5348;
+
+  --font-sans: "Work Sans", sans-serif;
+  --font-display: "Fraunces", serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* Variabel Bootstrap -> tema RG Ecoprint */
+  --bs-body-bg: var(--paper);
+  --bs-body-color: var(--ink);
+  --bs-body-color-rgb: 42, 36, 32;
+  --bs-body-font-family: var(--font-sans);
+  --bs-body-line-height: 1.6;
+  --bs-font-monospace: var(--font-mono);
+  --bs-primary-rgb: 180, 82, 47;   /* rust  -> text-primary, border-primary */
+  --bs-dark-rgb: 44, 59, 46;       /* forest -> bg-dark, btn-outline-dark   */
+  --bs-light-rgb: 241, 234, 217;   /* paper  -> text-light, border-light    */
+  --bs-secondary-color: var(--ink-soft);   /* text-body-secondary */
+  --bs-tertiary-bg: var(--paper-warm);
+  --bs-tertiary-bg-rgb: 234, 225, 203;     /* paper-warm -> bg-body-tertiary */
+  --bs-border-color: rgba(42, 36, 32, 0.14);
+  --bs-link-color-rgb: 42, 36, 32;
+  --bs-link-hover-color-rgb: 180, 82, 47;
+}
+
+body { padding-top: 4.5rem; } /* ruang untuk navbar fixed-top */
+a { text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Helper kecil di luar Bootstrap */
+.font-display { font-family: var(--font-display); }
+.text-olive { color: var(--olive) !important; }
+.text-paper-warm { color: var(--paper-warm) !important; }
+.bg-forest-deep { background-color: var(--forest-deep) !important; }
+.tracking { letter-spacing: 0.12em; }
+
+/* Navbar */
+.rg-nav {
+  background: rgba(241, 234, 217, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  --bs-navbar-color: var(--ink-soft);
+  --bs-navbar-hover-color: var(--rust);
+  --bs-navbar-active-color: var(--rust);
+}
+
+/* Komponen Bootstrap yang disesuaikan */
+.table { --bs-table-bg: transparent; }
+.form-control:focus {
+  border-color: var(--ink);
+  box-shadow: none;
+}
+.rg-lift { transition: transform 0.3s ease; }
+.rg-lift:hover { transform: translateY(-5px); }
