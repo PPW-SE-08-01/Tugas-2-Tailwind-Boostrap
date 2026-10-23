@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pilih bahan makanan yang Anda miliki, dan temukan resep lezat yang bisa Anda masak hari ini di RecipeMate." />
+    <meta name="author" content="RecipeMate Team" />
+    <title>Masak Dengan Bahan | RecipeMate</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="d-flex min-vh-100 flex-column bg-body-custom text-dark">
+
+    <header id="header" class="sticky-top z-header border-bottom border bg-white">
+        <nav id="nav" class="mx-auto d-flex max-w-main flex-wrap align-items-center justify-content-between gap-4 p-3">
+
+            <div id="logo">
+                <a href="index.html" class="fs-3 fw-bolder text-primary-custom">
+                    <span>RecipeMate</span>
+                </a>
+            </div>
+
+            <ul id="menu" class="d-flex flex-wrap align-items-center gap-4">
+                <li><a href="index.html" class="fw-medium">Home</a></li>
+                <li><a href="resep.html" class="fw-medium">Resep</a></li>
+                <li><a href="kategori.html" class="fw-medium">Kategori</a></li>
+                <li><a href="masak-dengan-bahan.html" aria-current="page" class="fw-bold text-primary-custom">Masak Dengan Bahan</a></li>
+                <li><a href="perencana-makan.html" class="fw-medium">Perencana Makan</a></li>
+                <li><a href="favorit.html" class="fw-medium">Favorit</a></li>
+            </ul>
+
+            <div id="auth" class="d-flex gap-3">
+                <a href="login.html" id="login" class="btn-outline-custom rounded px-3 py-2 text-decoration-none">Login</a>
+                <a href="register.html" id="register" class="btn-primary-custom rounded px-3 py-2 text-decoration-none">Register</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main id="content" class="mx-auto w-100 max-w-main flex-grow-1 px-3 py-5">
+
+        <section id="page-header" class="mb-4 rounded-3 border bg-white px-3 py-5 text-center">
+            <div id="page-header-content">
+                <h1 class="mb-3 fs-1 fw-bolder text-dark">Masak Dengan Bahan</h1>
+                <p class="mx-auto mb-4 max-w-hero-p fs-5 text-muted">Bingung ingin masak apa? Pilih bahan-bahan yang Anda miliki di dapur, dan kami akan merekomendasikan resep yang tepat untuk Anda.</p>
+            </div>
+        </section>
+
+        <section id="pilih-bahan" class="mb-5">
+            <div id="container-bahan">
+                <h2 class="mb-2 fs-3 fw-bold">Bahan Apa yang Anda Punya Hari Ini?</h2>
+                
+                <ul class="mb-4 d-flex flex-wrap gap-3">
+                    <li><a class="badge-tag-custom text-decoration-none" href="search.html?ingredient=telur">Telur</a></li>
+                    <li><a class="badge-tag-custom text-decoration-none" href="search.html?ingredient=ayam">Ayam</a></li>
+                    <li><a class="badge-tag-custom text-decoration-none" href="search.html?ingredient=daging">Daging</a></li>
+                    <li><a class="badge-tag-custom text-decoration-none" href="search.html?ingredient=sayuran">Sayuran</a></li>
+                    <li><a class="badge-tag-custom text-decoration-none" href="search.html?ingredient=nasi">Nasi</a></li>
+                    <li><a class="badge-tag-custom text-decoration-none" href="search.html?ingredient=mie">Mie</a></li>
+                    <li><a class="badge-tag-custom text-decoration-none" href="search.html?ingredient=tahu">Tahu</a></li>
+                    <li><a class="badge-tag-custom text-decoration-none" href="search.html?ingredient=tempe">Tempe</a></li>
+                    <li><a class="badge-tag-custom text-decoration-none" href="search.html?ingredient=seafood">Seafood</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="rekomendasi-bahan" class="mb-5">
+            <p>Tidak menemukan bahan yang Anda cari?</p>
+            <a href="resep.html">Lihat Semua Resep</a>
+        </section>
+
+    </main>
+
+    <footer id="site-footer" class="mt-auto border-top border bg-white px-3 pb-4 pt-5">
+
+        <div id="footer-brand" class="mb-4 mx-auto max-w-main d-md-flex align-items-md-center justify-content-md-between text-md-start">
+            <p id="footer-logo" class="mb-3 fs-3 fw-bolder text-primary-custom">
+                RecipeMate
+            </p>
+            <p id="footer-tagline" class="max-w-tagline text-muted text-md-end">
+                Temukan inspirasi masakan baru setiap hari. Dari dapur sederhana hingga sajian spesial — semua ada di RecipeMate.
+            </p>
+        </div>
+
+        <nav id="footer-nav" class="mx-auto mb-5 max-w-main gap-4 grid-cards-md">
+
+            <section class="mb-5">
+                <h3 class="mb-3 fs-5 fw-bold text-dark">Explore</h3>
+                <ul class="d-flex flex-column gap-3">
+                    <li><a href="resep.html" class="text-muted">Resep</a></li>
+                    <li><a href="kategori.html" class="text-muted">Kategori</a></li>
+                    <li><a href="masak-dengan-bahan.html" class="text-muted">Masak Dengan Bahan</a></li>
+                    <li><a href="perencana-makan.html" class="text-muted">Perencana Makan</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3 class="mb-3 fs-5 fw-bold text-dark">Company</h3>
+                <ul class="d-flex flex-column gap-3">
+                    <li><a href="about.html" class="text-muted">About</a></li>
+                    <li><a href="contact.html" class="text-muted">Contact</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3 class="mb-3 fs-5 fw-bold text-dark">Legal</h3>
+                <ul class="d-flex flex-column gap-3">
+                    <li><a href="privacy-policy.html" class="text-muted">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="text-muted">Terms</a></li>
+                </ul>
+            </section>
+
+        </nav>
+
+        <div id="footer-bottom" class="mx-auto max-w-main border-top border pt-4 text-center small text-muted">
+            <p id="footer-copyright">
+                <small>
+                    &copy; <time datetime="2026">2026</time> RecipeMate. All rights reserved.
+                </small>
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
