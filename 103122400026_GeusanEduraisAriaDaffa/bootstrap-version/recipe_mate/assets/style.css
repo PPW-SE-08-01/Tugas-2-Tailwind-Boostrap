@@ -1,0 +1,314 @@
+/* RecipeMate Custom CSS Variables & Base Styles */
+:root {
+    --bs-body-bg: #fdfbf7;
+    --bs-body-color: #1f2937;
+    --color-primary: #d97706;
+    --color-primary-hover: #b45309;
+    --color-text-main: #1f2937;
+    --color-border: #e5e7eb;
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background-color: #fff;
+    color: var(--color-text-main);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+}
+
+button {
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* Custom Primary & Theme Classes */
+.text-primary-custom {
+    color: #d97706 !important;
+}
+
+.text-primary-dark {
+    color: #b45309 !important;
+}
+
+.bg-primary-custom {
+    background-color: #d97706 !important;
+    color: #ffffff !important;
+}
+
+.bg-primary-subtle-custom {
+    background-color: #fef3c7 !important;
+    color: #b45309 !important;
+}
+
+.bg-body-custom {
+    background-color: #fdfbf7 !important;
+}
+
+.border-primary-custom {
+    border-color: #d97706 !important;
+}
+
+/* Button & Interactive styles */
+.btn-primary-custom {
+    background-color: #d97706 !important;
+    border-color: #d97706 !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn-primary-custom:hover,
+.btn-primary-custom:focus {
+    background-color: #b45309 !important;
+    border-color: #b45309 !important;
+    color: #ffffff !important;
+}
+
+.btn-outline-custom {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb !important;
+    color: #1f2937 !important;
+    font-weight: 600;
+    transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.btn-outline-custom:hover {
+    border-color: #d97706 !important;
+    color: #d97706 !important;
+}
+
+.badge-tag-custom {
+    display: inline-block;
+    border-radius: 50rem;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.badge-tag-custom:hover {
+    border-color: #d97706;
+    color: #d97706;
+}
+
+.badge-category-custom {
+    display: inline-block;
+    align-self: flex-start;
+    border-radius: 0.25rem;
+    background-color: #fef3c7;
+    color: #b45309;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-recipe-btn {
+    display: block;
+    border-radius: 0.25rem;
+    border: 1px solid #e5e7eb;
+    background-color: #fdfbf7;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-recipe-btn:hover {
+    border-color: #d97706;
+    background-color: #d97706;
+    color: #ffffff;
+}
+
+.card-hover-elevate {
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-hover-elevate:hover {
+    transform: translateY(-4px);
+    border-color: #d97706 !important;
+}
+
+/* Grids matching RecipeMate layout */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.grid-cards-sm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.grid-cards-md {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+}
+
+.grid-cards-lg {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Layout widths & constraints */
+.max-w-main {
+    max-width: 1200px;
+}
+
+.max-w-hero-p {
+    max-width: 700px;
+}
+
+.max-w-search {
+    max-width: 600px;
+}
+
+.max-w-form-box {
+    max-width: 480px;
+}
+
+.max-w-tagline {
+    max-width: 350px;
+}
+
+.min-w-field {
+    min-width: 150px;
+}
+
+/* Image styling */
+.img-recipe-cover {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-category-cover {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-detail-cover {
+    max-height: 450px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.z-header {
+    z-index: 1020;
+}
+
+/* Pagination items */
+.pagination-item {
+    display: inline-flex;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-weight: 500;
+    color: #1f2937;
+    transition: all 0.2s ease-in-out;
+}
+
+.pagination-item:hover {
+    border-color: #d97706;
+    color: #d97706;
+}
+
+.pagination-item.active {
+    border-color: #d97706;
+    background-color: #d97706;
+    color: #ffffff;
+}
+
+/* List item utility */
+.schedule-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.schedule-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Ingredients and preparation lists in recipe details */
+#bahan-resep ul {
+    list-style-type: disc !important;
+    padding-left: 1.5rem !important;
+}
+
+#cara-memasak ol {
+    list-style-type: decimal !important;
+    padding-left: 1.5rem !important;
+}
+

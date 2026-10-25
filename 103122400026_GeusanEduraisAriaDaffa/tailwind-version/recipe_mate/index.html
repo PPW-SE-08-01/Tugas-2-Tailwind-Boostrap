@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="RecipeMate — Temukan resep masakan lezat berdasarkan bahan yang kamu punya. Eksplorasi ribuan resep Indonesia dan internasional dengan mudah." />
+    <meta name="author" content="RecipeMate Team" />
+    <title>RecipeMate | Temukan Resep dari Bahan yang Kamu Punya</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-bg-body: #fdfbf7;
+            --color-primary: #d97706;
+            --color-primary-hover: #b45309;
+            --color-text-main: #1f2937;
+            --color-border: #e5e7eb;
+        }
+
+        @layer base {
+            a {
+                transition: color 0.2s ease-in-out;
+            }
+
+            a:hover {
+                color: var(--color-primary);
+            }
+
+            ul,
+            ol {
+                list-style: none;
+            }
+
+            img {
+                display: block;
+            }
+
+            button,
+            input,
+            select,
+            textarea {
+                font-family: inherit;
+                font-size: 1rem;
+                border: 1px solid var(--color-border);
+                border-radius: 0.5rem;
+                padding: 0.75rem 1.25rem;
+                background-color: #fff;
+                color: var(--color-text-main);
+                transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            input:focus,
+            select:focus,
+            textarea:focus {
+                outline: none;
+                border-color: var(--color-primary);
+                box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+            }
+
+            button {
+                background-color: var(--color-primary);
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                font-weight: 600;
+                transition: background-color 0.2s ease-in-out;
+            }
+
+            button:hover {
+                background-color: var(--color-primary-hover);
+            }
+        }
+    </style>
+</head>
+
+<body class="flex min-h-screen flex-col bg-bg-body font-sans text-gray-800 leading-[1.6]">
+    <header id="header" class="sticky top-0 z-[100] border-b border-gray-200 bg-white">
+        <nav id="nav" class="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-6 p-4">
+
+            <div id="logo">
+                <a href="index.html" class="text-2xl font-extrabold tracking-tight text-amber-600">
+                    <span>RecipeMate</span>
+                </a>
+            </div>
+
+            <ul id="menu" role="list" class="flex flex-wrap items-center gap-6">
+                <li><a href="index.html" class="font-medium">Home</a></li>
+                <li><a href="resep.html" class="font-medium">Resep</a></li>
+                <li><a href="kategori.html" class="font-medium">Kategori</a></li>
+                <li><a href="masak-dengan-bahan.html" class="font-medium">Masak Dengan Bahan</a></li>
+                <li><a href="perencana-makan.html" class="font-medium">Perencana Makan</a></li>
+                <li><a href="favorit.html" class="font-medium">Favorit</a></li>
+            </ul>
+
+            <div id="auth" class="flex gap-4">
+                <a href="login.html" id="login"
+                    class="rounded border border-gray-200 px-5 py-2 font-semibold hover:border-amber-600">Login</a>
+                <a href="register.html" id="register"
+                    class="rounded bg-amber-600 px-5 py-2 font-semibold text-white hover:bg-amber-700">Register</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main id="content" class="mx-auto w-full max-w-[1200px] flex-1 px-4 py-10">
+
+        <section id="hero" class="mb-16 rounded-lg border border-gray-200 bg-white px-4 py-20 text-center">
+            <div id="hero-content">
+                <h1 class="mb-3 text-4xl font-extrabold leading-[1.2] text-gray-800">Masak Apa Hari Ini?</h1>
+
+                <p class="mx-auto mb-8 max-w-[700px] text-lg text-gray-600">
+                    RecipeMate membantu kamu menemukan resep lezat berdasarkan bahan
+                    yang sudah ada di dapur. Tidak perlu bingung lagi — cukup ketik
+                    bahan yang kamu punya, dan kami siapkan resepnya!
+                </p>
+
+                <form id="search-form" action="search.html" method="get" role="search"
+                    class="mx-auto flex w-full max-w-[600px] flex-col gap-3 md:flex-row">
+                    <label for="search-input" class="hidden">
+                        Cari resep atau bahan masakan
+                    </label>
+                    <input type="search" id="search-input" name="q" placeholder="Cari resep atau masukkan bahan"
+                        class="flex-1 px-5 py-3.5 text-lg" />
+                    <button type="submit" class="px-8 py-3.5 text-lg">Cari</button>
+                </form>
+
+                <div id="popular-tags" class="text-sm text-gray-600">
+                    <span>Populer:</span>
+                    <a class="ml-2 font-medium underline" href="search.html?q=nasi+goreng">Nasi Goreng</a>
+                    <a class="ml-2 font-medium underline" href="search.html?q=ayam+bakar">Ayam Bakar</a>
+                    <a class="ml-2 font-medium underline" href="search.html?q=rendang">Rendang</a>
+                    <a class="ml-2 font-medium underline" href="search.html?q=pasta">Pasta</a>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="container-bahan" class="mb-16">
+
+            <h2 class="mb-2 text-[1.75rem] font-bold">Punya Bahan Apa?</h2>
+            <p class="mb-8 text-gray-600">Pilih bahan yang kamu punya dan temukan resep yang bisa dibuat sekarang.</p>
+
+            <ul id="list-bahan" class="flex flex-wrap gap-4 justify-center">
+
+                <li>
+                    <a class="inline-block rounded-full border border-gray-200 bg-white px-5 py-2 font-medium shadow-sm hover:border-amber-600 hover:text-amber-600"
+                        href="search.html?ingredient=telur" id="bahan-telur">
+                        Telur
+                    </a>
+                </li>
+
+                <li>
+                    <a class="inline-block rounded-full border border-gray-200 bg-white px-5 py-2 font-medium shadow-sm hover:border-amber-600 hover:text-amber-600"
+                        href="search.html?ingredient=ayam" id="bahan-ayam">
+                        Ayam
+                    </a>
+                </li>
+
+                <li>
+                    <a class="inline-block rounded-full border border-gray-200 bg-white px-5 py-2 font-medium shadow-sm hover:border-amber-600 hover:text-amber-600"
+                        href="search.html?ingredient=daging" id="bahan-daging">
+                        Daging
+                    </a>
+                </li>
+
+                <li>
+                    <a class="inline-block rounded-full border border-gray-200 bg-white px-5 py-2 font-medium shadow-sm hover:border-amber-600 hover:text-amber-600"
+                        href="search.html?ingredient=sayuran" id="bahan-sayuran">
+                        Sayuran
+                    </a>
+                </li>
+
+                <li>
+                    <a class="inline-block rounded-full border border-gray-200 bg-white px-5 py-2 font-medium shadow-sm hover:border-amber-600 hover:text-amber-600"
+                        href="search.html?ingredient=nasi" id="bahan-nasi">
+                        Nasi
+                    </a>
+                </li>
+
+                <li>
+                    <a class="inline-block rounded-full border border-gray-200 bg-white px-5 py-2 font-medium shadow-sm hover:border-amber-600 hover:text-amber-600"
+                        href="search.html?ingredient=mie" id="bahan-mie">
+                        Mie
+                    </a>
+                </li>
+
+            </ul>
+
+            <a href="masak-dengan-bahan.html" id="semua-bahan" class="mt-4 inline-block font-semibold text-amber-600">
+                Lihat semua bahan →
+            </a>
+
+        </section>
+
+
+        <section id="resep-populer" aria-labelledby="resep-populer-heading" class="mb-16">
+
+            <header>
+                <h2 id="resep-populer-heading" class="mb-3 text-4xl font-extrabold leading-[1.2] text-gray-800">Resep
+                    Populer</h2>
+                <a href="resep.html?sort=popular" id="link-semua-resep-populer"
+                    class="mt-4 inline-block font-semibold text-amber-600">Lihat semua →</a>
+            </header>
+
+            <div id="grid-resep-populer"
+                class="mt-8 grid gap-8 [grid-template-columns:repeat(auto-fill,minmax(280px,1fr))]">
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="resep/nasi-goreng-spesial.html">
+                        <img src="assets/img/resep/nasi_goreng.jpg"
+                            alt="Nasi Goreng Spesial disajikan dengan telur ceplok dan kerupuk" width="400" height="260"
+                            loading="lazy" class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="resep/nasi-goreng-spesial.html">Nasi Goreng Spesial</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Nasi goreng dengan bumbu rempah khas Indonesia, dilengkapi telur ceplok,
+                            ayam suwir, dan kerupuk renyah.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT20M">20 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/nasi-goreng-spesial.html"
+                            class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="resep/rendang-daging-sapi.html">
+                        <img src="assets/img/resep/rendang_daging.jpg"
+                            alt="Rendang daging sapi Padang dengan bumbu kuah kental berwarna cokelat gelap" width="400"
+                            height="260" loading="lazy"
+                            class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="resep/rendang-daging-sapi.html">Rendang Daging Sapi</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Rendang otentik Padang dengan daging sapi empuk dan bumbu rempah
+                            yang meresap sempurna. Hidangan kebanggaan Indonesia.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT180M">3 jam</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Sedang</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/rendang-daging-sapi.html"
+                            class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="resep/soto-ayam-lamongan.html">
+                        <img src="assets/img/resep/soto_ayam_lamongan.webp"
+                            alt="Soto Ayam Lamongan dengan kuah kuning bening dan taburan bawang goreng" width="400"
+                            height="260" loading="lazy"
+                            class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="resep/soto-ayam-lamongan.html">Soto Ayam Lamongan</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Soto ayam khas Lamongan dengan kuah kuning segar, suwiran ayam,
+                            telur rebus, dan taburan koya gurih.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT60M">1 jam</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Sedang</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/soto-ayam-lamongan.html"
+                            class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="resep/pasta-carbonara.html">
+                        <img src="assets/img/resep/pasta_carbonara.webp"
+                            alt="Pasta Carbonara dengan saus krim telur, bacon, dan taburan keju parmesan" width="400"
+                            height="260" loading="lazy"
+                            class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="resep/pasta-carbonara.html">Pasta Carbonara</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Pasta Italia klasik dengan saus telur dan keju pecorino yang creamy,
+                            dipadu bacon gurih dan lada hitam segar.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT25M">25 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Sedang</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/pasta-carbonara.html"
+                            class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="resep/gado-gado-jakarta.html">
+                        <img src="assets/img/resep/gado_gado_jakarta.webp"
+                            alt="Gado-Gado Jakarta dengan berbagai sayuran segar dan saus kacang kental" width="400"
+                            height="260" loading="lazy"
+                            class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="resep/gado-gado-jakarta.html">Gado-Gado Jakarta</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Salad sayuran khas Indonesia dengan saus kacang yang gurih dan manis,
+                            dilengkapi tempe goreng dan lontong.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT30M">30 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/gado-gado-jakarta.html"
+                            class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="resep/chicken-teriyaki.html">
+                        <img src="assets/img/resep/chicken_teriyaki.png"
+                            alt="Chicken Teriyaki dengan saus manis mengkilap disajikan di atas nasi putih" width="400"
+                            height="260" loading="lazy"
+                            class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="resep/chicken-teriyaki.html">Chicken Teriyaki</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Ayam panggang ala Jepang dengan saus teriyaki manis-gurih yang khas,
+                            sempurna disajikan bersama nasi putih hangat.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT35M">35 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/chicken-teriyaki.html"
+                            class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section id="resep-cepat" aria-labelledby="resep-cepat-heading" class="mb-16">
+
+            <header>
+                <h2 id="resep-cepat-heading" class="mb-3 text-4xl font-extrabold leading-[1.2] text-gray-800">Masak
+                    Cepat</h2>
+                <p class="max-w-[700px] text-lg text-gray-600">Resep lezat siap saji dalam 30 menit atau kurang.</p>
+                <a href="resep.html?filter=cepat" id="link-all-quick-recipes"
+                    class="mt-4 inline-block font-semibold text-amber-600">Lihat semua →</a>
+            </header>
+
+            <div id="grid-resep-cepat" role="list"
+                class="mt-8 grid gap-8 [grid-template-columns:repeat(auto-fill,minmax(280px,1fr))]">
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="resep/telur-dadar-bumbu.html">
+                        <img src="assets/img/resep/telur_dadar_bumbu.webp"
+                            alt="Telur dadar bumbu kuning dengan irisan daun bawang" width="400" height="260"
+                            loading="lazy" class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="resep/telur-dadar-bumbu.html">Telur Dadar Bumbu Kuning</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Telur dadar tipis dan gurih dengan bumbu kunyit, bawang merah, dan
+                            cabai. Lauk praktis favorit sehari-hari.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT10M">10 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/telur-dadar-bumbu.html"
+                            class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="resep/mie-goreng-sederhana.html">
+                        <img src="assets/img/resep/mie_goreng_sederhana.jpg"
+                            alt="Mie goreng sederhana dengan taburan bawang goreng dan irisan cabai" width="400"
+                            height="260" loading="lazy"
+                            class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="resep/mie-goreng-sederhana.html">Mie Goreng Sederhana</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Mie goreng kecap dengan sayuran dan telur, bumbu sederhana yang selalu
+                            enak dan bisa dibuat kapan saja.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT15M">15 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/mie-goreng-sederhana.html"
+                            class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="resep/sandwich-telur-mayones.html">
+                        <img src="assets/img/resep/sandwich_telur_mayones.jpg"
+                            alt="Sandwich telur mayones dengan selada segar dan tomat iris" width="400" height="260"
+                            loading="lazy" class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="resep/sandwich-telur-mayones.html">Sandwich Telur Mayones</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Sandwich klasik dengan isian telur rebus hancur, mayones, dan mustard.
+                            Sarapan cepat yang mengenyangkan.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT12M">12 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/sandwich-telur-mayones.html"
+                            class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <a href="resep/tumis-kangkung-belacan.html">
+                        <img src="assets/img/resep/tumis_kangkung_bencaan.jpg"
+                            alt="Tumis kangkung belacan dengan tampilan hijau segar dan bumbu merah" width="400"
+                            height="260" loading="lazy"
+                            class="h-[220px] w-full border-b border-gray-200 object-cover" />
+                    </a>
+                    <div class="flex flex-1 flex-col p-6">
+                        <h3 class="mb-3 text-xl font-bold leading-[1.3]">
+                            <a href="resep/tumis-kangkung-belacan.html">Tumis Kangkung Belacan</a>
+                        </h3>
+                        <p class="mb-6 flex-1 text-[0.95rem] text-gray-600">
+                            Tumis kangkung dengan terasi dan cabai yang wangi dan gurih.
+                            Sayur pelengkap favorit yang selalu habis di meja makan.
+                        </p>
+                        <dl class="mb-6 flex justify-between border-t border-gray-200 pt-4 text-sm text-gray-600">
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Waktu</dt>
+                                <dd><time datetime="PT10M">10 menit</time></dd>
+                            </div>
+                            <div class="flex gap-2">
+                                <dt class="font-semibold text-gray-800">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/tumis-kangkung-belacan.html"
+                            class="block rounded border border-gray-200 bg-bg-body p-3 text-center font-semibold hover:border-amber-600 hover:bg-amber-600 hover:text-white">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section id="kategori-preview" aria-labelledby="kategori-heading" class="mb-16">
+
+            <header>
+                <h2 id="kategori-heading" class="mb-3 text-4xl font-extrabold leading-[1.2] text-gray-800">Kategori</h2>
+                <p class="max-w-[700px] text-lg text-gray-600">Temukan resep berdasarkan kategori favoritmu.</p>
+            </header>
+
+            <ul id="kategori-list" role="list" aria-label="Kategori resep makanan"
+                class="mt-8 grid gap-8 [grid-template-columns:repeat(auto-fill,minmax(280px,1fr))]">
+
+                <li>
+                    <a href="kategori/sarapan.html" id="kategori-sarapan"
+                        class="flex items-center justify-center rounded-lg border border-gray-200 bg-white px-4 py-12 text-xl font-bold text-gray-800 hover:border-amber-600 hover:text-amber-600">
+                        <span>Sarapan</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kategori/makan-siang.html" id="kategori-makan-siang"
+                        class="flex items-center justify-center rounded-lg border border-gray-200 bg-white px-4 py-12 text-xl font-bold text-gray-800 hover:border-amber-600 hover:text-amber-600">
+                        <span>Makan Siang</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kategori/makan-malam.html" id="kategori-makan-malam"
+                        class="flex items-center justify-center rounded-lg border border-gray-200 bg-white px-4 py-12 text-xl font-bold text-gray-800 hover:border-amber-600 hover:text-amber-600">
+                        <span>Makan Malam</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kategori/minuman.html" id="kategori-minuman"
+                        class="flex items-center justify-center rounded-lg border border-gray-200 bg-white px-4 py-12 text-xl font-bold text-gray-800 hover:border-amber-600 hover:text-amber-600">
+                        <span>Minuman</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kategori/makanan-penutup.html" id="kategori-makanan-penutup"
+                        class="flex items-center justify-center rounded-lg border border-gray-200 bg-white px-4 py-12 text-xl font-bold text-gray-800 hover:border-amber-600 hover:text-amber-600">
+                        <span>Makanan Penutup</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kategori/camilan.html" id="kategori-camilan"
+                        class="flex items-center justify-center rounded-lg border border-gray-200 bg-white px-4 py-12 text-xl font-bold text-gray-800 hover:border-amber-600 hover:text-amber-600">
+                        <span>Camilan</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <a href="kategori.html" id="link-all-categories"
+                class="mt-4 inline-block font-semibold text-amber-600">Lihat semua kategori →</a>
+
+        </section>
+
+
+    </main>
+
+    <footer id="site-footer" role="contentinfo" class="mt-auto border-t border-gray-200 bg-white px-4 pb-6 pt-16">
+
+        <div id="footer-brand"
+            class="mb-12 mx-auto max-w-[1200px] md:flex md:items-center md:justify-between md:text-left">
+            <p id="footer-logo" class="mb-3 text-2xl font-extrabold tracking-tight text-amber-600">
+                RecipeMate
+            </p>
+            <p id="footer-tagline" class="max-w-[350px] text-gray-600 md:text-right">
+                Temukan inspirasi masakan baru setiap hari. Dari dapur sederhana hingga sajian spesial, semua ada di
+                RecipeMate.
+            </p>
+        </div>
+
+        <footer id="footer"
+            class="mx-auto mb-16 grid max-w-[1200px] gap-10 [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))]">
+
+            <section class="mb-16">
+                <h3 class="mb-5 text-lg font-bold text-gray-800">Explore</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="index.html" class="text-gray-600">Home</a></li>
+                    <li><a href="resep.html" class="text-gray-600">Recipes</a></li>
+                    <li><a href="kategori.html" class="text-gray-600">Categories</a></li>
+                    <li><a href="masak-dengan-bahan.html" class="text-gray-600">Cook With What You Have</a></li>
+                    <li><a href="perencana-makan.html" class="text-gray-600">Meal Planner</a></li>
+                    <li><a href="favorit.html" class="text-gray-600">Favorites</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="mb-5 text-lg font-bold text-gray-800">Company</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="about.html" class="text-gray-600">About</a></li>
+                    <li><a href="contact.html" class="text-gray-600">Contact</a></li>
+                    <li><a href="blog.html" class="text-gray-600">Blog</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="mb-5 text-lg font-bold text-gray-800">Legal</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="privacy-policy.html" class="text-gray-600">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="text-gray-600">Terms of Service</a></li>
+                </ul>
+            </section>
+
+        </footer>
+
+        <div id="footer-bottom"
+            class="mx-auto max-w-[1200px] border-t border-gray-200 pt-6 text-center text-sm text-gray-600">
+            <p id="footer-copyright">
+                <small>
+                    &copy; <time datetime="2026">2026</time> RecipeMate. All rights reserved.
+                </small>
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

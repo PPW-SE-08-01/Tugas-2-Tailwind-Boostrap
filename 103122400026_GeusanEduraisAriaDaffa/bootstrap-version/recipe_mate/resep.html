@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Jelajahi semua resep RecipeMate — dari masakan Indonesia hingga internasional. Filter berdasarkan kategori, waktu masak, dan tingkat kesulitan." />
+    <meta name="author" content="RecipeMate Team" />
+    <title>Semua Resep | RecipeMate</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="d-flex min-vh-100 flex-column bg-body-custom text-dark">
+
+    <header id="header" class="sticky-top z-header border-bottom border bg-white">
+        <nav id="nav" class="mx-auto d-flex max-w-main flex-wrap align-items-center justify-content-between gap-4 p-3">
+
+            <div id="logo">
+                <a href="index.html" class="fs-3 fw-bolder text-primary-custom">
+                    <span>RecipeMate</span>
+                </a>
+            </div>
+
+            <ul id="menu" role="list" class="d-flex flex-wrap align-items-center gap-4">
+                <li><a href="index.html" class="fw-medium">Home</a></li>
+                <li><a href="resep.html" aria-current="page" class="fw-bold text-primary-custom">Resep</a></li>
+                <li><a href="kategori.html" class="fw-medium">Kategori</a></li>
+                <li><a href="masak-dengan-bahan.html" class="fw-medium">Masak Dengan Bahan</a></li>
+                <li><a href="perencana-makan.html" class="fw-medium">Perencana Makan</a></li>
+                <li><a href="favorit.html" class="fw-medium">Favorit</a></li>
+            </ul>
+
+            <div id="auth" class="d-flex gap-3">
+                <a href="login.html" id="login" class="btn-outline-custom rounded px-3 py-2 text-decoration-none">Login</a>
+                <a href="register.html" id="register" class="btn-primary-custom rounded px-3 py-2 text-decoration-none">Register</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main id="content" class="mx-auto w-100 max-w-main flex-grow-1 px-3 py-5">
+
+        <section id="page-header" class="mb-4 rounded-3 border bg-white px-3 py-5 text-center">
+
+            <div id="page-header-content">
+                <h1 class="mb-3 fs-1 fw-bolder text-dark">Jelajahi Resep</h1>
+                <p class="mx-auto mb-4 max-w-hero-p fs-5 text-muted">Temukan berbagai resep lezat untuk setiap suasana dan kesempatan.</p>
+
+                <form id="search-form" action="resep.html" method="get" role="search" class="mx-auto d-flex w-100 max-w-search flex-column gap-3 flex-md-row">
+                    <label for="resep-search-input" class="d-none">Cari resep</label>
+                    <input type="search" id="resep-search-input" name="q" placeholder="Cari resep..." autocomplete="off"  class="flex-grow-1 px-4 py-2 fs-5" />
+                    <button type="submit" id="resep-search-btn" class="px-4 py-2 fs-5">Cari</button>
+                </form>
+            </div>
+
+        </section>
+
+        <section id="filter-resep" class="mb-5">
+
+            <h2 class="fs-3 fw-bold">Cari Resep</h2>
+
+            <form id="filter-form" action="resep.html" method="get" class="mb-4 d-flex flex-wrap gap-4 rounded-3 border bg-white p-4">
+
+                <div class="d-flex min-w-field flex-grow-1 flex-column gap-2">
+                    <label for="filter-kategori">Kategori</label>
+                    <select id="filter-kategori" name="kategori">
+                        <option value="">Semua</option>
+                        <option value="sarapan">Sarapan</option>
+                        <option value="makan-siang">Makan Siang</option>
+                        <option value="makan-malam">Makan Malam</option>
+                        <option value="makanan-penutup">Makanan Penutup</option>
+                        <option value="sehat">Sehat</option>
+                        <option value="vegetarian">Vegetarian</option>
+                    </select>
+                </div>
+
+                <div class="d-flex min-w-field flex-grow-1 flex-column gap-2">
+                    <label for="filter-waktu">Waktu Memasak</label>
+                    <select id="filter-waktu" name="waktu">
+                        <option value="">Kapan Saja</option>
+                        <option value="under-15">Di Bawah 15 Menit</option>
+                        <option value="15-30">15–30 Menit</option>
+                        <option value="30-60">30–60 Menit</option>
+                        <option value="over-60">Di Atas 60 Menit</option>
+                    </select>
+                </div>
+
+                <div class="d-flex min-w-field flex-grow-1 flex-column gap-2">
+                    <label for="filter-kesulitan">Tingkat Kesulitan</label>
+                    <select id="filter-kesulitan" name="kesulitan">
+                        <option value="">Semua Tingkat</option>
+                        <option value="mudah">Mudah</option>
+                        <option value="sedang">Sedang</option>
+                        <option value="sulit">Sulit</option>
+                    </select>
+                </div>
+
+                <div class="d-flex min-w-field flex-grow-1 flex-column gap-2">
+                    <label for="filter-sort">Urutkan</label>
+                    <select id="filter-sort" name="sort">
+                        <option value="popular">Populer</option>
+                        <option value="newest">Terbaru</option>
+                        <option value="rating">Rating</option>
+                        <option value="waktu-masak">Waktu Memasak</option>
+                    </select>
+                </div>
+
+                <div id="filter-actions" class="d-flex align-items-end gap-3">
+                    <button type="submit" id="btn-apply-filter">Terapkan Filter</button>
+                    <button type="reset" id="btn-reset-filter" class="border bg-transparent text-dark">Reset</button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <section id="semua-resep" class="mb-5">
+
+            <header>
+                <h2 class="mb-3 fs-1 fw-bolder text-dark">Semua Resep</h2>
+                <p id="resep-count" class="max-w-hero-p fs-5 text-muted">Menampilkan 12 resep</p>
+            </header>
+
+            <div id="grid-semua-resep" role="list" class="mt-4 gap-4 grid-cards">
+
+                <article class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <a href="resep/nasi-goreng-spesial.html">
+                        <img src="https://placehold.co/400x260?text=Nasi+Goreng+Spesial" alt="Nasi Goreng Spesial disajikan dengan telur ceplok dan kerupuk renyah" width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    </a>
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Makan Siang</span>
+                        <h3 class="mb-3 fs-4 fw-bold">
+                            <a href="resep/nasi-goreng-spesial.html">Nasi Goreng Spesial</a>
+                        </h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Nasi goreng bumbu rempah khas Indonesia lengkap dengan telur ceplok,
+                            ayam suwir, dan kerupuk renyah.
+                        </p>
+                        <dl class="mb-4 d-flex justify-content-between border-top border pt-3 small text-muted">
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Waktu</dt>
+                                <dd><time datetime="PT20M">20 menit</time></dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Rating</dt>
+                                <dd>4.8 / 5</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/nasi-goreng-spesial.html" class="card-recipe-btn text-decoration-none">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <a href="resep/rendang-daging-sapi.html">
+                        <img src="https://placehold.co/400x260?text=Rendang+Daging+Sapi" alt="Rendang daging sapi Padang dengan bumbu cokelat pekat dan santan kental" width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    </a>
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Makan Malam</span>
+                        <h3 class="mb-3 fs-4 fw-bold">
+                            <a href="resep/rendang-daging-sapi.html">Rendang Daging Sapi</a>
+                        </h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Rendang otentik Padang dengan daging sapi empuk dan bumbu rempah
+                            yang meresap sempurna — hidangan kebanggaan Indonesia.
+                        </p>
+                        <dl class="mb-4 d-flex justify-content-between border-top border pt-3 small text-muted">
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Waktu</dt>
+                                <dd><time datetime="PT180M">3 jam</time></dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Kesulitan</dt>
+                                <dd>Sedang</dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Rating</dt>
+                                <dd>4.9 / 5</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/rendang-daging-sapi.html" class="card-recipe-btn text-decoration-none">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <a href="resep/soto-ayam-lamongan.html">
+                        <img src="https://placehold.co/400x260?text=Soto+Ayam+Lamongan" alt="Soto Ayam Lamongan dengan kuah kuning bening dan koya gurih" width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    </a>
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Makan Siang</span>
+                        <h3 class="mb-3 fs-4 fw-bold">
+                            <a href="resep/soto-ayam-lamongan.html">Soto Ayam Lamongan</a>
+                        </h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Soto ayam khas Lamongan dengan kuah kuning segar, suwiran ayam,
+                            telur rebus, dan taburan koya yang gurih.
+                        </p>
+                        <dl class="mb-4 d-flex justify-content-between border-top border pt-3 small text-muted">
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Waktu</dt>
+                                <dd><time datetime="PT60M">1 jam</time></dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Kesulitan</dt>
+                                <dd>Sedang</dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Rating</dt>
+                                <dd>4.7 / 5</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/soto-ayam-lamongan.html" class="card-recipe-btn text-decoration-none">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <a href="resep/ayam-bakar-madu.html">
+                        <img src="https://placehold.co/400x260?text=Ayam+Bakar+Madu" alt="Ayam Bakar Madu dengan warna cokelat keemasan dan saus madu mengkilap" width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    </a>
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Makan Malam</span>
+                        <h3 class="mb-3 fs-4 fw-bold">
+                            <a href="resep/ayam-bakar-madu.html">Ayam Bakar Madu</a>
+                        </h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Ayam bakar dengan olesan madu, kecap, dan rempah pilihan.
+                            Aroma harumnya bikin selera makan meningkat!
+                        </p>
+                        <dl class="mb-4 d-flex justify-content-between border-top border pt-3 small text-muted">
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Waktu</dt>
+                                <dd><time datetime="PT50M">50 menit</time></dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Rating</dt>
+                                <dd>4.6 / 5</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/ayam-bakar-madu.html" class="card-recipe-btn text-decoration-none">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <a href="resep/pasta-carbonara.html">
+                        <img src="https://placehold.co/400x260?text=Pasta+Carbonara" alt="Pasta Carbonara Italia dengan saus telur creamy dan bacon gurih" width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    </a>
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Makan Malam</span>
+                        <h3 class="mb-3 fs-4 fw-bold">
+                            <a href="resep/pasta-carbonara.html">Pasta Carbonara</a>
+                        </h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Pasta Italia klasik dengan saus telur dan keju pecorino yang creamy,
+                            dipadu bacon gurih dan lada hitam segar.
+                        </p>
+                        <dl class="mb-4 d-flex justify-content-between border-top border pt-3 small text-muted">
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Waktu</dt>
+                                <dd><time datetime="PT25M">25 menit</time></dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Kesulitan</dt>
+                                <dd>Sedang</dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Rating</dt>
+                                <dd>4.7 / 5</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/pasta-carbonara.html" class="card-recipe-btn text-decoration-none">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <a href="resep/gado-gado-jakarta.html">
+                        <img src="https://placehold.co/400x260?text=Gado-Gado" alt="Gado-Gado dengan sayuran segar, tempe, dan saus kacang kental" width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    </a>
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Vegetarian</span>
+                        <h3 class="mb-3 fs-4 fw-bold">
+                            <a href="resep/gado-gado-jakarta.html">Gado-Gado Jakarta</a>
+                        </h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Salad sayuran Indonesia dengan saus kacang yang gurih dan manis,
+                            lengkap dengan tempe goreng dan lontong.
+                        </p>
+                        <dl class="mb-4 d-flex justify-content-between border-top border pt-3 small text-muted">
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Waktu</dt>
+                                <dd><time datetime="PT30M">30 menit</time></dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Rating</dt>
+                                <dd>4.5 / 5</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/gado-gado-jakarta.html" class="card-recipe-btn text-decoration-none">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <a href="resep/mie-goreng-jawa.html">
+                        <img src="https://placehold.co/400x260?text=Mie+Goreng+Jawa" alt="Mie Goreng Jawa dengan bumbu kecap dan taburan bawang goreng" width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    </a>
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Makan Siang</span>
+                        <h3 class="mb-3 fs-4 fw-bold">
+                            <a href="resep/mie-goreng-jawa.html">Mie Goreng Jawa</a>
+                        </h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Mie goreng khas Jawa dengan bumbu kecap, cabai, dan sayuran segar.
+                            Pilihan favorit saat ingin masak cepat dan lezat.
+                        </p>
+                        <dl class="mb-4 d-flex justify-content-between border-top border pt-3 small text-muted">
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Waktu</dt>
+                                <dd><time datetime="PT15M">15 menit</time></dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Rating</dt>
+                                <dd>4.5 / 5</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/mie-goreng-jawa.html" class="card-recipe-btn text-decoration-none">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <a href="resep/chicken-teriyaki.html">
+                        <img src="https://placehold.co/400x260?text=Chicken+Teriyaki" alt="Chicken Teriyaki dengan saus manis mengkilap di atas nasi putih" width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    </a>
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Makan Malam</span>
+                        <h3 class="mb-3 fs-4 fw-bold">
+                            <a href="resep/chicken-teriyaki.html">Chicken Teriyaki</a>
+                        </h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Ayam panggang ala Jepang dengan saus teriyaki manis-gurih,
+                            sempurna disajikan bersama nasi putih hangat.
+                        </p>
+                        <dl class="mb-4 d-flex justify-content-between border-top border pt-3 small text-muted">
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Waktu</dt>
+                                <dd><time datetime="PT35M">35 menit</time></dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Rating</dt>
+                                <dd>4.6 / 5</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/chicken-teriyaki.html" class="card-recipe-btn text-decoration-none">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <a href="resep/pancake-pisang.html">
+                        <img src="https://placehold.co/400x260?text=Pancake+Pisang" alt="Pancake Pisang berlapis dengan topping madu dan irisan pisang segar" width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    </a>
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Sarapan</span>
+                        <h3 class="mb-3 fs-4 fw-bold">
+                            <a href="resep/pancake-pisang.html">Pancake Pisang</a>
+                        </h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Pancake fluffy berbahan pisang matang, lembut di dalam dan
+                            sedikit crispy di luar. Sarapan manis yang menyenangkan.
+                        </p>
+                        <dl class="mb-4 d-flex justify-content-between border-top border pt-3 small text-muted">
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Waktu</dt>
+                                <dd><time datetime="PT20M">20 menit</time></dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Rating</dt>
+                                <dd>4.4 / 5</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/pancake-pisang.html" class="card-recipe-btn text-decoration-none">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <a href="resep/spaghetti-aglio-e-olio.html">
+                        <img src="https://placehold.co/400x260?text=Spaghetti+Aglio+e+Olio" alt="Spaghetti Aglio e Olio dengan bawang putih, cabai, dan peterseli segar" width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    </a>
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Makan Malam</span>
+                        <h3 class="mb-3 fs-4 fw-bold">
+                            <a href="resep/spaghetti-aglio-e-olio.html">Spaghetti Aglio e Olio</a>
+                        </h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Pasta sederhana ala Italia hanya dengan bawang putih, minyak zaitun,
+                            dan cabai. Bukti bahwa bahan sederhana bisa menghasilkan rasa luar biasa.
+                        </p>
+                        <dl class="mb-4 d-flex justify-content-between border-top border pt-3 small text-muted">
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Waktu</dt>
+                                <dd><time datetime="PT20M">20 menit</time></dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Rating</dt>
+                                <dd>4.5 / 5</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/spaghetti-aglio-e-olio.html" class="card-recipe-btn text-decoration-none">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <a href="resep/sup-ayam-sayuran.html">
+                        <img src="https://placehold.co/400x260?text=Sup+Ayam+Sayuran" alt="Sup Ayam Sayuran dengan kuah bening hangat dan potongan wortel serta kentang" width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    </a>
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Sehat</span>
+                        <h3 class="mb-3 fs-4 fw-bold">
+                            <a href="resep/sup-ayam-sayuran.html">Sup Ayam Sayuran</a>
+                        </h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Sup ayam dengan kuah bening yang hangat dan menyehatkan,
+                            berisi wortel, kentang, dan buncis segar.
+                        </p>
+                        <dl class="mb-4 d-flex justify-content-between border-top border pt-3 small text-muted">
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Waktu</dt>
+                                <dd><time datetime="PT45M">45 menit</time></dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Rating</dt>
+                                <dd>4.6 / 5</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/sup-ayam-sayuran.html" class="card-recipe-btn text-decoration-none">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+                <article class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <a href="resep/telur-balado.html">
+                        <img src="https://placehold.co/400x260?text=Telur+Balado" alt="Telur Balado dengan saus cabai merah yang pekat dan menggugah selera" width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    </a>
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Makan Siang</span>
+                        <h3 class="mb-3 fs-4 fw-bold">
+                            <a href="resep/telur-balado.html">Telur Balado</a>
+                        </h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Telur rebus goreng dengan saus balado pedas khas Padang.
+                            Lauk sederhana yang selalu dirindukan.
+                        </p>
+                        <dl class="mb-4 d-flex justify-content-between border-top border pt-3 small text-muted">
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Waktu</dt>
+                                <dd><time datetime="PT25M">25 menit</time></dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Kesulitan</dt>
+                                <dd>Mudah</dd>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <dt class="fw-semibold text-dark">Rating</dt>
+                                <dd>4.7 / 5</dd>
+                            </div>
+                        </dl>
+                        <a href="resep/telur-balado.html" class="card-recipe-btn text-decoration-none">
+                            Lihat Resep
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <nav id="pagination" aria-label="Navigasi halaman resep" class="mt-4 d-flex justify-content-center">
+                <ul role="list" class="d-flex gap-2">
+                    <li>
+                        <a href="resep.html?page=1" id="pagination-prev" class="pagination-item text-decoration-none">Previous</a>
+                    </li>
+                    <li>
+                        <a href="resep.html?page=1" aria-current="page" class="pagination-item active text-decoration-none">1</a>
+                    </li>
+                    <li>
+                        <a href="resep.html?page=2" class="pagination-item text-decoration-none">2</a>
+                    </li>
+                    <li>
+                        <a href="resep.html?page=3" class="pagination-item text-decoration-none">3</a>
+                    </li>
+                    <li>
+                        <a href="resep.html?page=4" class="pagination-item text-decoration-none">4</a>
+                    </li>
+                    <li>
+                        <a href="resep.html?page=5" class="pagination-item text-decoration-none">5</a>
+                    </li>
+                    <li>
+                        <a href="resep.html?page=2" id="pagination-next" class="pagination-item text-decoration-none">Next</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </section>
+
+        <section id="browse-kategori" class="mb-5">
+
+            <h2 class="fs-3 fw-bold">Jelajahi Kategori</h2>
+
+            <ul id="browse-kategori-list" role="list">
+
+                <li>
+                    <a href="kategori/sarapan.html" class="d-flex align-items-center justify-content-center rounded-3 border bg-white px-3 py-5 fs-4 fw-bold text-dark text-decoration-none card-hover-elevate">Sarapan</a>
+                </li>
+
+                <li>
+                    <a href="kategori/makan-siang.html" class="d-flex align-items-center justify-content-center rounded-3 border bg-white px-3 py-5 fs-4 fw-bold text-dark text-decoration-none card-hover-elevate">Makan Siang</a>
+                </li>
+
+                <li>
+                    <a href="kategori/makan-malam.html" class="d-flex align-items-center justify-content-center rounded-3 border bg-white px-3 py-5 fs-4 fw-bold text-dark text-decoration-none card-hover-elevate">Makan Malam</a>
+                </li>
+
+                <li>
+                    <a href="kategori/makanan-penutup.html" class="d-flex align-items-center justify-content-center rounded-3 border bg-white px-3 py-5 fs-4 fw-bold text-dark text-decoration-none card-hover-elevate">Makanan Penutup</a>
+                </li>
+
+                <li>
+                    <a href="kategori/sehat.html" class="d-flex align-items-center justify-content-center rounded-3 border bg-white px-3 py-5 fs-4 fw-bold text-dark text-decoration-none card-hover-elevate">Sehat</a>
+                </li>
+
+                <li>
+                    <a href="kategori/vegetarian.html" class="d-flex align-items-center justify-content-center rounded-3 border bg-white px-3 py-5 fs-4 fw-bold text-dark text-decoration-none card-hover-elevate">Vegetarian</a>
+                </li>
+
+                <li>
+                    <a href="kategori/indonesia.html" class="d-flex align-items-center justify-content-center rounded-3 border bg-white px-3 py-5 fs-4 fw-bold text-dark text-decoration-none card-hover-elevate">Indonesia</a>
+                </li>
+
+                <li>
+                    <a href="kategori/asia.html" class="d-flex align-items-center justify-content-center rounded-3 border bg-white px-3 py-5 fs-4 fw-bold text-dark text-decoration-none card-hover-elevate">Asia</a>
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer id="site-footer" class="mt-auto border-top border bg-white px-3 pb-4 pt-5">
+
+        <div id="footer-brand" class="mb-4 mx-auto max-w-main d-md-flex align-items-md-center justify-content-md-between text-md-start">
+            <p id="footer-logo" class="mb-3 fs-3 fw-bolder text-primary-custom">
+                RecipeMate
+            </p>
+            <p id="footer-tagline" class="max-w-tagline text-muted text-md-end">
+                Temukan inspirasi masakan baru setiap hari. Dari dapur sederhana hingga sajian spesial — semua ada di RecipeMate.
+            </p>
+        </div>
+
+        <nav id="footer-nav" class="mx-auto mb-5 max-w-main gap-4 grid-cards-md">
+
+
+
+        </nav>
+
+        <div id="footer-bottom" class="mx-auto max-w-main border-top border pt-4 text-center small text-muted">
+            <p id="footer-copyright">
+                <small>
+                    &copy; <time datetime="2026">2026</time> RecipeMate. All rights reserved.
+                </small>
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
