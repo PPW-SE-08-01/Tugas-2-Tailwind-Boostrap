@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triajasa - IT Solution (Tailwind CSS Version)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-700 font-sans antialiased">
+
+  <div class="bg-dark-custom text-white text-xs py-2 border-b border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center flex-wrap gap-2">
+      <div class="flex items-center gap-4 flex-wrap">
+        <span class="flex items-center gap-1 text-gray-300">
+          <i class="bi bi-geo-alt-fill text-blue-400"></i> Jl. Tarumanegara Atas 1 No. 64, Bekasi
+        </span>
+        <span class="hidden md:inline text-gray-600">|</span>
+        <span class="hidden md:inline text-gray-300">
+          <i class="bi bi-envelope-fill text-blue-400"></i> info@triajasa.com
+        </span>
+      </div>
+      <div>
+        <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">
+          PT Tria Jasa Informasi
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+
+        <a href="#" class="flex items-center gap-2.5 font-extrabold text-2xl text-gray-900">
+          <span
+            class="w-10 h-10 rounded-xl brand-gradient text-white flex items-center justify-center text-xl shadow-sm">
+            <i class="bi bi-cpu-fill"></i>
+          </span>
+          <span>TRIA<span class="text-primary">JASA</span></span>
+          <span
+            class="bg-primary-light text-primary text-xs font-semibold px-2 py-0.5 rounded-full border border-primary-light ml-1">Tailwind</span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-8 font-semibold text-gray-600">
+          <a href="#beranda" class="text-primary font-bold">Beranda</a>
+          <a href="#tentang" class="hover:text-primary transition-colors">Tentang Kami</a>
+          <a href="#layanan" class="hover:text-primary transition-colors">Layanan IT</a>
+          <a href="#kontak" class="hover:text-primary transition-colors">Kontak</a>
+        </div>
+
+        <div class="hidden lg:flex items-center">
+          <a href="#kontak"
+            class="bg-primary text-white font-semibold px-5 py-2.5 rounded-full text-sm shadow-md transition-all flex items-center gap-1.5">
+            <i class="bi bi-chat-dots-fill"></i>
+            <span>Konsultasi IT</span>
+          </a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="hidden">
+        <label for="menu-toggle" class="lg:hidden text-gray-700 p-2 rounded-lg cursor-pointer focus:outline-none"
+          aria-label="Toggle Navigation">
+          <i class="bi bi-list text-3xl"></i>
+        </label>
+
+        <div id="mobile-drawer"
+          class="hidden lg:hidden absolute top-20 left-0 right-0 bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-lg">
+          <a href="#beranda" class="block font-bold text-primary py-1">Beranda</a>
+          <a href="#tentang" class="block text-gray-600 hover:text-primary py-1">Tentang Kami</a>
+          <a href="#layanan" class="block text-gray-600 hover:text-primary py-1">Layanan IT</a>
+          <a href="#kontak" class="block text-gray-600 hover:text-primary py-1">Kontak</a>
+          <div class="pt-2">
+            <a href="#kontak"
+              class="block text-center bg-primary text-white font-semibold py-2.5 rounded-full shadow-sm">
+              <i class="bi bi-chat-dots-fill mr-1"></i> Konsultasi IT
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <section id="beranda" class="bg-radial-hero py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <span
+            class="inline-block bg-primary-light text-primary border border-primary-light text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-4">
+            <i class="bi bi-shield-check mr-1"></i> IT Solution &amp; Services
+          </span>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
+            Solusi Praktis IT untuk <br class="hidden sm:inline">
+            <span class="text-gradient">Pertumbuhan Bisnis Anda</span>
+          </h1>
+          <p class="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+            <strong>PT Tria Jasa Informasi</strong> menyediakan solusi teknologi informasi terpadu: infrastruktur
+            jaringan, layanan cloud, dan proteksi data untuk kelancaran operasional perusahaan Anda.
+          </p>
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+            <a href="#layanan"
+              class="bg-primary text-white font-semibold px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all flex items-center gap-1.5">
+              Jelajahi Layanan <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="#kontak"
+              class="bg-white text-gray-800 border border-gray-200 font-semibold px-6 py-3 rounded-full shadow-sm hover:shadow transition-all">
+              Hubungi Kami
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="text-3xl text-primary"><i class="bi bi-hdd-network-fill"></i></div>
+              <div>
+                <h3 class="font-bold text-gray-900 text-base">IT Infrastructure &amp; Cloud</h3>
+                <p class="text-xs text-gray-500">High Availability &amp; Disaster Recovery</p>
+              </div>
+            </div>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-4">
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Perencanaan
+                Jaringan &amp; Server</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Private &amp;
+                Hybrid Cloud Services</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Backup Otomatis
+                &amp; Pemulihan Data</li>
+              <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-green-500"></i> Dukungan Tenaga
+                Ahli Bersertifikasi</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="layanan" class="py-16 bg-white border-t border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span
+          class="inline-block bg-primary-light text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">
+          Layanan Utama
+        </span>
+        <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight mb-2">Layanan Teknologi Informasi</h2>
+        <p class="text-sm text-gray-500">Layanan unggulan PT Tria Jasa Informasi yang dirancang untuk memperkuat fondasi
+          IT bisnis Anda.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200 service-card shadow-sm text-center">
+          <div
+            class="w-12 h-12 bg-primary-light text-primary rounded-xl flex items-center justify-center text-xl mx-auto mb-4">
+            <i class="bi bi-hdd-rack-fill"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">IT Infrastructure</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">Perencanaan, instalasi, dan pemeliharaan server, storage,
+            serta perangkat jaringan.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200 service-card shadow-sm text-center">
+          <div
+            class="w-12 h-12 bg-primary-light text-primary rounded-xl flex items-center justify-center text-xl mx-auto mb-4">
+            <i class="bi bi-briefcase-fill"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Professional Services</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">Konsultasi IT mendalam, audit sistem, dan asistensi teknis
+            langsung oleh tim ahli.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200 service-card shadow-sm text-center">
+          <div
+            class="w-12 h-12 bg-primary-light text-primary rounded-xl flex items-center justify-center text-xl mx-auto mb-4">
+            <i class="bi bi-cloud-arrow-up-fill"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Cloud Services</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">Penyediaan solusi cloud yang fleksibel, aman, dan terukur
+            untuk menunjang skalabilitas bisnis.</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-gray-200 service-card shadow-sm text-center">
+          <div
+            class="w-12 h-12 bg-primary-light text-primary rounded-xl flex items-center justify-center text-xl mx-auto mb-4">
+            <i class="bi bi-shield-shaded"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Backup Solutions</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">Pencadangan data otomatis dan penyiapan rencana pemulihan
+            bencana (Disaster Recovery).</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="cta-gradient rounded-2xl p-8 sm:p-12 text-white text-center shadow-lg">
+        <h3 class="text-2xl sm:text-3xl font-extrabold mb-2">Siap Mengoptimalkan Infrastruktur IT Anda?</h3>
+        <p class="text-sm sm:text-base text-blue-100 mb-6 max-w-xl mx-auto">Diskusikan kebutuhan teknologi informasi
+          bersama PT Tria Jasa Informasi.</p>
+        <a href="mailto:info@triajasa.com"
+          class="inline-flex items-center gap-1.5 bg-white text-primary font-bold px-6 py-2.5 rounded-full shadow-sm hover:bg-gray-100 transition-colors">
+          <i class="bi bi-envelope-fill"></i> Email ke info@triajasa.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="kontak" class="bg-dark-custom text-white pt-12 pb-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <h4 class="font-bold text-lg mb-2">TRIA<span class="text-blue-400">JASA</span> &bull; IT Solution</h4>
+          <p class="text-xs text-gray-400 leading-relaxed mb-3">
+            <strong>PT Tria Jasa Informasi</strong> adalah perusahaan swasta di bidang solusi Teknologi Informasi
+            terpadu di Indonesia.
+          </p>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            <i class="bi bi-geo-alt-fill text-blue-400 mr-1"></i> Jl. Tarumanegara Atas 1 No. 64, Bekasi, Jawa Barat<br>
+            <i class="bi bi-envelope-fill text-blue-400 mr-1"></i> info@triajasa.com &bull; triajasa.com
+          </p>
+        </div>
+        <div class="md:text-right">
+          <h5 class="font-bold text-sm mb-2">Layanan Kami</h5>
+          <p class="text-xs text-gray-400 mb-4">
+            IT Infrastructure &bull; Professional Services &bull; Cloud Services &bull; Backup Solutions
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-4 text-center text-xs text-gray-500">
+        &copy; 2026 PT Tria Jasa Informasi. Penugasan Week 4.
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
