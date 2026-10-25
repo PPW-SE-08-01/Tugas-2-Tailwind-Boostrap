@@ -1,0 +1,111 @@
+:root {
+  --primary-color: #0284c7;
+  --primary-dark: #0369a1;
+  --primary-light: #e0f2fe;
+  --dark-color: #0b1120;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #334155;
+  scroll-behavior: smooth;
+}
+
+.top-bar {
+  background-color: var(--dark-color);
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-brand .logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #0284c7, #06b6d4);
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #475569;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.nav-toggle-check:checked~.navbar-collapse {
+  display: block !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -4px rgba(2, 132, 199, 0.35);
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary-subtle {
+  background-color: var(--primary-light) !important;
+}
+
+.border-primary-subtle {
+  border-color: #bae6fd !important;
+}
+
+.hero-section {
+  background: radial-gradient(circle at 85% 20%, #e0f2fe 0%, #f8fafc 70%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #0284c7, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-card {
+  border: 1px solid #e2e8f0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 25px -6px rgba(2, 132, 199, 0.15) !important;
+  border-color: #bae6fd;
+}
+
+.icon-box {
+  width: 52px;
+  height: 52px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+}
+
+.cta-banner {
+  background: linear-gradient(135deg, #0369a1, #0284c7);
+}
+
+.footer {
+  background-color: var(--dark-color);
+}
+
+.footer a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}

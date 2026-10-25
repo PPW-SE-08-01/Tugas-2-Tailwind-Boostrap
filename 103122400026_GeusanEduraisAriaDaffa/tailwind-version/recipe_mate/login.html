@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Login ke akun RecipeMate kamu untuk menyimpan resep favorit dan merencanakan menu masakan." />
+    <meta name="author" content="RecipeMate Team" />
+    <title>Login | RecipeMate</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-bg-body: #fdfbf7;
+            --color-primary: #d97706;
+            --color-primary-hover: #b45309;
+            --color-text-main: #1f2937;
+            --color-border: #e5e7eb;
+        }
+
+        @layer base {
+            a {
+                transition: color 0.2s ease-in-out;
+            }
+
+            a:hover {
+                color: var(--color-primary);
+            }
+
+            ul,
+            ol {
+                list-style: none;
+            }
+
+            img {
+                display: block;
+            }
+
+            button,
+            input,
+            select,
+            textarea {
+                font-family: inherit;
+                font-size: 1rem;
+                border: 1px solid var(--color-border);
+                border-radius: 0.5rem;
+                padding: 0.75rem 1.25rem;
+                background-color: #fff;
+                color: var(--color-text-main);
+                transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            input:focus,
+            select:focus,
+            textarea:focus {
+                outline: none;
+                border-color: var(--color-primary);
+                box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+            }
+
+            button {
+                background-color: var(--color-primary);
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                font-weight: 600;
+                transition: background-color 0.2s ease-in-out;
+            }
+
+            button:hover {
+                background-color: var(--color-primary-hover);
+            }
+        }
+    </style>
+</head>
+
+<body class="flex min-h-screen flex-col bg-bg-body font-sans text-gray-800 leading-[1.6]">
+
+    <header id="header" class="sticky top-0 z-[100] border-b border-gray-200 bg-white">
+        <nav id="nav" class="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-6 p-4">
+
+            <div id="logo">
+                <a href="index.html" class="text-2xl font-extrabold tracking-tight text-amber-600">
+                    <span>RecipeMate</span>
+                </a>
+            </div>
+
+            <ul id="menu" role="list" class="flex flex-wrap items-center gap-6">
+                <li><a href="index.html" class="font-medium">Home</a></li>
+                <li><a href="resep.html" class="font-medium">Resep</a></li>
+                <li><a href="kategori.html" class="font-medium">Kategori</a></li>
+                <li><a href="masak-dengan-bahan.html" class="font-medium">Masak Dengan Bahan</a></li>
+                <li><a href="perencana-makan.html" class="font-medium">Perencana Makan</a></li>
+                <li><a href="favorit.html" class="font-medium">Favorit</a></li>
+            </ul>
+
+            <div id="auth" class="flex gap-4">
+                <a href="login.html" id="login" class="rounded border border-gray-200 px-5 py-2 font-semibold hover:border-amber-600">Login</a>
+                <a href="register.html" id="register" class="rounded bg-amber-600 px-5 py-2 font-semibold text-white hover:bg-amber-700">Register</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main id="content" class="mx-auto w-full max-w-[1200px] flex-1 px-4 py-10">
+
+        <section id="page-header" class="mb-12 rounded-lg border border-gray-200 bg-white px-4 py-16 text-center">
+            <div id="page-header-content">
+                <h1 class="mb-3 text-4xl font-extrabold leading-[1.2] text-gray-800">Login</h1>
+                <p class="mx-auto mb-8 max-w-[700px] text-lg text-gray-600">Masuk ke akun RecipeMate kamu untuk menyimpan resep favorit dan merencanakan menu masakan.</p>
+            </div>
+        </section>
+
+        <section id="login-section" class="mb-16">
+
+            <form id="login-form" method="post" action="#" class="mb-16 flex max-w-[480px] flex-col gap-6 rounded-lg border border-gray-200 bg-white p-6">
+
+                <div class="flex min-w-[150px] flex-1 flex-col gap-2">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" placeholder="contoh@email.com" required autocomplete="email" />
+                </div>
+
+                <div class="flex min-w-[150px] flex-1 flex-col gap-2">
+                    <label for="login-password">Kata Sandi</label>
+                    <input type="password" id="login-password" name="password" placeholder="Kata sandi kamu" required autocomplete="current-password" />
+                </div>
+
+                <button type="submit" id="login-submit">Masuk</button>
+
+            </form>
+
+            <p id="login-alt" class="mt-6 text-gray-600">
+                Belum punya akun? <a href="register.html">Daftar di sini</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer id="site-footer" class="mt-auto border-t border-gray-200 bg-white px-4 pb-6 pt-16">
+
+        <div id="footer-brand" class="mb-12 mx-auto max-w-[1200px] md:flex md:items-center md:justify-between md:text-left">
+            <p id="footer-logo" class="mb-3 text-2xl font-extrabold tracking-tight text-amber-600">
+                RecipeMate
+            </p>
+            <p id="footer-tagline" class="max-w-[350px] text-gray-600 md:text-right">
+                Temukan inspirasi masakan baru setiap hari. Dari dapur sederhana hingga sajian spesial, semua ada di RecipeMate.
+            </p>
+        </div>
+
+        <nav id="footer-nav" class="mx-auto mb-16 grid max-w-[1200px] gap-10 [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))]">
+
+            <section class="mb-16">
+                <h3 class="mb-5 text-lg font-bold text-gray-800">Explore</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="resep.html" class="text-gray-600">Resep</a></li>
+                    <li><a href="kategori.html" class="text-gray-600">Kategori</a></li>
+                    <li><a href="masak-dengan-bahan.html" class="text-gray-600">Masak Dengan Bahan</a></li>
+                    <li><a href="perencana-makan.html" class="text-gray-600">Perencana Makan</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="mb-5 text-lg font-bold text-gray-800">Company</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="about.html" class="text-gray-600">About</a></li>
+                    <li><a href="contact.html" class="text-gray-600">Contact</a></li>
+                    <li><a href="blog.html" class="text-gray-600">Blog</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="mb-5 text-lg font-bold text-gray-800">Legal</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="privacy-policy.html" class="text-gray-600">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="text-gray-600">Terms</a></li>
+                </ul>
+            </section>
+
+        </nav>
+
+        <div id="footer-bottom" class="mx-auto max-w-[1200px] border-t border-gray-200 pt-6 text-center text-sm text-gray-600">
+            <p id="footer-copyright">
+                <small>
+                    &copy; <time datetime="2026">2026</time> RecipeMate. All rights reserved.
+                </small>
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

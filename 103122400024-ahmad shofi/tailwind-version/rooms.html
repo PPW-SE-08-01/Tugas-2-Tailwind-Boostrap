@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooms - Grand Luxora Hotel</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#c9a227',
+            cream: '#faf8f3',
+            charcoal: '#1c1c1c'
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            playfair: ['Playfair Display', 'serif']
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-8px)' }
+            }
+          },
+          animation: {
+            float: 'float 3s ease-in-out infinite'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-cream font-poppins text-[#222] antialiased">
+
+  <!-- NAVBAR -->
+  <header class="relative z-50">
+    <nav class="navbar relative flex items-center justify-between bg-white px-[8%] py-5 shadow-[0_5px_20px_rgba(0,0,0,0.08)] transition-all duration-[400ms]">
+
+      <a href="index.html" class="flex items-center gap-2 font-playfair text-[23px] font-bold text-gold sm:text-[28px]">
+        <i class="bi bi-building animate-float"></i>
+        <span>Grand Luxora</span>
+      </a>
+
+      <button id="menuToggle" type="button"
+              class="text-3xl text-gold md:hidden"
+              aria-label="Buka menu navigasi"
+              aria-controls="navMenu"
+              aria-expanded="false">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <ul id="navMenu"
+          class="absolute left-0 top-full hidden w-full flex-col items-center gap-5 bg-white px-5 py-6 shadow-lg md:static md:flex md:w-auto md:flex-row md:gap-[35px] md:bg-transparent md:p-0 md:shadow-none">
+
+        <li>
+          <a href="index.html" class="text-[#333] text-[15px] transition-colors hover:text-gold">
+            <i class="bi bi-house-door mr-1"></i> Home
+          </a>
+        </li>
+
+        <li>
+          <a href="rooms.html" class="font-medium text-gold text-[15px]">
+            <i class="bi bi-door-open mr-1"></i> Rooms
+          </a>
+        </li>
+
+        <li>
+          <a href="reservation.html" class="text-[#333] text-[15px] transition-colors hover:text-gold">
+            <i class="bi bi-calendar-check mr-1"></i> Reservation
+          </a>
+        </li>
+
+        <li>
+          <a href="booking.html" class="text-[#333] text-[15px] transition-colors hover:text-gold">
+            <i class="bi bi-person-circle mr-1"></i> My Booking
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-charcoal px-[8%] py-[70px] text-center text-white">
+    <h1 class="font-playfair text-[40px] font-bold sm:text-[50px]">
+      Our Rooms
+    </h1>
+    <p class="mt-2 text-sm text-gray-300 sm:text-base">
+      Pilihan kamar terbaik dengan fasilitas premium.
+    </p>
+  </section>
+
+  <!-- ROOMS -->
+  <main class="px-[8%] py-20">
+
+    <div class="flex flex-col gap-[30px]">
+
+      <!-- DELUXE ROOM -->
+      <article class="tilt-card flex flex-col gap-[30px] rounded-2xl bg-white p-[25px] shadow-sm transition-shadow duration-300 hover:shadow-xl md:flex-row">
+
+        <img src="images/room1.jpg"
+             alt="Deluxe Room"
+             class="h-[250px] w-full rounded-xl object-cover md:w-[350px] md:shrink-0">
+
+        <div class="flex-1">
+
+          <h3 class="font-playfair text-[30px] font-bold sm:text-[32px]">
+            Deluxe Room
+          </h3>
+
+          <p class="my-[15px] text-[#666]">
+            Kamar nyaman dengan desain modern dan fasilitas lengkap.
+          </p>
+
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2">
+              <i class="bi bi-check-circle text-gold"></i> King Size Bed
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="bi bi-check-circle text-gold"></i> Free WiFi
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="bi bi-check-circle text-gold"></i> Breakfast
+            </li>
+          </ul>
+
+          <h4 class="my-5 text-xl font-semibold text-gold">
+            Rp500.000
+            <span class="text-sm font-normal text-gray-500">/ malam</span>
+          </h4>
+
+          <a href="reservation.html?room=deluxe"
+             class="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-[35px] py-[14px] font-medium text-white shadow-[0_10px_20px_rgba(201,162,39,0.35)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:bg-[#b8921e]">
+            Book Now
+            <i class="bi bi-arrow-right"></i>
+          </a>
+
+        </div>
+      </article>
+
+      <!-- SUITE ROOM -->
+      <article class="tilt-card flex flex-col gap-[30px] rounded-2xl bg-white p-[25px] shadow-sm transition-shadow duration-300 hover:shadow-xl md:flex-row">
+
+        <img src="images/room2.jpg"
+             alt="Suite Room"
+             class="h-[250px] w-full rounded-xl object-cover md:w-[350px] md:shrink-0">
+
+        <div class="flex-1">
+
+          <h3 class="font-playfair text-[30px] font-bold sm:text-[32px]">
+            Suite Room
+          </h3>
+
+          <p class="my-[15px] text-[#666]">
+            Kamar luas dengan desain elegan dan fasilitas premium.
+          </p>
+
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2">
+              <i class="bi bi-check-circle text-gold"></i> Living Room
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="bi bi-check-circle text-gold"></i> Bathtub
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="bi bi-check-circle text-gold"></i> Breakfast
+            </li>
+          </ul>
+
+          <h4 class="my-5 text-xl font-semibold text-gold">
+            Rp900.000
+            <span class="text-sm font-normal text-gray-500">/ malam</span>
+          </h4>
+
+          <a href="reservation.html?room=suite"
+             class="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-[35px] py-[14px] font-medium text-white shadow-[0_10px_20px_rgba(201,162,39,0.35)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:bg-[#b8921e]">
+            Book Now
+            <i class="bi bi-arrow-right"></i>
+          </a>
+
+        </div>
+      </article>
+
+      <!-- FAMILY ROOM -->
+      <article class="tilt-card flex flex-col gap-[30px] rounded-2xl bg-white p-[25px] shadow-sm transition-shadow duration-300 hover:shadow-xl md:flex-row">
+
+        <img src="images/room3.jpg"
+             alt="Family Room"
+             class="h-[250px] w-full rounded-xl object-cover md:w-[350px] md:shrink-0">
+
+        <div class="flex-1">
+
+          <h3 class="font-playfair text-[30px] font-bold sm:text-[32px]">
+            Family Room
+          </h3>
+
+          <p class="my-[15px] text-[#666]">
+            Kamar luas untuk keluarga dengan kenyamanan maksimal.
+          </p>
+
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2">
+              <i class="bi bi-check-circle text-gold"></i> 2 Queen Bed
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="bi bi-check-circle text-gold"></i> Large Space
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="bi bi-check-circle text-gold"></i> Free Breakfast
+            </li>
+          </ul>
+
+          <h4 class="my-5 text-xl font-semibold text-gold">
+            Rp1.200.000
+            <span class="text-sm font-normal text-gray-500">/ malam</span>
+          </h4>
+
+          <a href="reservation.html?room=family"
+             class="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-[35px] py-[14px] font-medium text-white shadow-[0_10px_20px_rgba(201,162,39,0.35)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:bg-[#b8921e]">
+            Book Now
+            <i class="bi bi-arrow-right"></i>
+          </a>
+
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

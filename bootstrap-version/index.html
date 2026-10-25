@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Jasa Servis Komputer Budi - Level Pemula Bootstrap</title>
+
+    <!-- Bootstrap 4.6 CSS (CDN Resmi) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    >
+  </head>
+  <body>
+    <!-- 1. NAVBAR (Copas Dokumentasi Standar Navbar Dark) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand font-weight-bold" href="#">Servis Komputer Budi</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#beranda">Beranda <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#layanan">Daftar Layanan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Hubungi Kami</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 2. HERO SECTION (Pakai Jumbotron Abu-abu Bawaan Bootstrap 4) -->
+    <div class="jumbotron text-center" id="beranda">
+      <div class="container">
+        <h1 class="display-4 font-weight-bold">Selamat Datang di Servis Komputer Budi!</h1>
+        <p class="lead">
+          Komputer anda rusak? Lemot? Kena virus? Layar biru (bluescreen)? Kami siap datang dan perbaiki sampai nyala kembali.
+        </p>
+        <hr class="my-4">
+        <p>
+          Bisa dipanggil langsung ke rumah atau kostan daerah kampus dan sekitarnya. Pengerjaan cepat, murah, dan bergaransi 1 minggu.
+        </p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#kontak" role="button">Daftar Sekarang</a>
+          <a class="btn btn-success btn-lg" href="#layanan" role="button">Lihat Harga Jasa</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- 3. SECTION KONTEN (3 Kolom Grid col-md-4 dengan Card Baku) -->
+    <div class="container my-5" id="layanan">
+      <h2 class="text-center font-weight-bold mb-4">Layanan Servis Kami</h2>
+      <div class="row">
+        <!-- Kolom Layanan 1 -->
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-header bg-primary text-white font-weight-bold">
+              Layanan 1: Software
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Install Ulang Windows</h5>
+              <p class="card-text">
+                Install ulang Windows 10 atau 11 lengkap dengan driver, antivirus, dan aplikasi penunjang tugas seperti Microsoft Office dan PDF reader.
+              </p>
+              <a href="#kontak" class="btn btn-primary">Pesan Layanan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Layanan 2 -->
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-header bg-success text-white font-weight-bold">
+              Layanan 2: Maintenance
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Bersihin Kipas & Ganti Pasta</h5>
+              <p class="card-text">
+                Laptop cepat panas dan mati sendiri? Bersihkan debu pada kipas processor dan ganti thermal paste baru biar performa kembali dingin dan stabil.
+              </p>
+              <a href="#kontak" class="btn btn-success">Pesan Layanan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Layanan 3 -->
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-header bg-danger text-white font-weight-bold">
+              Layanan 3: Hardware
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Upgrade SSD & Tambah RAM</h5>
+              <p class="card-text">
+                Ganti harddisk lemot lama ke SSD super ngebut, serta upgrade RAM agar laptop tidak nge-lag saat buka banyak tab browser.
+              </p>
+              <a href="#kontak" class="btn btn-danger">Pesan Layanan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Hubungi / CTA Tambahan Kaku -->
+    <div class="container text-center my-5" id="kontak">
+      <div class="card bg-light p-4">
+        <h3 class="font-weight-bold">Konsultasi Kerusakan Komputer Gratis!</h3>
+        <p class="text-muted">Tanyakan masalah komputer atau laptop anda sebelum servis melalui tombol di bawah ini:</p>
+        <div>
+          <button type="button" class="btn btn-success btn-lg font-weight-bold">
+            Chat WhatsApp Mas Budi
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. FOOTER (Standar Gelap Kaku) -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-1">Copyright &copy; 2026 Jasa Servis Komputer Budi. All rights reserved.</p>
+        <small class="text-muted">
+          Tugas Praktikum PPW Week 4 &bull; Nadia Tambunan (103122400005) &bull; SE-08-01
+        </small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 4 JS Bundle (jQuery & Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

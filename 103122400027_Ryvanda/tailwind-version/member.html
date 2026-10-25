@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Member & Mitra | Ryco Spices Indonesia (Tailwind Version)</title>
+  <meta name="description" content="Akses eksklusif untuk mitra petani binaan dan buyer B2B internasional Ryco Spices.">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#2D5016',
+              dark: '#1e380e',
+              light: '#3e6a20'
+            },
+            earth: {
+              DEFAULT: '#8B4513',
+              dark: '#6e350d',
+              light: '#a85a1f'
+            },
+            gold: {
+              DEFAULT: '#C9A959',
+              light: '#e0c785'
+            },
+            cream: '#FBF9F5'
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased selection:bg-forest selection:text-white">
+
+  <!-- Top Info Bar -->
+  <div class="bg-forest text-white py-2 px-4 text-xs sm:text-sm border-b border-forest-light/30">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span><i class="bi bi-geo-alt-fill text-gold me-1"></i> Maluku & Jakarta, Indonesia</span>
+        <span class="text-white/40">|</span>
+        <span><i class="bi bi-envelope-fill text-gold me-1"></i> partner@rycospices.com</span>
+      </div>
+      <div>
+        <span class="bg-gold text-forest-dark px-3 py-0.5 rounded-full font-semibold text-xs inline-flex items-center gap-1 shadow-sm">
+          <i class="bi bi-lock-fill"></i> Sistem Keanggotaan Terverifikasi
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50 py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <img src="../images/logo.webp" alt="Ryco Spices Logo" class="h-10 sm:h-11 object-contain">
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="index.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Beranda</a>
+        <a href="tentang-kami.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Tentang Kami</a>
+        <a href="layanan.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Layanan</a>
+        <a href="dokter.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Dokter Tanaman</a>
+        <a href="galeri.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Galeri</a>
+        <a href="member.html" class="text-forest font-bold text-sm tracking-wide">Member</a>
+        <a href="kontak.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Kontak</a>
+        <a href="pendaftaran.html" class="bg-forest hover:bg-forest-light text-white px-5 py-2 rounded-full font-semibold text-sm transition shadow-sm inline-flex items-center gap-1.5">
+          <i class="bi bi-person-plus-fill"></i> Pendaftaran
+        </a>
+      </div>
+
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="lg:hidden p-2 text-gray-700 hover:text-forest focus:outline-none" aria-label="Toggle Menu">
+        <i class="bi bi-list text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-5 flex flex-col gap-3 shadow-lg">
+      <a href="index.html" class="text-gray-600 py-1">Beranda</a>
+      <a href="tentang-kami.html" class="text-gray-600 py-1">Tentang Kami</a>
+      <a href="layanan.html" class="text-gray-600 py-1">Layanan</a>
+      <a href="dokter.html" class="text-gray-600 py-1">Dokter Tanaman</a>
+      <a href="galeri.html" class="text-gray-600 py-1">Galeri</a>
+      <a href="member.html" class="text-forest font-bold py-1">Member</a>
+      <a href="kontak.html" class="text-gray-600 py-1">Kontak</a>
+      <a href="pendaftaran.html" class="bg-forest text-white text-center py-2.5 rounded-full font-semibold mt-2">
+        <i class="bi bi-person-plus-fill me-1"></i> Pendaftaran
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header py-16 text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <span class="eyebrow-badge-light mb-3 inline-flex items-center gap-1.5"><i class="bi bi-person-lock"></i> Area Akses Terbatas</span>
+      <h1 class="font-heading text-3xl sm:text-5xl font-bold mb-3">Portal Member & Kemitraan</h1>
+      <p class="text-gray-200 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        Pusat layanan mandiri untuk mitra petani binaan Ryco Spices dan buyer komoditas internasional.
+      </p>
+    </div>
+  </section>
+
+  <!-- Login Area & Manfaat -->
+  <section class="py-16 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Form Login -->
+        <div class="lg:col-span-5 bg-white p-8 sm:p-10 rounded-3xl card-hover border border-stone-200/60">
+          <div class="text-center mb-6">
+            <div class="icon-box-emerald mx-auto mb-3">
+              <i class="bi bi-shield-lock"></i>
+            </div>
+            <h3 class="font-bold text-xl text-gray-900 mb-1">Masuk Akun Member</h3>
+            <p class="text-gray-500 text-xs">Silakan masukkan email / ID kemitraan Anda</p>
+          </div>
+
+          <form onsubmit="event.preventDefault(); alert('Ini adalah prototipe portal member. Pendaftaran akun baru dapat dilakukan melalui halaman Pendaftaran.');" class="space-y-4">
+            <div>
+              <label for="memberEmail" class="block text-xs font-semibold text-gray-700 mb-1">Email / ID Mitra</label>
+              <input type="text" id="memberEmail" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-forest text-sm" placeholder="nama@perusahaan.com / ID Petani" required>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-center mb-1">
+                <label for="memberPassword" class="block text-xs font-semibold text-gray-700">Kata Sandi</label>
+                <a href="#" onclick="alert('Silakan hubungi admin di WhatsApp untuk pemulihan akun.'); return false;" class="text-xs text-forest hover:underline">Lupa sandi?</a>
+              </div>
+              <input type="password" id="memberPassword" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-forest text-sm" placeholder="••••••••" required>
+            </div>
+
+            <div>
+              <label for="memberRole" class="block text-xs font-semibold text-gray-700 mb-1">Jenis Keanggotaan</label>
+              <select id="memberRole" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-forest text-sm bg-white">
+                <option value="buyer">Buyer / Importir B2B</option>
+                <option value="petani">Mitra Petani Binaan</option>
+                <option value="distributor">Distributor Domestik</option>
+              </select>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="rememberMe" class="rounded text-forest focus:ring-forest">
+              <label for="rememberMe" class="text-xs text-gray-500">Ingat perangkat ini selama 30 hari</label>
+            </div>
+
+            <button type="submit" class="w-full bg-forest hover:bg-forest-light text-white font-semibold py-3 rounded-full text-sm shadow-sm transition">
+              <i class="bi bi-box-arrow-in-right me-1"></i> Masuk Portal
+            </button>
+
+            <p class="text-center text-xs text-gray-500 pt-2">
+              Belum menjadi mitra resmi? <a href="pendaftaran.html" class="text-forest font-bold hover:underline">Daftar sekarang</a>
+            </p>
+          </form>
+        </div>
+
+        <!-- Manfaat Akun -->
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <span class="eyebrow-badge mb-2 inline-flex items-center gap-1.5"><i class="bi bi-grid-fill"></i> Fitur Portal Digital</span>
+            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-3">Kemudahan Akses Transparan Bagi Mitra</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-white p-6 rounded-3xl card-hover border border-stone-200/60">
+              <div class="icon-box-gold mb-3"><i class="bi bi-truck"></i></div>
+              <h4 class="font-bold text-base text-gray-900 mb-1">Pelacakan Kontainer</h4>
+              <p class="text-gray-500 text-xs leading-relaxed">Buyer dapat memantau pergerakan kapal, estimasi tiba di pelabuhan tujuan, dan status bea cukai.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl card-hover border border-stone-200/60">
+              <div class="icon-box-gold mb-3"><i class="bi bi-file-earmark-pdf"></i></div>
+              <h4 class="font-bold text-base text-gray-900 mb-1">Arsip Dokumen COA</h4>
+              <p class="text-gray-500 text-xs leading-relaxed">Unduh Certificate of Analysis, Phytosanitary, dan laporan uji kadar air setiap lot produksi secara mandiri.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl card-hover border border-stone-200/60">
+              <div class="icon-box-gold mb-3"><i class="bi bi-calendar2-heart"></i></div>
+              <h4 class="font-bold text-base text-gray-900 mb-1">Jadwal Dokter Tanaman</h4>
+              <p class="text-gray-500 text-xs leading-relaxed">Bagi petani mitra: pantau kalender kunjungan inspeksi kebun dan ajukan konsultasi darurat keluhan hama.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl card-hover border border-stone-200/60">
+              <div class="icon-box-gold mb-3"><i class="bi bi-cash-coin"></i></div>
+              <h4 class="font-bold text-base text-gray-900 mb-1">Harga Transparan</h4>
+              <p class="text-gray-500 text-xs leading-relaxed">Update patokan harga pembelian biji pala dan fuli mingguan langsung tanpa potongan tengkulak.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-forest-dark text-white pt-16 pb-8 border-t border-forest-light/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
+        <div class="lg:col-span-4">
+          <img src="../images/logo.webp" alt="Ryco Spices" class="h-10 mb-4 brightness-0 invert">
+          <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+            Ryco Spices adalah produsen dan eksportir rempah Indonesia yang mengedepankan kualitas organik, sertifikasi laboratorium, dan pemberdayaan petani lokal di Kepulauan Rempah.
+          </p>
+        </div>
+        <div class="lg:col-span-2">
+          <h4 class="text-gold font-bold text-sm mb-4">Menu Utama</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+            <li><a href="index.html" class="hover:text-gold transition">Beranda</a></li>
+            <li><a href="tentang-kami.html" class="hover:text-gold transition">Tentang Kami</a></li>
+            <li><a href="layanan.html" class="hover:text-gold transition">Layanan Ekspor</a></li>
+            <li><a href="dokter.html" class="hover:text-gold transition">Dokter Tanaman</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-2">
+          <h4 class="text-gold font-bold text-sm mb-4">Akses Khusus</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+            <li><a href="galeri.html" class="hover:text-gold transition">Galeri Panen</a></li>
+            <li><a href="member.html" class="hover:text-gold transition">Portal Member</a></li>
+            <li><a href="pendaftaran.html" class="hover:text-gold transition">Pendaftaran Mitra</a></li>
+            <li><a href="kontak.html" class="hover:text-gold transition">Kontak Kami</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-4">
+          <h4 class="text-gold font-bold text-sm mb-4">Kontak</h4>
+          <p class="text-xs sm:text-sm text-gray-300 mb-2">Banda & Jakarta, Indonesia</p>
+          <p class="text-xs sm:text-sm text-gray-300 mb-2">+62 821-2345-6789</p>
+          <p class="text-xs sm:text-sm text-gray-300">partner@rycospices.com</p>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 text-center text-xs text-gray-400">
+        <p>&copy; 2026 Ryco Spices Indonesia. Versi Modern Tailwind CSS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6282123456789" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition duration-200 z-50" target="_blank" title="Chat WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+</body>
+</html>

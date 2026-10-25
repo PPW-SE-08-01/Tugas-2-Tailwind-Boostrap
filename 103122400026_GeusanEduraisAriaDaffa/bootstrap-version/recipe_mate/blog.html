@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Blog RecipeMate — artikel, tips memasak, dan inspirasi menu sehari-hari untuk membantu kamu lebih percaya diri di dapur." />
+    <meta name="author" content="RecipeMate Team" />
+    <title>Blog | RecipeMate</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="d-flex min-vh-100 flex-column bg-body-custom text-dark">
+    <header id="header" class="sticky-top z-header border-bottom border bg-white">
+        <nav id="nav" class="mx-auto d-flex max-w-main flex-wrap align-items-center justify-content-between gap-4 p-3">
+
+            <div id="logo">
+                <a href="index.html" class="fs-3 fw-bolder text-primary-custom">
+                    <span>RecipeMate</span>
+                </a>
+            </div>
+
+            <ul id="menu" role="list" class="d-flex flex-wrap align-items-center gap-4">
+                <li><a href="index.html" class="fw-medium">Home</a></li>
+                <li><a href="resep.html" class="fw-medium">Resep</a></li>
+                <li><a href="kategori.html" class="fw-medium">Kategori</a></li>
+                <li><a href="masak-dengan-bahan.html" class="fw-medium">Masak Dengan Bahan</a></li>
+                <li><a href="perencana-makan.html" class="fw-medium">Perencana Makan</a></li>
+                <li><a href="favorit.html" class="fw-medium">Favorit</a></li>
+            </ul>
+
+            <div id="auth" class="d-flex gap-3">
+                <a href="login.html" id="login" class="btn-outline-custom rounded px-3 py-2 text-decoration-none">Login</a>
+                <a href="register.html" id="register" class="btn-primary-custom rounded px-3 py-2 text-decoration-none">Register</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main id="content" class="mx-auto w-100 max-w-main flex-grow-1 px-3 py-5">
+
+        <section id="page-header" class="mb-5">
+            <div id="page-header-content">
+                <h1 class="mb-3 fs-1 fw-bolder text-dark">Blog RecipeMate</h1>
+                <p class="max-w-hero-p fs-5 text-muted">Artikel, tips memasak, dan inspirasi menu sehari-hari untuk membantu kamu lebih percaya diri di dapur.</p>
+            </div>
+        </section>
+
+
+        <section id="blog-artikel" aria-labelledby="blog-artikel-heading" class="mb-5">
+
+            <h2 id="blog-artikel-heading" class="fs-3 fw-bold">Artikel Terbaru</h2>
+
+            <ul id="grid-resep-populer" class="mt-4 gap-4 grid-cards">
+
+                <li class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <img src="assets/img/resep/nasi_goreng.jpg"
+                        alt="Nasi goreng dengan bumbu rempah yang harum di atas wajan panas"
+                        width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Tips Memasak</span>
+                        <h3 class="mb-3 fs-4 fw-bold">Tips Memasak Nasi Goreng agar Lebih Lezat</h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Nasi goreng yang enak bukan soal bumbu saja. Ada beberapa hal kecil yang bisa membuat
+                            hasilnya jauh berbeda, mulai dari jenis nasi hingga urutan memasak.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <img src="assets/img/resep/gado_gado_jakarta.webp"
+                        alt="Sayuran segar yang tersusun rapi di atas talenan kayu"
+                        width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Bahan Makanan</span>
+                        <h3 class="mb-3 fs-4 fw-bold">Cara Menyimpan Bahan Makanan agar Tetap Segar</h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Bahan makanan yang disimpan dengan benar bisa bertahan lebih lama dan tetap bergizi.
+                            Pelajari cara menyimpan sayuran, daging, dan bahan kering yang tepat.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <img src="assets/img/resep/tumis_kangkung_bencaan.jpg"
+                        alt="Berbagai bahan makanan segar di atas meja dapur"
+                        width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Panduan</span>
+                        <h3 class="mb-3 fs-4 fw-bold">Panduan Memilih Bahan untuk Menu Harian</h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Memilih bahan yang tepat membuat proses memasak lebih mudah dan hasilnya lebih konsisten.
+                            Panduan ini membantu kamu berbelanja lebih cerdas setiap minggu.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="d-flex flex-column overflow-hidden rounded-3 border bg-white">
+                    <img src="assets/img/resep/chicken_teriyaki.png"
+                        alt="Makanan tersaji rapi di meja makan untuk satu minggu"
+                        width="400" height="260" loading="lazy"  class="img-recipe-cover w-100 border-bottom border" />
+                    <div class="d-flex flex-grow-1 flex-column p-4">
+                        <span class="badge-category-custom mb-3">Perencana Menu</span>
+                        <h3 class="mb-3 fs-4 fw-bold">Tips Menyiapkan Menu Makan Selama Seminggu</h3>
+                        <p class="mb-4 flex-grow-1 text-muted">
+                            Merencanakan menu mingguan bisa menghemat waktu, mengurangi pemborosan bahan, dan
+                            memastikan kamu makan lebih teratur. Mulai dari mana yang paling mudah.
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <footer id="site-footer" role="contentinfo" class="mt-auto border-top border bg-white px-3 pb-4 pt-5">
+
+        <div id="footer-brand" class="mb-4 mx-auto max-w-main d-md-flex align-items-md-center justify-content-md-between text-md-start">
+            <p id="footer-logo" class="mb-3 fs-3 fw-bolder text-primary-custom">
+                RecipeMate
+            </p>
+            <p id="footer-tagline" class="max-w-tagline text-muted text-md-end">
+                Temukan inspirasi masakan baru setiap hari. Dari dapur sederhana hingga sajian spesial, semua ada di RecipeMate.
+            </p>
+        </div>
+
+        <footer id="footer" class="mx-auto mb-5 max-w-main gap-4 grid-cards-md">
+
+            <section class="mb-5">
+                <h3 class="mb-3 fs-5 fw-bold text-dark">Explore</h3>
+                <ul class="d-flex flex-column gap-3">
+                    <li><a href="index.html" class="text-muted">Home</a></li>
+                    <li><a href="resep.html" class="text-muted">Recipes</a></li>
+                    <li><a href="kategori.html" class="text-muted">Categories</a></li>
+                    <li><a href="masak-dengan-bahan.html" class="text-muted">Cook With What You Have</a></li>
+                    <li><a href="perencana-makan.html" class="text-muted">Meal Planner</a></li>
+                    <li><a href="favorit.html" class="text-muted">Favorites</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3 class="mb-3 fs-5 fw-bold text-dark">Company</h3>
+                <ul class="d-flex flex-column gap-3">
+                    <li><a href="about.html" class="text-muted">About</a></li>
+                    <li><a href="contact.html" class="text-muted">Contact</a></li>
+                    <li><a href="blog.html" class="text-muted">Blog</a></li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3 class="mb-3 fs-5 fw-bold text-dark">Legal</h3>
+                <ul class="d-flex flex-column gap-3">
+                    <li><a href="privacy-policy.html" class="text-muted">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="text-muted">Terms of Service</a></li>
+                </ul>
+            </section>
+
+        </footer>
+
+        <div id="footer-bottom" class="mx-auto max-w-main border-top border pt-4 text-center small text-muted">
+            <p id="footer-copyright">
+                <small>
+                    &copy; <time datetime="2026">2026</time> RecipeMate. All rights reserved.
+                </small>
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

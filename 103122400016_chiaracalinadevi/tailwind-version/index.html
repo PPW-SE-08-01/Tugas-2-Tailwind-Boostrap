@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pinky Doll Shop — Tailwind</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { peach: '#FFE5D4', 'peach-deep': '#FFB88C', blush: '#F8C8DC', rose: '#E98FA8', ink: '#6b4a55' },
+      fontFamily: { sans: ['Poppins', 'sans-serif'] }
+    } } }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#FFF9F5] text-ink font-sans">
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 bg-peach shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="font-bold text-lg text-rose">🎀 Pinky Doll Shop</a>
+      <button id="toggle" class="md:hidden text-2xl" aria-label="Menu">☰</button>
+      <ul id="menu" class="hidden md:flex absolute md:static top-full left-0 w-full md:w-auto bg-peach md:bg-transparent flex-col md:flex-row items-center gap-4 p-4 md:p-0">
+        <li><a class="hover:text-rose" href="#beranda">Beranda</a></li>
+        <li><a class="hover:text-rose" href="#keunggulan">Keunggulan</a></li>
+        <li><a class="hover:text-rose" href="#produk">Produk</a></li>
+        <li><a class="bg-rose hover:bg-[#d97a95] text-white text-sm px-4 py-2 rounded-full" href="#kontak">Hubungi Kami</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="beranda" class="bg-gradient-to-br from-peach to-blush py-12">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
+      <div class="text-center lg:text-left">
+        <span class="inline-block bg-white text-rose rounded-full px-4 py-2 text-sm mb-4">✨ Jual Beli Boneka Fashion</span>
+        <h1 class="text-4xl lg:text-5xl font-bold leading-tight">Koleksi Boneka Barbie &amp; Perlengkapannya</h1>
+        <p class="text-lg my-4">Temukan boneka, outfit, rumah, hingga aksesori impian dengan harga bersahabat. Bisa beli baru maupun jual kembali koleksimu!</p>
+        <a href="#produk" class="inline-block bg-rose hover:bg-[#d97a95] text-white rounded-full px-6 py-3 mr-2 mb-2">Belanja Sekarang</a>
+        <a href="#kontak" class="inline-block border-2 border-rose text-rose hover:bg-rose hover:text-white rounded-full px-6 py-2.5">Jual Koleksimu</a>
+      </div>
+      <img src="assets/hero.svg" alt="Boneka fashion" class="w-full rounded-3xl shadow-lg">
+    </div>
+  </header>
+
+  <!-- KEUNGGULAN -->
+  <section id="keunggulan" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold">Kenapa Belanja di Sini?</h2>
+        <p class="mt-2">Tiga alasan kenapa koleksi kamu aman bersama kami.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-3xl p-6 text-center shadow-lg shadow-rose/20 hover:-translate-y-1.5 transition">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blush flex items-center justify-center text-3xl">💖</div>
+          <h5 class="font-bold text-lg mb-2">Kondisi Terjamin</h5>
+          <p>Setiap barang dicek dan dibersihkan sebelum dijual, baik baru maupun preloved.</p></div>
+        <div class="bg-white rounded-3xl p-6 text-center shadow-lg shadow-rose/20 hover:-translate-y-1.5 transition">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blush flex items-center justify-center text-3xl">🔄</div>
+          <h5 class="font-bold text-lg mb-2">Jual &amp; Beli</h5>
+          <p>Punya boneka yang sudah tidak dipakai? Kami bantu jualkan dengan harga adil.</p></div>
+        <div class="bg-white rounded-3xl p-6 text-center shadow-lg shadow-rose/20 hover:-translate-y-1.5 transition">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blush flex items-center justify-center text-3xl">🎁</div>
+          <h5 class="font-bold text-lg mb-2">Packing Aman &amp; Cantik</h5>
+          <p>Dikemas rapi dengan bubble wrap, siap dikirim atau jadi hadiah.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUK -->
+  <section id="produk" class="py-16 bg-peach">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold">Produk Favorit</h2>
+        <p class="mt-2">Pilihan terlaris minggu ini.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-6 gap-6">
+        <div class="lg:col-span-2 bg-white rounded-3xl overflow-hidden shadow-lg shadow-rose/20 hover:-translate-y-1.5 transition">
+          <img src="assets/doll.svg" alt="Boneka" class="w-full">
+          <div class="p-5"><h5 class="font-bold text-lg">Boneka Fashion Classic</h5><p class="my-2">Boneka dengan rambut pirang dan gaun pink.</p><p class="font-bold text-rose">Rp 189.000</p></div></div>
+        <div class="lg:col-span-2 bg-white rounded-3xl overflow-hidden shadow-lg shadow-rose/20 hover:-translate-y-1.5 transition">
+          <img src="assets/outfit.svg" alt="Outfit" class="w-full">
+          <div class="p-5"><h5 class="font-bold text-lg">Set Gaun &amp; Outfit</h5><p class="my-2">Paket 5 pakaian pesta dan casual.</p><p class="font-bold text-rose">Rp 75.000</p></div></div>
+        <div class="lg:col-span-2 bg-white rounded-3xl overflow-hidden shadow-lg shadow-rose/20 hover:-translate-y-1.5 transition">
+          <img src="assets/house.svg" alt="Rumah" class="w-full">
+          <div class="p-5"><h5 class="font-bold text-lg">Rumah Impian Mini</h5><p class="my-2">Rumah boneka dua lantai lengkap furnitur.</p><p class="font-bold text-rose">Rp 450.000</p></div></div>
+        <div class="lg:col-span-3 bg-white rounded-3xl overflow-hidden shadow-lg shadow-rose/20 hover:-translate-y-1.5 transition">
+          <img src="assets/car.svg" alt="Mobil" class="w-full">
+          <div class="p-5"><h5 class="font-bold text-lg">Mobil Pink Convertible</h5><p class="my-2">Mobil mainan muat 2 boneka.</p><p class="font-bold text-rose">Rp 220.000</p></div></div>
+        <div class="lg:col-span-3 bg-white rounded-3xl overflow-hidden shadow-lg shadow-rose/20 hover:-translate-y-1.5 transition">
+          <img src="assets/accessories.svg" alt="Aksesori" class="w-full">
+          <div class="p-5"><h5 class="font-bold text-lg">Aksesori &amp; Sepatu</h5><p class="my-2">Tas, sepatu, topi, dan perhiasan mini.</p><p class="font-bold text-rose">Rp 45.000</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="kontak" class="bg-blush py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-12 gap-6">
+        <div class="md:col-span-5"><h5 class="font-bold text-lg mb-2">🎀 Pinky Doll Shop</h5><p>Toko jual beli boneka fashion beserta perlengkapannya.</p></div>
+        <div class="md:col-span-3"><h6 class="font-bold mb-2">Menu</h6><ul><li><a href="#beranda">Beranda</a></li><li><a href="#keunggulan">Keunggulan</a></li><li><a href="#produk">Produk</a></li></ul></div>
+        <div class="md:col-span-4"><h6 class="font-bold mb-2">Kontak</h6><p>📱 WhatsApp: 0812-3456-7890<br>📧 hello@pinkydoll.id</p></div>
+      </div>
+      <hr class="my-6 border-ink/20">
+      <p class="text-center text-sm">&copy; 2026 Pinky Doll Shop. Dibuat dengan Tailwind CSS.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('toggle').addEventListener('click', () => {
+      document.getElementById('menu').classList.toggle('hidden');
+      document.getElementById('menu').classList.toggle('flex');
+    });
+  </script>
+</body>
+</html>

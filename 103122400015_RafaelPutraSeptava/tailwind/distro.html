@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamLinux Indonesia - Distro</title>
+    <link rel="stylesheet" href="distro.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 flex flex-col min-h-full text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white text-center py-6 shadow-sm mb-6">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold tracking-tight">Distro Linux</h1>
+            <p class="text-lg text-gray-400 mt-1 mb-0">Eksplorasi ragam distribusi Linux terbaik sesuai kebutuhanmu</p>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <div class="container mx-auto px-4 mb-6">
+        <nav class="bg-blue-600 rounded-lg shadow-sm px-4 py-3">
+            <div class="flex flex-wrap items-center justify-between">
+                <span class="text-white font-bold text-lg lg:hidden">Menu</span>
+                <!-- Mobile Responsif-->
+                <button id="navbar-toggler"
+                    class="lg:hidden text-white focus:outline-none p-1 rounded hover:bg-blue-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div id="navbarNav" class="hidden lg:flex w-full lg:w-auto items-center justify-between mt-3 lg:mt-0">
+                    <ul class="flex flex-col lg:flex-row w-full justify-around items-center gap-2 lg:gap-0">
+                        <li class="w-full lg:w-auto text-center">
+                            <a class="text-white/80 hover:text-white px-4 py-2 rounded hover:bg-blue-700 transition block"
+                                href="index.html">Beranda</a>
+                        </li>
+                        <li class="w-full lg:w-auto text-center">
+                            <a class="text-white font-semibold px-4 py-2 rounded bg-blue-700 lg:bg-transparent block"
+                                href="distro.html">Distro</a>
+                        </li>
+                        <li class="w-full lg:w-auto text-center">
+                            <a class="text-white/80 hover:text-white px-4 py-2 rounded hover:bg-blue-700 transition block"
+                                href="join.html">Join</a>
+                        </li>
+                        <li class="w-full lg:w-auto text-center">
+                            <a class="text-white/80 hover:text-white px-4 py-2 rounded hover:bg-blue-700 transition block"
+                                href="member.html">Member</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mx-auto px-4 flex-grow mb-12">
+        <h2 class="text-2xl font-bold mb-6 text-center text-gray-900 border-b border-gray-200 pb-3">Berbagai Distro
+            Linux Populer</h2>
+
+        <!-- Basis Debian -->
+        <section class="mb-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold text-blue-600">Basis Debian</h3>
+                <p class="text-gray-500 mt-1">Distro yang diturunkan dari Debian, terkenal dengan stabilitas tinggi dan
+                    sistem manajemen paket APT yang matang.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                    <article
+                        class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 text-center flex flex-col justify-between h-full">
+                        <div class="flex items-center justify-center my-3 h-30">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Openlogo-debianV2.svg/1280px-Openlogo-debianV2.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20220905005628"
+                                alt="Debian Logo" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <div class="p-2">
+                            <h4 class="text-lg font-bold text-gray-800">Debian</h4>
+                            <p class="text-gray-500 text-sm mt-1">Cocok untuk dipakai di <strong
+                                    class="text-gray-700">server</strong></p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 text-center flex flex-col justify-between h-full">
+                        <div class="flex items-center justify-center my-3 h-30">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/1280px-UbuntuCoF.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20120210072525"
+                                alt="Ubuntu Logo" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <div class="p-2">
+                            <h4 class="text-lg font-bold text-gray-800">Ubuntu</h4>
+                            <p class="text-gray-500 text-sm mt-1">Cocok untuk user <strong class="text-gray-700">pemula
+                                    dan pengguna harian</strong></p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 text-center flex flex-col justify-between h-full">
+                        <div class="flex items-center justify-center my-3 h-30">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Linux_Mint_logo_without_wordmark.svg/1280px-Linux_Mint_logo_without_wordmark.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20211107101027"
+                                alt="Linux Mint Logo" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <div class="p-2">
+                            <h4 class="text-lg font-bold text-gray-800">Mint</h4>
+                            <p class="text-gray-500 text-sm mt-1">Cocok untuk user yang baru <strong
+                                    class="text-gray-700">migrasi dari Windows</strong></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Basis Arch -->
+        <section class="mb-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold text-blue-600">Basis Arch</h3>
+                <p class="text-gray-500 mt-1">Distro dengan model rolling release yang berfokus pada kustomisasi tinggi,
+                    fleksibilitas, dan kesederhanaan sistem.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <article
+                        class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 text-center flex flex-col justify-between h-full">
+                        <div class="flex items-center justify-center my-3 h-30">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Arch_Linux_%22Crystal%22_icon.svg/960px-Arch_Linux_%22Crystal%22_icon.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20230812231250"
+                                alt="Arch Linux Logo" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <div class="p-2">
+                            <h4 class="text-lg font-bold text-gray-800">Arch</h4>
+                            <p class="text-gray-500 text-sm mt-1">Cocok untuk user yang suka <strong
+                                    class="text-gray-700">kustomisasi dan merakit sistem sendiri</strong></p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 text-center flex flex-col justify-between h-full">
+                        <div class="flex items-center justify-center my-3 h-30">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/CachyOS_Logo.svg/250px-CachyOS_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20230130074653"
+                                alt="CachyOS Logo" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <div class="p-2">
+                            <h4 class="text-lg font-bold text-gray-800">Cachy</h4>
+                            <p class="text-gray-500 text-sm mt-1">Cocok untuk user yang suka <strong
+                                    class="text-gray-700">mengejar performa tinggi dan bermain game</strong></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Basis Fedora -->
+        <section class="mb-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold text-blue-600">Basis Fedora</h3>
+                <p class="text-gray-500 mt-1">Distro yang berfokus pada teknologi open-source mutakhir, inovasi
+                    perangkat lunak terbaru, dan standar enterprise.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <article
+                        class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 text-center flex flex-col justify-between h-full">
+                        <div class="flex items-center justify-center my-3 h-30">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Fedora-logo.svg/330px-Fedora-logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20150505191134"
+                                alt="Fedora Logo" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <div class="p-2">
+                            <h4 class="text-lg font-bold text-gray-800">Fedora</h4>
+                            <p class="text-gray-500 text-sm mt-1">Cocok untuk <strong class="text-gray-700">developer
+                                    dan menjalankan fitur terbaru</strong></p>
+                        </div>
+                    </article>
+
+                    <article
+                        class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 text-center flex flex-col justify-between h-full">
+                        <div class="flex items-center justify-center my-3 h-30">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Nobara_logotype.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+                                alt="Nobara Logo" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <div class="p-2">
+                            <h4 class="text-lg font-bold text-gray-800">Nobara</h4>
+                            <p class="text-gray-500 text-sm mt-1">Cocok untuk <strong class="text-gray-700">gamer dan
+                                    Content Creator</strong></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-4 border-t border-gray-200 mt-auto text-gray-500">
+        <div class="container mx-auto px-4">
+            <p class="text-sm mb-0">&copy; 2026 TeamLinux Indonesia. Dibuat oleh <strong class="text-gray-700">Rafael
+                    Putra Septava</strong> pada
+                <time>30 September 2026</time>.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const toggler = document.getElementById('navbar-toggler');
+        const navMenu = document.getElementById('navbarNav');
+        toggler.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

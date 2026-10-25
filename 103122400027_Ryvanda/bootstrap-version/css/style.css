@@ -1,0 +1,410 @@
+/* ==========================================================================
+   Ryco Spices - Custom Theme Styling (Bootstrap 5.3 Extension)
+   Dioptimalkan berdasarkan panduan Modern Web Guidance (Typography, Visual Effects, Theming)
+   Ringkas, modern, modular, dan bebas bloatware.
+   ========================================================================== */
+
+:root {
+  --color-forest: #2D5016;
+  --color-forest-dark: #1E370E;
+  --color-forest-light: #447323;
+  --color-earth: #8B4513;
+  --color-gold: #C9A959;
+  --color-gold-light: #DFC47E;
+  --color-cream: #FAF7F2;
+  --color-dark: #172211;
+  --color-text-main: #2A3027;
+  --color-text-muted: #586154;
+
+  /* Bootstrap 5 Theme Variables */
+  --bs-primary: #2D5016;
+  --bs-primary-rgb: 45, 80, 22;
+  --bs-secondary: #8B4513;
+  --bs-secondary-rgb: 139, 69, 19;
+  --bs-warning: #C9A959;
+  --bs-warning-rgb: 201, 169, 89;
+  --bs-light: #FAF7F2;
+  --bs-light-rgb: 250, 247, 242;
+  --bs-dark: #172211;
+  --bs-dark-rgb: 23, 34, 17;
+  
+  --bs-body-font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --bs-body-color: #2A3027;
+  --bs-body-bg: #FFFFFF;
+}
+
+/* 1. Browser UI Theming (Modern Web Guidance) */
+::selection {
+  background-color: var(--color-forest);
+  color: #ffffff;
+}
+
+html {
+  scrollbar-color: var(--color-forest) #f1ece3;
+  scrollbar-width: thin;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* 2. Typography Best Practices (Modern Web Guidance) */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  text-wrap: balance;
+  color: var(--color-dark);
+}
+
+h1, .h1 {
+  font-size: clamp(2.25rem, 1.6rem + 2.5vw, 3.75rem);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+h2, .h2 {
+  font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem);
+  line-height: 1.24;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+h3, .h3 {
+  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.85rem);
+  line-height: 1.32;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+p, li, blockquote {
+  text-wrap: pretty;
+  line-height: 1.68;
+  overflow-wrap: break-word;
+}
+
+p.lead {
+  font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.25rem);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.max-w-text {
+  max-width: 68ch;
+}
+
+/* Eyebrow Pill / Subtitle Badge */
+.eyebrow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background: rgba(45, 80, 22, 0.08);
+  color: var(--color-forest);
+  border: 1px solid rgba(45, 80, 22, 0.16);
+  margin-bottom: 0.85rem;
+}
+
+.eyebrow-badge::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-gold);
+}
+
+.eyebrow-badge-light {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-gold-light);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.eyebrow-badge-light::before {
+  background-color: var(--color-gold);
+}
+
+/* 3. Navigation & Glassmorphism */
+.navbar-brand img {
+  max-height: 42px;
+}
+
+.navbar-glass {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(45, 80, 22, 0.08);
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #3b4339;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--color-forest) !important;
+  background-color: rgba(45, 80, 22, 0.06);
+  font-weight: 600;
+}
+
+/* 4. Buttons with Custom Theme Colors */
+.btn-primary {
+  --bs-btn-bg: #2D5016;
+  --bs-btn-border-color: #2D5016;
+  --bs-btn-hover-bg: #213c0f;
+  --bs-btn-hover-border-color: #213c0f;
+  --bs-btn-active-bg: #192e0b;
+  --bs-btn-active-border-color: #192e0b;
+  --bs-btn-focus-shadow-rgb: 45, 80, 22;
+  color: #ffffff !important;
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(45, 80, 22, 0.25);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #2D5016;
+  --bs-btn-border-color: #2D5016;
+  --bs-btn-hover-bg: #2D5016;
+  --bs-btn-hover-border-color: #2D5016;
+  --bs-btn-active-bg: #213c0f;
+  --bs-btn-focus-shadow-rgb: 45, 80, 22;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(45, 80, 22, 0.15);
+}
+
+.btn-warning {
+  --bs-btn-bg: #C9A959;
+  --bs-btn-border-color: #C9A959;
+  --bs-btn-hover-bg: #b99847;
+  --bs-btn-hover-border-color: #b99847;
+  color: #172211 !important;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(201, 169, 89, 0.35);
+}
+
+/* 5. Hero & Page Headers */
+.hero-wrapper {
+  background: linear-gradient(135deg, rgba(16, 28, 9, 0.90) 0%, rgba(28, 44, 18, 0.84) 100%), 
+              url('../../images/hero_bg.webp') center/cover no-repeat;
+  color: #ffffff;
+  position: relative;
+}
+
+.hero-glass-box {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+  color: #ffffff !important;
+}
+
+.hero-glass-box li,
+.hero-glass-box li span,
+.hero-glass-box p {
+  color: #ffffff !important;
+}
+
+.page-header {
+  background: linear-gradient(135deg, rgba(16, 28, 9, 0.92) 0%, rgba(28, 44, 18, 0.88) 100%), 
+              url('../../images/hero_bg.webp') center/cover no-repeat;
+  position: relative;
+  padding: 4.75rem 0 4.25rem;
+  color: #ffffff;
+  border-bottom: 3px solid rgba(201, 169, 89, 0.45);
+}
+
+.hero-wrapper h1,
+.hero-wrapper h2,
+.hero-wrapper h3,
+.page-header h1,
+.page-header h2,
+.page-header h3 {
+  color: #ffffff !important;
+}
+
+/* 6. Cards & Visual Effects (Layered Depth) */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  border: 1px solid rgba(45, 80, 22, 0.09) !important;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 4px 6px -1px rgba(45, 80, 22, 0.04),
+    0 14px 28px -4px rgba(45, 80, 22, 0.12),
+    0 22px 34px -8px rgba(0, 0, 0, 0.06) !important;
+  border-color: rgba(201, 169, 89, 0.45) !important;
+}
+
+.product-card-img-wrapper {
+  overflow: hidden;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.product-card-img-wrapper img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover .product-card-img-wrapper img {
+  transform: scale(1.06);
+}
+
+/* Icon Containers with Ambient Glow */
+.icon-box-emerald {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(45, 80, 22, 0.10) 0%, rgba(45, 80, 22, 0.03) 100%);
+  border: 1px solid rgba(45, 80, 22, 0.14);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-forest);
+  font-size: 1.55rem;
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover .icon-box-emerald {
+  transform: scale(1.06) rotate(3deg);
+  background: var(--color-forest);
+  color: #ffffff;
+  border-color: var(--color-forest);
+}
+
+.icon-box-gold {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(201, 169, 89, 0.15) 0%, rgba(201, 169, 89, 0.04) 100%);
+  border: 1px solid rgba(201, 169, 89, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #8f6e22;
+  font-size: 1.55rem;
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover .icon-box-gold {
+  transform: scale(1.06) rotate(-3deg);
+  background: var(--color-gold);
+  color: var(--color-dark);
+}
+
+/* 7. Form & Interactive State */
+.form-control:focus, .form-select:focus {
+  border-color: var(--color-forest);
+  box-shadow: 0 0 0 0.22rem rgba(45, 80, 22, 0.18);
+}
+
+.role-card {
+  transition: all 0.2s ease;
+  border: 1px solid rgba(45, 80, 22, 0.15);
+  cursor: pointer;
+}
+
+.role-card:has(input:checked) {
+  border-color: var(--color-forest) !important;
+  background-color: rgba(45, 80, 22, 0.06) !important;
+  box-shadow: 0 0 0 2px var(--color-forest), 0 6px 14px rgba(45, 80, 22, 0.12) !important;
+}
+
+/* Custom Background & Text Helpers */
+.bg-cream {
+  background-color: var(--color-cream);
+}
+.bg-forest {
+  background-color: var(--color-forest);
+  color: #fff;
+}
+.text-forest {
+  color: var(--color-forest) !important;
+}
+.text-earth {
+  color: var(--color-earth) !important;
+}
+.text-gold {
+  color: var(--color-gold) !important;
+}
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 54px;
+  height: 54px;
+  background-color: #25D366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.85rem;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  z-index: 1050;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.floating-whatsapp:hover {
+  color: #ffffff;
+  transform: scale(1.1) rotate(6deg);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.55);
+}
+
+/* 8. Footer Contrast & Theming */
+footer,
+footer.bg-dark {
+  background-color: #121c0b !important;
+  color: #ffffff !important;
+}
+
+footer p,
+footer li,
+footer span,
+footer a {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+footer a:hover {
+  color: var(--color-gold) !important;
+}
+
+footer .text-white-50 {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+footer .border-top {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}

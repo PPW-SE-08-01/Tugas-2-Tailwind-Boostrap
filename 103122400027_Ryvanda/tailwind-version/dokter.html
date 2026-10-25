@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dokter Tanaman & Tim Agronomi | Ryco Spices Indonesia (Tailwind Version)</title>
+  <meta name="description" content="Tim dokter tanaman dan pakar agronomi Ryco Spices yang bertugas mendampingi petani, menjaga kesehatan pohon pala, dan menjamin mutu bebas penyakit.">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#2D5016',
+              dark: '#1e380e',
+              light: '#3e6a20'
+            },
+            earth: {
+              DEFAULT: '#8B4513',
+              dark: '#6e350d',
+              light: '#a85a1f'
+            },
+            gold: {
+              DEFAULT: '#C9A959',
+              light: '#e0c785'
+            },
+            cream: '#FBF9F5'
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased selection:bg-forest selection:text-white">
+
+  <!-- Top Info Bar -->
+  <div class="bg-forest text-white py-2 px-4 text-xs sm:text-sm border-b border-forest-light/30">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span><i class="bi bi-geo-alt-fill text-gold me-1"></i> Maluku & Jakarta, Indonesia</span>
+        <span class="text-white/40">|</span>
+        <span><i class="bi bi-envelope-fill text-gold me-1"></i> agronomi@rycospices.com</span>
+      </div>
+      <div>
+        <span class="bg-gold text-forest-dark px-3 py-0.5 rounded-full font-semibold text-xs inline-flex items-center gap-1 shadow-sm">
+          <i class="bi bi-patch-check-fill"></i> Divisi Kesehatan Tanaman & QC
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50 py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <img src="../images/logo.webp" alt="Ryco Spices Logo" class="h-10 sm:h-11 object-contain">
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="index.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Beranda</a>
+        <a href="tentang-kami.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Tentang Kami</a>
+        <a href="layanan.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Layanan</a>
+        <a href="dokter.html" class="text-forest font-bold text-sm tracking-wide">Dokter Tanaman</a>
+        <a href="galeri.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Galeri</a>
+        <a href="member.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Member</a>
+        <a href="kontak.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Kontak</a>
+        <a href="pendaftaran.html" class="bg-forest hover:bg-forest-light text-white px-5 py-2 rounded-full font-semibold text-sm transition shadow-sm inline-flex items-center gap-1.5">
+          <i class="bi bi-person-plus-fill"></i> Pendaftaran
+        </a>
+      </div>
+
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="lg:hidden p-2 text-gray-700 hover:text-forest focus:outline-none" aria-label="Toggle Menu">
+        <i class="bi bi-list text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-5 flex flex-col gap-3 shadow-lg">
+      <a href="index.html" class="text-gray-600 py-1">Beranda</a>
+      <a href="tentang-kami.html" class="text-gray-600 py-1">Tentang Kami</a>
+      <a href="layanan.html" class="text-gray-600 py-1">Layanan</a>
+      <a href="dokter.html" class="text-forest font-bold py-1">Dokter Tanaman</a>
+      <a href="galeri.html" class="text-gray-600 py-1">Galeri</a>
+      <a href="member.html" class="text-gray-600 py-1">Member</a>
+      <a href="kontak.html" class="text-gray-600 py-1">Kontak</a>
+      <a href="pendaftaran.html" class="bg-forest text-white text-center py-2.5 rounded-full font-semibold mt-2">
+        <i class="bi bi-person-plus-fill me-1"></i> Pendaftaran
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header py-16 text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <span class="eyebrow-badge-light mb-3 inline-flex items-center gap-1.5"><i class="bi bi-shield-check"></i> Divisi Proteksi Tanaman</span>
+      <h1 class="font-heading text-3xl sm:text-5xl font-bold mb-3">Dokter Tanaman & Pakar Agronomi</h1>
+      <p class="text-gray-200 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        Menjamin kemurnian dan kesehatan rempah sejak di kebun. Tim agronomis kami mendiagnosa penyakit pohon pala, membina petani lokal, dan mencegah kontaminasi biologis.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mengapa Dokter Tanaman -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-16">
+        <div>
+          <span class="eyebrow-badge mb-3 inline-flex items-center gap-1.5"><i class="bi bi-patch-check-fill"></i> Dedikasi Ilmiah</span>
+          <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 leading-snug">Mengapa Perkebunan Kami Memerlukan Dokter Tanaman?</h2>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Rempah berkualitas ekspor tidak tercipta secara kebetulan. Jamur aflatoksin, penyakit kanker batang pohon pala, serta serangan serangga penggerek biji dapat menurunkan kualitas panen secara drastis jika tidak ditangani oleh ahlinya.
+          </p>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Di Ryco Spices, setiap kelompok tani mitra didampingi dokter tanaman yang bertanggung jawab secara berkala memeriksa kesehatan tanah, mengawasi proses pemangkasan dahan pohon, dan membimbing penjemuran higienis agar kadar minyak esensial tetap optimal.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-6 bg-cream rounded-3xl border border-stone-200/60 card-hover">
+            <div class="icon-box-emerald mb-3">
+              <i class="bi bi-heart-pulse-fill"></i>
+            </div>
+            <h4 class="font-bold text-base text-gray-900 mb-1">Pemeriksaan Rutin</h4>
+            <p class="text-xs text-gray-500 leading-relaxed">Deteksi dini gejala infeksi jamur pada buah dan daun pohon pala tua.</p>
+          </div>
+          <div class="p-6 bg-cream rounded-3xl border border-stone-200/60 card-hover">
+            <div class="icon-box-emerald mb-3">
+              <i class="bi bi-droplet-half"></i>
+            </div>
+            <h4 class="font-bold text-base text-gray-900 mb-1">Uji Nutrisi Tanah</h4>
+            <p class="text-xs text-gray-500 leading-relaxed">Menjaga keseimbangan hara tanah vulkanik tanpa pupuk kimiawi sintetis.</p>
+          </div>
+          <div class="p-6 bg-cream rounded-3xl border border-stone-200/60 card-hover">
+            <div class="icon-box-emerald mb-3">
+              <i class="bi bi-bug-fill"></i>
+            </div>
+            <h4 class="font-bold text-base text-gray-900 mb-1">Pengendalian Alami</h4>
+            <p class="text-xs text-gray-500 leading-relaxed">Pemanfaatan mikroorganisme hayati ramah lingkungan.</p>
+          </div>
+          <div class="p-6 bg-cream rounded-3xl border border-stone-200/60 card-hover">
+            <div class="icon-box-emerald mb-3">
+              <i class="bi bi-award-fill"></i>
+            </div>
+            <h4 class="font-bold text-base text-gray-900 mb-1">Bebas Racun Hama</h4>
+            <p class="text-xs text-gray-500 leading-relaxed">Jaminan mutlak bebas residu pestisida untuk ekspor Uni Eropa & USA.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tim Pakar -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="eyebrow-badge mb-3 inline-flex items-center gap-1.5"><i class="bi bi-people-fill"></i> Pakar Profesional</span>
+        <h2 class="font-heading text-3xl font-bold text-gray-900">Profil Tim Ahli & Dokter Tanaman</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 1 -->
+        <div class="bg-white border border-gray-100 rounded-3xl p-6 card-hover text-center flex flex-col justify-between">
+          <div>
+            <div class="icon-box-emerald mx-auto mb-4 text-2xl w-16 h-16">
+              <i class="bi bi-person-badge"></i>
+            </div>
+            <h3 class="font-bold text-base text-gray-900 mb-1">Dr. Ir. Budi Santoso</h3>
+            <span class="bg-green-50 text-forest text-xs font-semibold px-2.5 py-1 rounded-full inline-block mb-3">Dokter Patologi Tanaman</span>
+            <p class="text-gray-500 text-xs leading-relaxed mb-4">Spesialis proteksi pohon pala dan mikotoksin dengan pengalaman riset 18 tahun di Maluku.</p>
+          </div>
+          <div class="border-t border-gray-100 pt-3 text-xs text-gray-400">
+            <i class="bi bi-mortarboard-fill me-1"></i> Doktoral Ilmu Tanaman IPB
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="bg-white border border-gray-100 rounded-3xl p-6 card-hover text-center flex flex-col justify-between">
+          <div>
+            <div class="icon-box-gold mx-auto mb-4 text-2xl w-16 h-16">
+              <i class="bi bi-person-badge"></i>
+            </div>
+            <h3 class="font-bold text-base text-gray-900 mb-1">Apt. Sarah Wijaya</h3>
+            <span class="bg-amber-50 text-earth text-xs font-semibold px-2.5 py-1 rounded-full inline-block mb-3">Pakar Fitokimia & Minyak</span>
+            <p class="text-gray-500 text-xs leading-relaxed mb-4">Fokus pada pengujian zat aktif eugenol cengkeh dan profil aroma rempah ekspor.</p>
+          </div>
+          <div class="border-t border-gray-100 pt-3 text-xs text-gray-400">
+            <i class="bi bi-mortarboard-fill me-1"></i> Magister Farmasi ITB
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="bg-white border border-gray-100 rounded-3xl p-6 card-hover text-center flex flex-col justify-between">
+          <div>
+            <div class="icon-box-emerald mx-auto mb-4 text-2xl w-16 h-16">
+              <i class="bi bi-person-badge"></i>
+            </div>
+            <h3 class="font-bold text-base text-gray-900 mb-1">Ir. Hendra Maluku</h3>
+            <span class="bg-green-50 text-forest text-xs font-semibold px-2.5 py-1 rounded-full inline-block mb-3">Koordinator Lapangan</span>
+            <p class="text-gray-500 text-xs leading-relaxed mb-4">Putra asli Banda yang memimpin bimbingan budidaya 300+ petani mitra binaan.</p>
+          </div>
+          <div class="border-t border-gray-100 pt-3 text-xs text-gray-400">
+            <i class="bi bi-mortarboard-fill me-1"></i> Sarjana Pertanian Unpatti
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="bg-white border border-gray-100 rounded-3xl p-6 card-hover text-center flex flex-col justify-between">
+          <div>
+            <div class="icon-box-gold mx-auto mb-4 text-2xl w-16 h-16">
+              <i class="bi bi-person-badge"></i>
+            </div>
+            <h3 class="font-bold text-base text-gray-900 mb-1">Dewi Anggraini, S.Si</h3>
+            <span class="bg-stone-100 text-earth text-xs font-semibold px-2.5 py-1 rounded-full inline-block mb-3">Kepala Laboratorium</span>
+            <p class="text-gray-500 text-xs leading-relaxed mb-4">Menguji kelembaban, kadar air, dan kebersihan komoditas sebelum dimuat ke kapal.</p>
+          </div>
+          <div class="border-t border-gray-100 pt-3 text-xs text-gray-400">
+            <i class="bi bi-mortarboard-fill me-1"></i> Bioteknologi Pertanian UGM
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-forest-dark text-white pt-16 pb-8 border-t border-forest-light/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
+        <div class="lg:col-span-4">
+          <img src="../images/logo.webp" alt="Ryco Spices" class="h-10 mb-4 brightness-0 invert">
+          <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+            Ryco Spices adalah produsen dan eksportir rempah Indonesia yang mengedepankan kualitas organik, sertifikasi laboratorium, dan pemberdayaan petani lokal di Kepulauan Rempah.
+          </p>
+        </div>
+        <div class="lg:col-span-2">
+          <h4 class="text-gold font-bold text-sm mb-4">Menu Utama</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+            <li><a href="index.html" class="hover:text-gold transition">Beranda</a></li>
+            <li><a href="tentang-kami.html" class="hover:text-gold transition">Tentang Kami</a></li>
+            <li><a href="layanan.html" class="hover:text-gold transition">Layanan Ekspor</a></li>
+            <li><a href="dokter.html" class="hover:text-gold transition">Dokter Tanaman</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-2">
+          <h4 class="text-gold font-bold text-sm mb-4">Akses Khusus</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+            <li><a href="galeri.html" class="hover:text-gold transition">Galeri Panen</a></li>
+            <li><a href="member.html" class="hover:text-gold transition">Portal Member</a></li>
+            <li><a href="pendaftaran.html" class="hover:text-gold transition">Pendaftaran Mitra</a></li>
+            <li><a href="kontak.html" class="hover:text-gold transition">Kontak Kami</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-4">
+          <h4 class="text-gold font-bold text-sm mb-4">Kontak Divisi Agronomi</h4>
+          <p class="text-xs sm:text-sm text-gray-300 mb-2">Banda & Jakarta, Indonesia</p>
+          <p class="text-xs sm:text-sm text-gray-300 mb-2">+62 821-2345-6789</p>
+          <p class="text-xs sm:text-sm text-gray-300">agronomi@rycospices.com</p>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 text-center text-xs text-gray-400">
+        <p>&copy; 2026 Ryco Spices Indonesia. Versi Modern Tailwind CSS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6282123456789" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition duration-200 z-50" target="_blank" title="Chat WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+</body>
+</html>
