@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layanan Ekspor Rempah | Ryco Spices Indonesia (Tailwind Version)</title>
+  <meta name="description" content="Layanan pengadaan rempah B2B skala besar, standarisasi sortir mutu ekspor, uji laboratorium fitosanitari, dan pengemasan kustom.">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#2D5016',
+              dark: '#1e380e',
+              light: '#3e6a20'
+            },
+            earth: {
+              DEFAULT: '#8B4513',
+              dark: '#6e350d',
+              light: '#a85a1f'
+            },
+            gold: {
+              DEFAULT: '#C9A959',
+              light: '#e0c785'
+            },
+            cream: '#FBF9F5'
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased selection:bg-forest selection:text-white">
+
+  <!-- Top Info Bar -->
+  <div class="bg-forest text-white py-2 px-4 text-xs sm:text-sm border-b border-forest-light/30">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span><i class="bi bi-geo-alt-fill text-gold me-1"></i> Maluku & Jakarta, Indonesia</span>
+        <span class="text-white/40">|</span>
+        <span><i class="bi bi-envelope-fill text-gold me-1"></i> export@rycospices.com</span>
+      </div>
+      <div>
+        <span class="bg-gold text-forest-dark px-3 py-0.5 rounded-full font-semibold text-xs inline-flex items-center gap-1 shadow-sm">
+          <i class="bi bi-patch-check-fill"></i> Standar Ekspor ISO & Phytosanitary
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50 py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <img src="../images/logo.webp" alt="Ryco Spices Logo" class="h-10 sm:h-11 object-contain">
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="index.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Beranda</a>
+        <a href="tentang-kami.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Tentang Kami</a>
+        <a href="layanan.html" class="text-forest font-bold text-sm tracking-wide">Layanan</a>
+        <a href="dokter.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Dokter Tanaman</a>
+        <a href="galeri.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Galeri</a>
+        <a href="member.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Member</a>
+        <a href="kontak.html" class="text-gray-600 hover:text-forest font-medium text-sm transition">Kontak</a>
+        <a href="pendaftaran.html" class="bg-forest hover:bg-forest-light text-white px-5 py-2 rounded-full font-semibold text-sm transition shadow-sm inline-flex items-center gap-1.5">
+          <i class="bi bi-person-plus-fill"></i> Pendaftaran
+        </a>
+      </div>
+
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="lg:hidden p-2 text-gray-700 hover:text-forest focus:outline-none" aria-label="Toggle Menu">
+        <i class="bi bi-list text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-5 flex flex-col gap-3 shadow-lg">
+      <a href="index.html" class="text-gray-600 py-1">Beranda</a>
+      <a href="tentang-kami.html" class="text-gray-600 py-1">Tentang Kami</a>
+      <a href="layanan.html" class="text-forest font-bold py-1">Layanan</a>
+      <a href="dokter.html" class="text-gray-600 py-1">Dokter Tanaman</a>
+      <a href="galeri.html" class="text-gray-600 py-1">Galeri</a>
+      <a href="member.html" class="text-gray-600 py-1">Member</a>
+      <a href="kontak.html" class="text-gray-600 py-1">Kontak</a>
+      <a href="pendaftaran.html" class="bg-forest text-white text-center py-2.5 rounded-full font-semibold mt-2">
+        <i class="bi bi-person-plus-fill me-1"></i> Pendaftaran
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header py-16 text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <span class="eyebrow-badge-light mb-3 inline-flex items-center gap-1.5"><i class="bi bi-award-fill"></i> Layanan Terpadu</span>
+      <h1 class="font-heading text-3xl sm:text-5xl font-bold mb-3">Layanan Ekspor & Pengolahan Rempah</h1>
+      <p class="text-gray-200 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        Solusi terintegrasi dari kebun petani hingga pelabuhan tujuan: penyortiran grade ketat, uji laboratorium terakreditasi, dan legalitas ekspor terjamin.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 Layanan Utama -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- 1 -->
+        <div class="bg-cream p-8 rounded-3xl border border-stone-200/60 card-hover">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="icon-box-emerald">
+              <i class="bi bi-box-seam-fill"></i>
+            </div>
+            <h3 class="font-bold text-lg sm:text-xl text-gray-900">1. Pengadaan Skala Ekspor (FCL & LCL)</h3>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Melayani pesanan partai besar (Full Container Load / 20ft & 40ft) maupun partai fleksibel untuk pabrik bumbu internasional dan industri farmasi.
+          </p>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-600">
+            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-forest"></i> Kapasitas pasokan stabil sepanjang tahun</li>
+            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-forest"></i> Pengiriman via Pelabuhan Tanjung Priok & Ambon</li>
+            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-forest"></i> Sistem kontrak berjangka dengan jaminan harga tetap</li>
+          </ul>
+        </div>
+
+        <!-- 2 -->
+        <div class="bg-cream p-8 rounded-3xl border border-stone-200/60 card-hover">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="icon-box-emerald">
+              <i class="bi bi-funnel-fill"></i>
+            </div>
+            <h3 class="font-bold text-lg sm:text-xl text-gray-900">2. Standarisasi Sortir Grade & Mutu</h3>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Fasilitas sortasi kami memisahkan biji pala ke dalam grade presisi (Grade ABCD utuh, Sound Shriveled, BWP/Broken) secara cermat.
+          </p>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-600">
+            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-forest"></i> Pemisahan biji berlubang dan cacat fisik ganda</li>
+            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-forest"></i> Pengeringan solar dome (Kadar air konsisten &lt; 10%)</li>
+            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-forest"></i> Pembersihan debu partikel asing secara mekanis</li>
+          </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="bg-cream p-8 rounded-3xl border border-stone-200/60 card-hover">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="icon-box-emerald">
+              <i class="bi bi-clipboard2-check-fill"></i>
+            </div>
+            <h3 class="font-bold text-lg sm:text-xl text-gray-900">3. Uji Laboratorium & Sertifikasi Dokumen</h3>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Setiap batch ekspor disertai dokumen pengujian resmi dari laboratorium terakreditasi internasional untuk pemenuhan regulasi negara tujuan.
+          </p>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-600">
+            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-forest"></i> Certificate of Analysis (COA) lengkap</li>
+            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-forest"></i> Uji Aflatoksin B1 & Total (bebas jamur racun)</li>
+            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-forest"></i> Phytosanitary Certificate & Certificate of Origin (COO)</li>
+          </ul>
+        </div>
+
+        <!-- 4 -->
+        <div class="bg-cream p-8 rounded-3xl border border-stone-200/60 card-hover">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="icon-box-emerald">
+              <i class="bi bi-tags-fill"></i>
+            </div>
+            <h3 class="font-bold text-lg sm:text-xl text-gray-900">4. Private Labeling & Kemasan Ekspor</h3>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Menyediakan beragam pilihan kemasan ekspor berkualitas tinggi, mulai dari karung goni tradisional hingga kantong kedap udara (*vacuum pack*).
+          </p>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-600">
+            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-forest"></i> Karung Goni (Jute Bag) standar 25 kg & 50 kg</li>
+            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-forest"></i> Inner Polypropylene (PP) kedap kelembaban</li>
+            <li class="flex items-center gap-2"><i class="bi bi-check-circle-fill text-forest"></i> Kustomisasi cetak logo buyer pada kemasan</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabel Spesifikasi Mutu -->
+  <section class="py-16 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="eyebrow-badge mb-3 inline-flex items-center gap-1.5"><i class="bi bi-sliders"></i> Spesifikasi Teknis</span>
+        <h2 class="font-heading text-3xl font-bold text-gray-900">Standar Mutu Komoditas Ekspor</h2>
+      </div>
+
+      <div class="overflow-x-auto bg-white rounded-3xl shadow-sm border border-stone-200/60">
+        <table class="w-full text-left text-xs sm:text-sm text-gray-600">
+          <thead class="bg-forest/5 text-forest font-bold uppercase text-xs border-b border-stone-200/60">
+            <tr>
+              <th scope="col" class="py-4 px-6">Komoditas</th>
+              <th scope="col" class="py-4 px-6">Grade / Tipe</th>
+              <th scope="col" class="py-4 px-6">Kadar Air (Max)</th>
+              <th scope="col" class="py-4 px-6">Minyak Atsiri</th>
+              <th scope="col" class="py-4 px-6">Kemurnian</th>
+              <th scope="col" class="py-4 px-6">Kemasan</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-100">
+            <tr class="hover:bg-cream/50 transition">
+              <td class="py-4 px-6 font-bold text-gray-900 flex items-center gap-2">
+                <i class="bi bi-record-circle-fill text-gold"></i> Biji Pala (Nutmeg)
+              </td>
+              <td class="py-4 px-6">ABCD / Sound Shriveled</td>
+              <td class="py-4 px-6">10.0%</td>
+              <td class="py-4 px-6">7% - 9%</td>
+              <td class="py-4 px-6">99.0% Bebas Jamur</td>
+              <td class="py-4 px-6">Goni Jute 25/50 kg</td>
+            </tr>
+            <tr class="hover:bg-cream/50 transition">
+              <td class="py-4 px-6 font-bold text-gray-900 flex items-center gap-2">
+                <i class="bi bi-record-circle-fill text-gold"></i> Fuli Pala (Mace)
+              </td>
+              <td class="py-4 px-6">Whole Blades Handpicked</td>
+              <td class="py-4 px-6">10.5%</td>
+              <td class="py-4 px-6">10% - 13%</td>
+              <td class="py-4 px-6">99.5% Tanpa Campuran</td>
+              <td class="py-4 px-6">Karton + Vacuum</td>
+            </tr>
+            <tr class="hover:bg-cream/50 transition">
+              <td class="py-4 px-6 font-bold text-gray-900 flex items-center gap-2">
+                <i class="bi bi-record-circle-fill text-gold"></i> Cengkeh (Cloves)
+              </td>
+              <td class="py-4 px-6">Lalpari / AB6 Pilihan</td>
+              <td class="py-4 px-6">11.0%</td>
+              <td class="py-4 px-6">&gt; 19% Eugenol</td>
+              <td class="py-4 px-6">Headless &lt; 2%</td>
+              <td class="py-4 px-6">Karung Goni 50 kg</td>
+            </tr>
+            <tr class="hover:bg-cream/50 transition">
+              <td class="py-4 px-6 font-bold text-gray-900 flex items-center gap-2">
+                <i class="bi bi-record-circle-fill text-gold"></i> Kayu Manis (Cinnamon)
+              </td>
+              <td class="py-4 px-6">Vera / Cassia Stick</td>
+              <td class="py-4 px-6">12.0%</td>
+              <td class="py-4 px-6">2.5% - 3.5%</td>
+              <td class="py-4 px-6">Bebas Kerusakan Kulit</td>
+              <td class="py-4 px-6">Bundle Roll 25 kg</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-forest-dark text-white pt-16 pb-8 border-t border-forest-light/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
+        <div class="lg:col-span-4">
+          <img src="../images/logo.webp" alt="Ryco Spices" class="h-10 mb-4 brightness-0 invert">
+          <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+            Ryco Spices adalah produsen dan eksportir rempah Indonesia yang mengedepankan kualitas organik, sertifikasi laboratorium, dan pemberdayaan petani lokal di Kepulauan Rempah.
+          </p>
+        </div>
+        <div class="lg:col-span-2">
+          <h4 class="text-gold font-bold text-sm mb-4">Menu Utama</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+            <li><a href="index.html" class="hover:text-gold transition">Beranda</a></li>
+            <li><a href="tentang-kami.html" class="hover:text-gold transition">Tentang Kami</a></li>
+            <li><a href="layanan.html" class="hover:text-gold transition">Layanan Ekspor</a></li>
+            <li><a href="dokter.html" class="hover:text-gold transition">Dokter Tanaman</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-2">
+          <h4 class="text-gold font-bold text-sm mb-4">Akses Khusus</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+            <li><a href="galeri.html" class="hover:text-gold transition">Galeri Panen</a></li>
+            <li><a href="member.html" class="hover:text-gold transition">Portal Member</a></li>
+            <li><a href="pendaftaran.html" class="hover:text-gold transition">Pendaftaran Mitra</a></li>
+            <li><a href="kontak.html" class="hover:text-gold transition">Kontak Kami</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-4">
+          <h4 class="text-gold font-bold text-sm mb-4">Kontak</h4>
+          <p class="text-xs sm:text-sm text-gray-300 mb-2">Banda & Jakarta, Indonesia</p>
+          <p class="text-xs sm:text-sm text-gray-300 mb-2">+62 821-2345-6789</p>
+          <p class="text-xs sm:text-sm text-gray-300">export@rycospices.com</p>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 text-center text-xs text-gray-400">
+        <p>&copy; 2026 Ryco Spices Indonesia. Versi Modern Tailwind CSS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6282123456789" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition duration-200 z-50" target="_blank" title="Chat WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+</body>
+</html>
