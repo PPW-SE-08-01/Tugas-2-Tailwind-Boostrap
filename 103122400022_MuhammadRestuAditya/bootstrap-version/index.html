@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradoxx Parfum - Luxury Artisan Fragrance | Bootstrap Version</title>
+  <meta name="description" content="Koleksi wewangian mewah berbahan alami pilihan dari Paradoxx Parfum. Menghadirkan aroma tahan lama dan elegan untuk menyempurnakan persona Anda.">
+  <meta name="author" content="Muhammad Restu Aditya - 103122400022">
+
+  <!-- Bootstrap 5.3 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Banner -->
+  <div class="student-banner">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span>Tugas Praktikum Pemrograman Web - Week 4 • Muhammad Restu Aditya (103122400022)</span>
+      <span class="student-badge d-none d-sm-inline-block">Bootstrap 5 Edition</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-custom py-3" id="mainNavbar">
+      <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand text-decoration-none d-flex flex-column" href="#beranda">
+          <span class="brand-title">PARADOXX</span>
+          <span class="brand-sub">PARFUM</span>
+        </a>
+
+        <!-- Mobile Toggler Button -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2 text-dark"></i>
+        </button>
+
+        <!-- Nav Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="#keunggulan">Keunggulan</a></li>
+            <li class="nav-item"><a class="nav-link" href="#koleksi">Koleksi</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cerita">Tentang Kami</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+          </ul>
+          <!-- Action Button -->
+          <div class="d-flex align-items-center gap-3">
+            <a href="#kontak" class="btn btn-gold text-nowrap"><i class="bi bi-chat-dots me-1"></i> Hubungi Kami</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="beranda">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6">
+            <span class="badge mb-3 px-3 py-2 rounded-pill text-uppercase tracking-wider" style="background-color: var(--primary-gold-light); color: var(--primary-gold-dark); font-size: 0.75rem; letter-spacing: 1px;">EAU DE LUXE ARTISAN</span>
+            <h1 class="hero-title">Temukan Karaktermu dalam <span>Keanggunan Aroma</span></h1>
+            <p class="hero-lead">
+              Koleksi wewangian artisan mewah berbahan botani alami dari Grasse, Perancis. Diramu secara eksklusif dengan konsentrasi Extrait de Parfum untuk ketahanan aroma sepanjang hari.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#koleksi" class="btn btn-gold px-4 py-3"><i class="bi bi-gem me-2"></i>Jelajahi Koleksi</a>
+              <a href="#cerita" class="btn btn-outline-gold px-4 py-3"><i class="bi bi-compass me-2"></i>Tentang Kami</a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center text-lg-end">
+            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80" alt="Botol Parfum Mewah Paradoxx Parfum" class="hero-img img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keunggulan Section (Features) -->
+    <section class="feature-section" id="keunggulan">
+      <div class="container">
+        <div class="text-center max-w-xl mx-auto mb-5">
+          <span class="section-eyebrow">Mengapa Memilih Kami</span>
+          <h2 class="section-title">Kesempurnaan Dalam Tiap Tetes</h2>
+          <p class="text-muted mx-auto" style="max-width: 620px;">Kami berdedikasi menciptakan karya wewangian dengan standar internasional, memadukan tradisi artisan dan kemewahan modern.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div class="feature-icon-box"><i class="bi bi-clock-history"></i></div>
+              <h5 class="fw-bold mb-2 font-serif">Daya Tahan 24 Jam</h5>
+              <p class="text-muted small mb-0">Formula konsentrasi tinggi Extrait de Parfum memberikan daya tahan aroma seharian penuh tanpa perlu semprot berulang.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div class="feature-icon-box"><i class="bi bi-flower1"></i></div>
+              <h5 class="fw-bold mb-2 font-serif">Bahan Botani Grasse</h5>
+              <p class="text-muted small mb-0">Minyak atsiri murni diimpor langsung dari perkebunan bunga legendaris di Grasse, ibukota parfum dunia di Perancis.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div class="feature-icon-box"><i class="bi bi-shield-check"></i></div>
+              <h5 class="fw-bold mb-2 font-serif">Uji Dermatologi</h5>
+              <p class="text-muted small mb-0">Aman untuk segala jenis kulit sensitif, bebas zat berbahaya paraben, dan 100% cruelty-free tanpa uji coba pada hewan.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-card">
+              <div class="feature-icon-box"><i class="bi bi-box2-heart"></i></div>
+              <h5 class="fw-bold mb-2 font-serif">Kemasan Mewah</h5>
+              <p class="text-muted small mb-0">Setiap botol dikemas dalam kotak velvet eksklusif dengan segel lilin artisan, sangat cocok untuk kado istimewa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Koleksi Produk Section (Content Section) -->
+    <section class="product-section" id="koleksi">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+          <div>
+            <span class="section-eyebrow">Signature Scents</span>
+            <h2 class="section-title mb-0">Koleksi Terpopuler</h2>
+          </div>
+          <p class="text-muted mb-0 mt-2 mt-md-0" style="max-width: 400px;">Aroma signature paling diminati yang dirancang untuk membangkitkan aura percaya diri dan daya tarik memikat.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-container">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80" alt="Midnight Velvet" class="product-img">
+              </div>
+              <div class="product-body">
+                <span class="product-category">Extrait de Parfum • 50ml</span>
+                <h4 class="product-title">Midnight Velvet</h4>
+                <p class="product-notes"><i class="bi bi-droplet-half me-1"></i>Notes: Blackcurrant, Iris, Sandalwood & Amber</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-container">
+                <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80" alt="Golden Ambergris" class="product-img">
+              </div>
+              <div class="product-body">
+                <span class="product-category">Extrait de Parfum • 50ml</span>
+                <h4 class="product-title">Golden Ambergris</h4>
+                <p class="product-notes"><i class="bi bi-droplet-half me-1"></i>Notes: Bergamot, Warm Vanilla, Bourbon & Oud</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-container">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80" alt="Oasis Blanc" class="product-img">
+              </div>
+              <div class="product-body">
+                <span class="product-category">Eau de Parfum • 50ml</span>
+                <h4 class="product-title">Oasis Blanc</h4>
+                <p class="product-notes"><i class="bi bi-droplet-half me-1"></i>Notes: Sea Salt, Mandarin, White Cedar & Sage</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card">
+              <div class="product-image-container">
+                <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=600&q=80" alt="Rose Impériale" class="product-img">
+              </div>
+              <div class="product-body">
+                <span class="product-category">Extrait de Parfum • 50ml</span>
+                <h4 class="product-title">Rose Impériale</h4>
+                <p class="product-notes"><i class="bi bi-droplet-half me-1"></i>Notes: Damask Rose, Pink Pepper, Oud & Musk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Banner / Call To Action Section -->
+    <section class="container my-5" id="cerita">
+      <div class="story-banner shadow-lg">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <span class="student-badge mb-3 d-inline-block">FILOSOFI KAMI</span>
+            <h2 class="display-6 font-serif fw-bold mb-3">"Aroma Bukan Sekadar Wangian, Tetapi Jejak Kenangan Abadi."</h2>
+            <p class="text-light opacity-75 mb-0" style="max-width: 600px;">
+              Didirikan dengan kecintaan mendalam pada wewangian berkelas, Paradoxx Parfum memadukan resep klasik artisan Perancis dengan sentuhan kemewahan modern nusantara. Konsultasikan aroma khasmu hari ini bersama konsultan aroma kami untuk menemukan paduan karakter terbaik.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="#kontak" class="btn btn-gold btn-lg px-4 py-3 shadow"><i class="bi bi-chat-dots me-2"></i>Hubungi Kami</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-section" id="kontak">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Brand Info & Identity -->
+        <div class="col-lg-4 col-md-6">
+          <a class="text-decoration-none d-inline-flex flex-column mb-3" href="#beranda">
+            <span class="footer-brand">PARADOXX</span>
+            <span class="brand-sub">PARFUM</span>
+          </a>
+          <p class="footer-desc mb-3">
+            Koleksi wewangian artisan mewah yang dikurasi khusus untuk menghadirkan keanggunan, daya pikat, dan rasa percaya diri tanpa batas.
+          </p>
+          <div class="footer-identity-box">
+            <span class="d-block text-gold fw-semibold small mb-1">Identitas Pembuat:</span>
+            <span class="d-block text-white fw-medium">Muhammad Restu Aditya</span>
+            <span class="d-block footer-subtext">NIM: 103122400022 • Pemrograman Web</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-3 col-6">
+          <h6 class="footer-heading">Navigasi</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#beranda" class="footer-link">Beranda</a></li>
+            <li><a href="#keunggulan" class="footer-link">Keunggulan</a></li>
+            <li><a href="#koleksi" class="footer-link">Koleksi Terpopuler</a></li>
+            <li><a href="#cerita" class="footer-link">Kisah Kami</a></li>
+            <li><a href="#kontak" class="footer-link">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Category Links -->
+        <div class="col-lg-2 col-md-3 col-6">
+          <h6 class="footer-heading">Koleksi Parfum</h6>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#koleksi" class="footer-link">Extrait de Parfum</a></li>
+            <li><a href="#koleksi" class="footer-link">Eau de Parfum</a></li>
+            <li><a href="#koleksi" class="footer-link">Discovery Scent Set</a></li>
+            <li><a href="#koleksi" class="footer-link">Exclusive Gift Box</a></li>
+            <li><a href="#koleksi" class="footer-link">Aroma Lilin Terapi</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Location -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="footer-heading">Hubungi & Lokasi</h6>
+          <p class="footer-contact-item mb-2"><i class="bi bi-geo-alt-fill text-gold me-1"></i><span>Jl. Senopati No. 42, Kebayoran Baru, Jakarta Selatan</span></p>
+          <p class="footer-contact-item mb-2"><i class="bi bi-whatsapp text-gold me-1"></i><span>+62 812-3456-7890</span></p>
+          <p class="footer-contact-item mb-3"><i class="bi bi-envelope-fill text-gold me-1"></i><span>concierge@paradoxxparfum.com</span></p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer-divider">
+
+      <!-- Bottom Bar -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start footer-bottom">
+        <p class="mb-2 mb-md-0">&copy; 2026 Paradoxx Parfum. Dibuat untuk Penugasan Praktikum PPW Week 4.</p>
+        <p class="mb-0">Implementasi Framework: <span class="framework-badge">Bootstrap 5.3 (Light Luxury Theme)</span> | Pengembang: <strong class="text-white">Muhammad Restu Aditya (103122400022)</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
